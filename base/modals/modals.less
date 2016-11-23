@@ -1,0 +1,60 @@
+//veriables
+@import "../../veriables.less";
+//veriables
+
+.g-modal-cover
+{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    z-index:200;
+    left:0;
+    top:0;
+    overflow-y:auto;
+    background-color:fade(black,80%);
+    padding:15px;
+}
+.b-modal
+{
+    padding:15px;
+    width:100%;
+    max-width:450px;
+    background-color:white;
+    margin:auto;
+    position:relative;
+    &_mini
+    {
+       max-width:300px; 
+    }
+    &_wide
+    {
+       max-width:800px; 
+    }
+    //
+    &__header
+    {
+        border-bottom:1px solid @c-gray_light;
+        margin-bottom:15px;
+        h1,h2,h3,h4,h5
+        {
+//            margin-top:0px;
+        }
+    }
+    &__close
+    {
+        position:absolute;
+        right:15px;
+        top:15px;
+        background-image:url(/assets/img/icons/close.png);
+        background-size:80%;
+    }
+    //header
+    &__body
+    {
+        
+    }
+    &__footer
+    {
+        
+    }
+}

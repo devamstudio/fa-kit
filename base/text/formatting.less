@@ -1,0 +1,96 @@
+//fonts
+@font-face 
+{
+    font-family:HelveticaBl;
+    src:url(/assets/fonts/HelveticaNeueCyr-Black.otf);
+}
+@font-face 
+{
+    font-family:HelveticaR;
+    src:url(/assets/fonts/HelveticaNeueCyr-Roman.otf);
+}
+@font-face 
+{
+    font-family:HelveticaL;
+    src:url(/assets/fonts/HelveticaNeueCyr-Light.otf);
+}
+//fonts
+//veriables
+@import "../../veriables.less";
+@c-header : black;
+//veriables
+//globals
+*
+{
+    font-family:HelveticaL;
+}
+body,html
+{
+    
+}
+h1
+{
+    font-family:HelveticaBl;
+    font-size:36pt;
+    margin:15px 0 20px 0;
+    color:@c-header;
+}
+h2
+{
+    font-family:HelveticaBl;
+    font-size:24pt;
+    margin:15px 0 20px 0;
+    color:@c-header;
+}
+h3
+{
+    font-family:HelveticaBl;
+    font-size:21pt;
+    margin:15px 0 20px 0;
+    color:@c-header;
+}
+h4
+{
+    font-family:HelveticaBl;
+    font-size:18pt;
+    margin:15px 0 15px 0;
+    color:@c-header;
+}
+h5
+{
+    font-family:HelveticaBl;
+    font-size:14pt;
+    margin:15px 0 10px 0;
+    color:@c-header;
+}
+p
+{
+    font-size:12pt;
+    margin:0 0 15px 0;
+    color:@c-gray_dark;
+}
+span,a
+{
+    font-size:12pt;
+}
+strong,i,b
+{
+    font-size:inherit;
+}
+
+//rules
+.g-text
+{
+    &_align-left
+    {
+        text-align:left;
+    }
+    &_align-right
+    {
+        text-align:right;
+    }
+    &_align-center
+    {
+        text-align:center;
+    }
+}
