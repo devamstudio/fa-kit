@@ -10,30 +10,34 @@
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
     border-width:0;
     margin:15px 0;
-    &_top
+    &__top
     {
         border-top-width:6px;
         border-style:solid;
     }
-    &_left
+    &__left
     {
         border-left-width:6px;
         border-style:solid;
     }
-    &_alert
+    &__alert
     {
         border-color:@c_alert;
     }
-    &_warning
+    &__warning
     {
         border-color:@c_warning;
     }
-    &_ok
+    &__ok
     {
         border-color:@c_ok;
     }
     h1,h2,h3,h4,h5
     {
         margin-top:0;
+    }
+    p:last-child
+    {
+        margin:0;
     }
 }

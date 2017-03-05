@@ -44,7 +44,7 @@ body
         clear:both;
         display:block;
     }
-    &_wide
+    &__wide
     {
         max-width:100%!important;
     }
@@ -67,231 +67,128 @@ body
 .g-row
 {
     content:'';
-    display:table;
+    display:block;
     margin-left:-15px;
     margin-right:-15px;
-    width:100%;
     &:before
     {
         content:'';
-        clear:both;
         display:block;
+        clear:both;
     }
     &:after
     {
         content:'';
-        clear:both;
         display:block;
+        clear:both;
     }
 }
 ////container
 ////greed
-.g-cols_mini--1,.g-cols_mini--2,.g-cols_mini--3,.g-cols_mini--4,.g-cols_mini--5,.g-cols_mini--6,.g-cols_mini--7,.g-cols_mini--8,.g-cols_mini--9,.g-cols_mini--10,.g-cols_mini--11,.g-cols_mini-12,.g-cols_middle--1,.g-cols_middle--2,.g-cols_middle--3,.g-cols_middle--4,.g-cols_middle--5,.g-cols_middle--6,.g-cols_middle--7,.g-cols_middle--8,.g-cols_middle--9,.g-cols_middle--10,.g-cols_middle--11,.g-cols_middle--12,.g-cols_medium--1,.g-cols_medium--2,.g-cols_medium--3,.g-cols_medium--4,.g-cols_medium--5,.g-cols_medium--6,.g-cols_medium-7,.g-cols_medium--8,.g-cols_medium--9,.g-cols_medium--10,.g-cols_medium--11,.g-cols_medium--12,.g-cols_large--1,.g-cols_large--2,.g-cols_large--3,.g-cols_large--4,.g-cols_large--5,.g-cols_large--6,.g-cols_large--7,.g-cols_large--8,.g-cols_large--9,.g-cols_large--10,.g-cols_large--11,.g-cols_large--12
+.g-cols__xs-1,.g-cols__xs-2,.g-cols__xs-3,.g-cols__xs-4,.g-cols__xs-5,.g-cols__xs-6,.g-cols__xs-7,.g-cols__xs-8,.g-cols__xs-9,.g-cols__xs-10,.g-cols__xs-11,.g-cols__xs-12,.g-cols__m-1,.g-cols__m-2,.g-cols__m-3,.g-cols__m-4,.g-cols__m-5,.g-cols__m-6,.g-cols__m-7,.g-cols__m-8,.g-cols__m-9,.g-cols__m-10,.g-cols__m-11,.g-cols__m-12,.g-cols__s-1,.g-cols__s-2,.g-cols__s-3,.g-cols__s-4,.g-cols__s-5,.g-cols__s-6,.g-cols__s-7,.g-cols__s-8,.g-cols__s-9,.g-cols__s-10,.g-cols__s-11,.g-cols__s-12,.g-cols__l-1,.g-cols__l-2,.g-cols__l-3,.g-cols__l-4,.g-cols__l-5,.g-cols__l-6,.g-cols__l-7,.g-cols__l-8,.g-cols__l-9,.g-cols__l-10,.g-cols__l-11,.g-cols__l-12
 {
     padding:0 15px;
     position:relative;
     float:left;
-    width:100%;
+    max-width:100%;
     min-height:1px;
 }
 @media screen and(min-width:0px)
 {
-    .g-cols_mini
+    .g-cols__xs
     {
         //widths
-        &--1
+        &-1
         {
             width:100%/12;
         }
-        &--2
+        &-2
         {
             width:(100%/12)*2;
         }
-        &--3
+        &-3
         {
             width:(100%/12)*3;
         }
-        &--4
+        &-4
         {
             width:(100%/12)*4;
         }
-        &--5
+        &-5
         {
             width:(100%/12)*5;
         }
-        &--6
+        &-6
         {
             width:(100%/12)*6;
         }
-        &--7
+        &-7
         {
             width:(100%/12)*7;
         }
-        &--8
+        &-8
         {
             width:(100%/12)*8;
         }
-        &--9
+        &-9
         {
             width:(100%/12)*9;
         }
-        &--10
+        &-10
         {
             width:(100%/12)*10;
         }
-        &--11
+        &-11
         {
             width:(100%/12)*11;
         }
-        &--12
+        &-12
         {
             width:100%;
         }
         //widths
         //offsets
-        &--offset1
+        &-offset1
         {
             margin-left:100%-(100%/12*11);
         }
-        &--offset2
+        &-offset2
         {
             margin-left:100%-(100%/12*10);
         }
-        &--offset3
+        &-offset3
         {
             margin-left:100%-(100%/12*9);
         }
-        &--offset4
+        &-offset4
         {
             margin-left:100%-(100%/12*8);
         }
-        &--offset5
+        &-offset5
         {
             margin-left:100%-(100%/12*7);
         }
-        &--offset6
+        &-offset6
         {
             margin-left:100%-(100%/12*6);
         }
-        &--offset7
+        &-offset7
         {
             margin-left:100%-(100%/12*5);
         }
-        &--offset8
+        &-offset8
         {
             margin-left:100%-(100%/12*4);
         }
-        &--offset9
+        &-offset9
         {
             margin-left:100%-(100%/12*3);
         }
-        &--offset10
+        &-offset10
         {
             margin-left:100%-(100%/12*2);
         }
-        &--offset11
-        {
-            margin-left:100%-(100%/12*1);
-        }
-        //offsets
-    }
-}
-@media screen and(min-width:@mini)
-{
-    .g-cols_middle
-    {
-        //widths
-        &--1
-        {
-            width:100%/12;
-        }
-        &--2
-        {
-            width:(100%/12)*2;
-        }
-        &--3
-        {
-            width:(100%/12)*3;
-        }
-        &--4
-        {
-            width:(100%/12)*4;
-        }
-        &--5
-        {
-            width:(100%/12)*5;
-        }
-        &--6
-        {
-            width:(100%/12)*6;
-        }
-        &--7
-        {
-            width:(100%/12)*7;
-        }
-        &--8
-        {
-            width:(100%/12)*8;
-        }
-        &--9
-        {
-            width:(100%/12)*9;
-        }
-        &--10
-        {
-            width:(100%/12)*10;
-        }
-        &--11
-        {
-            width:(100%/12)*11;
-        }
-        &--12
-        {
-            width:100%;
-        }
-        //widths
-        //offsets
-        &--offset1
-        {
-            margin-left:100%-(100%/12*11);
-        }
-        &--offset2
-        {
-            margin-left:100%-(100%/12*10);
-        }
-        &--offset3
-        {
-            margin-left:100%-(100%/12*9);
-        }
-        &--offset4
-        {
-            margin-left:100%-(100%/12*8);
-        }
-        &--offset5
-        {
-            margin-left:100%-(100%/12*7);
-        }
-        &--offset6
-        {
-            margin-left:100%-(100%/12*6);
-        }
-        &--offset7
-        {
-            margin-left:100%-(100%/12*5);
-        }
-        &--offset8
-        {
-            margin-left:100%-(100%/12*4);
-        }
-        &--offset9
-        {
-            margin-left:100%-(100%/12*3);
-        }
-        &--offset10
-        {
-            margin-left:100%-(100%/12*2);
-        }
-        &--offset11
+        &-offset11
         {
             margin-left:100%-(100%/12*1);
         }
@@ -300,100 +197,100 @@ body
 }
 @media screen and(min-width:@middle)
 {
-    .g-cols_medium
+    .g-cols__s
     {
         //widths
-        &--1
+        &-1
         {
             width:100%/12;
         }
-        &--2
+        &-2
         {
             width:(100%/12)*2;
         }
-        &--3
+        &-3
         {
             width:(100%/12)*3;
         }
-        &--4
+        &-4
         {
             width:(100%/12)*4;
         }
-        &--5
+        &-5
         {
             width:(100%/12)*5;
         }
-        &--6
+        &-6
         {
             width:(100%/12)*6;
         }
-        &--7
+        &-7
         {
             width:(100%/12)*7;
         }
-        &--8
+        &-8
         {
             width:(100%/12)*8;
         }
-        &--9
+        &-9
         {
             width:(100%/12)*9;
         }
-        &--10
+        &-10
         {
             width:(100%/12)*10;
         }
-        &--11
+        &-11
         {
             width:(100%/12)*11;
         }
-        &--12
+        &-12
         {
             width:100%;
         }
         //widths
         //offsets
-        &--offset1
+        &-offset1
         {
             margin-left:100%-(100%/12*11);
         }
-        &--offset2
+        &-offset2
         {
             margin-left:100%-(100%/12*10);
         }
-        &--offset3
+        &-offset3
         {
             margin-left:100%-(100%/12*9);
         }
-        &--offset4
+        &-offset4
         {
             margin-left:100%-(100%/12*8);
         }
-        &--offset5
+        &-offset5
         {
             margin-left:100%-(100%/12*7);
         }
-        &--offset6
+        &-offset6
         {
             margin-left:100%-(100%/12*6);
         }
-        &--offset7
+        &-offset7
         {
             margin-left:100%-(100%/12*5);
         }
-        &--offset8
+        &-offset8
         {
             margin-left:100%-(100%/12*4);
         }
-        &--offset9
+        &-offset9
         {
             margin-left:100%-(100%/12*3);
         }
-        &--offset10
+        &-offset10
         {
             margin-left:100%-(100%/12*2);
         }
-        &--offset11
+        &-offset11
         {
             margin-left:100%-(100%/12*1);
         }
@@ -402,100 +299,202 @@ body
 }
 @media screen and(min-width:@medium)
 {
-    .g-cols_large
+    .g-cols__m
     {
         //widths
-        &--1
+        &-1
         {
             width:100%/12;
         }
-        &--2
+        &-2
         {
             width:(100%/12)*2;
         }
-        &--3
+        &-3
         {
             width:(100%/12)*3;
         }
-        &--4
+        &-4
         {
             width:(100%/12)*4;
         }
-        &--5
+        &-5
         {
             width:(100%/12)*5;
         }
-        &--6
+        &-6
         {
             width:(100%/12)*6;
         }
-        &--7
+        &-7
         {
             width:(100%/12)*7;
         }
-        &--8
+        &-8
         {
             width:(100%/12)*8;
         }
-        &--9
+        &-9
         {
             width:(100%/12)*9;
         }
-        &--10
+        &-10
         {
             width:(100%/12)*10;
         }
-        &--11
+        &-11
         {
             width:(100%/12)*11;
         }
-        &--12
+        &-12
         {
             width:100%;
         }
         //widths
         //offsets
-        &--offset1
+        &-offset1
         {
             margin-left:100%-(100%/12*11);
         }
-        &--offset2
+        &-offset2
         {
             margin-left:100%-(100%/12*10);
         }
-        &--offset3
+        &-offset3
         {
             margin-left:100%-(100%/12*9);
         }
-        &--offset4
+        &-offset4
         {
             margin-left:100%-(100%/12*8);
         }
-        &--offset5
+        &-offset5
         {
             margin-left:100%-(100%/12*7);
         }
-        &--offset6
+        &-offset6
         {
             margin-left:100%-(100%/12*6);
         }
-        &--offset7
+        &-offset7
         {
             margin-left:100%-(100%/12*5);
         }
-        &--offset8
+        &-offset8
         {
             margin-left:100%-(100%/12*4);
         }
-        &--offset9
+        &-offset9
         {
             margin-left:100%-(100%/12*3);
         }
-        &--offset10
+        &-offset10
         {
             margin-left:100%-(100%/12*2);
         }
-        &--offset11
+        &-offset11
+        {
+            margin-left:100%-(100%/12*1);
+        }
+        //offsets
+    }
+}
+@media screen and(min-width:@large)
+{
+    .g-cols__l
+    {
+        //widths
+        &-1
+        {
+            width:100%/12;
+        }
+        &-2
+        {
+            width:(100%/12)*2;
+        }
+        &-3
+        {
+            width:(100%/12)*3;
+        }
+        &-4
+        {
+            width:(100%/12)*4;
+        }
+        &-5
+        {
+            width:(100%/12)*5;
+        }
+        &-6
+        {
+            width:(100%/12)*6;
+        }
+        &-7
+        {
+            width:(100%/12)*7;
+        }
+        &-8
+        {
+            width:(100%/12)*8;
+        }
+        &-9
+        {
+            width:(100%/12)*9;
+        }
+        &-10
+        {
+            width:(100%/12)*10;
+        }
+        &-11
+        {
+            width:(100%/12)*11;
+        }
+        &-12
+        {
+            width:100%;
+        }
+        //widths
+        //offsets
+        &-offset1
+        {
+            margin-left:100%-(100%/12*11);
+        }
+        &-offset2
+        {
+            margin-left:100%-(100%/12*10);
+        }
+        &-offset3
+        {
+            margin-left:100%-(100%/12*9);
+        }
+        &-offset4
+        {
+            margin-left:100%-(100%/12*8);
+        }
+        &-offset5
+        {
+            margin-left:100%-(100%/12*7);
+        }
+        &-offset6
+        {
+            margin-left:100%-(100%/12*6);
+        }
+        &-offset7
+        {
+            margin-left:100%-(100%/12*5);
+        }
+        &-offset8
+        {
+            margin-left:100%-(100%/12*4);
+        }
+        &-offset9
+        {
+            margin-left:100%-(100%/12*3);
+        }
+        &-offset10
+        {
+            margin-left:100%-(100%/12*2);
+        }
+        &-offset11
         {
             margin-left:100%-(100%/12*1);
         }
@@ -503,5 +502,74 @@ body
     }
 }
 ////greed
+////hidden-blocks
+.g-hidden
+{
+    &__xs
+    {
+        @media screen and(min-width:0px) and (max-width:@mini)
+        {
+            display:none!important;
+        }
+    }
+    &__s
+    {
+        @media screen and(min-width:@mini) and (max-width:@middle)
+        {
+            display:none!important;
+        }
+    }
+    &__m
+    {
+        @media screen and(min-width:@middle) and (max-width:@medium)
+        {
+            display:none!important;
+        }
+    }
+    &__l
+    {
+        @media screen and(min-width:@medium)
+        {
+            display:none!important;
+        }
+    }
+    &__all
+    {
+        display:none!important;
+    }
+}
+.g-visible
+{
+    &__xs
+    {
+        @media screen and(min-width:0px) and (max-width:@mini)
+        {
+            display:block;
+        }
+    }
+    &__s
+    {
+        @media screen and(min-width:@mini) and (max-width:@middle)
+        {
+            display:block;
+        }
+    }
+    &__m
+    {
+        @media screen and(min-width:@middle) and (max-width:@medium)
+        {
+            display:block;
+        }
+    }
+    &__l
+    {
+        @media screen and(min-width:@medium)
+        {
+            display:block;
+        }
+    }
+}
+////hidden-blocks end
 //grid system
 
+@import 'additional.less';
