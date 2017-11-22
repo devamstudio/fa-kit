@@ -10,8 +10,8 @@
 ## Examples
 ## Features
 ## TODO
-[ ] Grid system
-[ ] Text rules
-[ ] Mixins
-[ ] Modals
-[ ] JS
+- [ ] Grid system
+- [ ] Text rules
+- [ ] Mixins
+- [ ] Modals
+- [ ] JS
