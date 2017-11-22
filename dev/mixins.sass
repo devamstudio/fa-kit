@@ -1,0 +1,32 @@
+//* 1. Media mixins */
+//* 2. Grid mixins */
+
+
+//* 1. Media mixins */
+// 1.1 Get media query up
+@mixin media_query_up($breakpoint)
+	@if map-has-key($media_quaries, $breakpoint)
+		@media (min-width: #{map-get($media_quaries, $breakpoint)})
+			@content
+// 1.2 Get media query down
+@mixin media_query_down($breakpoint)
+	@if map-has-key($media_quaries, $breakpoint)
+		@media (max-width: #{map-get($media_quaries, $breakpoint)})
+			@content
+// 1.3 Get media query between
+@mixin media_query_between($breakpoint_min, $breakpoint_max)
+	@if map-has-key($media_quaries, $breakpoint_min) && ($media_quaries, $breakpoint_max)
+		@media (min-width: #{map-get($media_quaries, $breakpoint_min)}) and (max-width: #{map-get($media_quaries, $breakpoint_max)} )
+			@content
+
+//* 2. Grid mixins */
+// 2.1 Create grid
+@mixin touch_grid($grid_cols, $media_quaries)
+	@each $item, $size in $media_quaries
+		@include media_query_up($item)
+			@for $col from 1 through $grid_cols
+				.g-cols__#{$item}-#{$col}
+					width : 100% / $grid_cols * $col
+				.g-offset__#{$item}-#{$col}
+					margin-left : 100% - (100% / $grid_cols * ($grid_cols - $col))
+					

@@ -1,0 +1,102 @@
+//Create by Arseny / i-am.studio
+//reset
+
+*
+	margin : 0
+	padding : 0
+	box-sizing : border-box
+
+body
+	width : 100%
+
+//grid system
+////container
+.g-container
+	width : 100%
+	padding : 0 15px
+	margin : auto
+	clear : both
+	position : relative
+	&:before
+		content : ''
+		clear : both
+		display : block
+	&:after
+		content : ''
+		clear : both
+		display : block
+	&__wide
+		max-width : 100%!important
+	@include media_query_up(md)
+		max-width : 1000px
+	@include media_query_up(lg)
+		max-width : 1200px
+.g-clearfix
+	display : block
+	width : 100%
+	clear : both
+	overflow : hidden
+%row
+	width : inherit
+	margin-left : -15px
+	margin-right : -15px
+	&:before
+		content : ''
+		display : block
+		clear : both
+	&:after
+		content : ''
+		display : block
+		clear : both
+.g-row
+	@extend %row
+	display : flex
+	flex :
+		direction : row
+.g-column
+	@extend %row
+	display : flex
+	flex :
+		direction : column
+////container
+////greed
+.g-cols__xs-1,.g-cols__xs-2,.g-cols__xs-3,.g-cols__xs-4,.g-cols__xs-5,.g-cols__xs-6,.g-cols__xs-7,.g-cols__xs-8,.g-cols__xs-9,.g-cols__xs-10,.g-cols__xs-11,.g-cols__xs-12,.g-cols__md-1,.g-cols__md-2,.g-cols__md-3,.g-cols__md-4,.g-cols__md-5,.g-cols__md-6,.g-cols__md-7,.g-cols__md-8,.g-cols__md-9,.g-cols__md-10,.g-cols__md-11,.g-cols__md-12,.g-cols__sm-1,.g-cols__sm-2,.g-cols__sm-3,.g-cols__sm-4,.g-cols__sm-5,.g-cols__sm-6,.g-cols__sm-7,.g-cols__sm-8,.g-cols__sm-9,.g-cols__sm-10,.g-cols__sm-11,.g-cols__sm-12,.g-cols__lg-1,.g-cols__lg-2,.g-cols__lg-3,.g-cols__lg-4,.g-cols__lg-5,.g-cols__lg-6,.g-cols__lg-7,.g-cols__lg-8,.g-cols__lg-9,.g-cols__lg-10,.g-cols__lg-11,.g-cols__lg-12
+	padding : 0 15px
+	position : relative
+	float : left
+	max-width : 100%
+	min-height : 1px
+@include touch_grid($grid_cols, $media_quaries)
+////greed
+
+////hidden-blocks
+.g-hidden
+	&__xs
+		@include media_query_down(xs)
+			display : none!important
+	&__sm
+		@include media_query_between(xs, sm)
+			display : none!important
+	&__md
+		@include media_query_between(sm, md)
+			display : none!important
+	&__lg
+		@include media_query_up(lg)
+			display : none!important
+	&__all
+		display : none!important
+.g-visible
+	&__xs
+		@include media_query_down(xs)
+			display : block
+	&__sm
+		@include media_query_between(xs, sm)
+			display : block
+	&__md
+		@include media_query_between(sm, md)
+			display : block
+	&__lg
+		@include media_query_up(lg)
+			display : block
+////hidden-blocks end
+//grid system

@@ -24,7 +24,7 @@ var dest = 'dist/';
 gulp.task('sass', function () {
   return gulp.src( source + 'fa-kit.sass' )
 	.pipe(sass_globbing() )
-	.pipe(sass( { outputStyle: 'compressed' } ).on( 'error', sass.logError ) )
+	  .pipe(sass(  ).on( 'error', sass.logError ) )
 	.pipe(gulp.dest(dest));
 });
 gulp.task('coffee', function() {

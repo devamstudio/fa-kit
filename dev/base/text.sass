@@ -1,0 +1,40 @@
+$text : 'g-text'
+
+/* 1. Touch text */
+/* 2. Align text */
+
+/* 1. Touch text */
+body,html
+	font-size : $font_base_size
+	line-height : $text_line_height
+
+// Create headings
+@each $heading, $size in $font_heading_sizes
+	#{$heading}
+		font :
+			size : $size
+			family : $font_heading
+		margin : 15px 0 20px 0
+		color : $font_heading_color
+// Create main text
+p
+	font :
+		size : $font_main_size
+		family : $font_main
+	margin : 0 0 1rem 0
+	color : $font_main_color
+span,a,strong,i,b
+	font :
+		size : inherit
+		family : inherit
+
+/* 2. Align text */
+.#{$text}
+	@each $align in $text_align_list
+		&__#{$align}
+			text-align : $align
+	@each $size, $tmp in $media_quaries
+		@include media_query_up($size)
+			@each $align in $text_align_list
+				&__#{$size}-#{$align}
+					text-align : $align

@@ -1,0 +1,32 @@
+//* 1. Margins and paddings */
+
+//* 1. Margins and paddings */
+$offset_side : margin, padding
+@each $item in $offset_side
+	.g-#{$item}
+		@each $direction in $directions
+			@each $offset, $offset_value in $direction_offset
+				&__#{$direction}-#{$offset}
+					#{$item} :
+						@if $direction == yy
+							top : $offset_value
+							bottom : $offset_value
+						@else if $direction == xx
+							right : $offset_value
+							left : $offset_value
+						@else
+							#{$direction} : $offset_value
+		@each $size, $tmp in $media_quaries
+			@include media_query_up($size)
+				@each $direction in $directions
+					@each $offset, $offset_value in $direction_offset
+						&__#{$size}-#{$direction}-#{$offset}
+							#{$item} :
+								@if $direction == yy
+									top : $offset_value
+									bottom : $offset_value
+								@else if $direction == xx
+									right : $offset_value
+									left : $offset_value
+								@else
+									#{$direction} : $offset_value

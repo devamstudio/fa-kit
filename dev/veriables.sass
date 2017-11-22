@@ -1,9 +1,12 @@
-//Colors
-//$c-cta : #124381
-$c-cta : #e66b30
-$c-cta_sub : #fab51b
+//* 1. Colors */
+//* 2. Grid */
+//* 3. Text */
+//* 4. Margin and paddings */
 
-//adds
+//* 1. Colors */
+$c-cta : #124388
+$c-cta_sub : #fab51b
+//gray
 $c-gray_light : #eaeaea
 $c-gray : #a4a4a4
 $c-gray_dark : #727272
@@ -15,10 +18,27 @@ $c_alert : $c-red
 $c_warning : #fab51b
 $c_ok : #3baa35
 
+//* 2. Grid */
+$grid_cols : 12
+$containers : ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px )
+$media_quaries : ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px )
 
-////sizes
-$mini : 500px
-$middle : 900px
-$medium : 1024px
-$large : 1220px
-////sizes
+//* 3. Text */
+// Family
+$font_heading : Arial, -apple-system, system-ui
+$font_main : Arial, -apple-system, system-ui
+// Size
+$font_base_size : 16px
+$font_heading_sizes : ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem )
+$font_main_size : 1rem
+// Color
+$font_heading_color : black
+$font_main_color : $c-gray_dark
+// Align
+$text_align_list : left, right, center, justify
+// Other
+$text_line_height : 1.61
+
+//* 4. Margin and paddings */
+$directions : left, right, top, bottom, yy, xx
+$direction_offset : ( 1 : 1rem , 2 : 1.5rem , 3 : 2rem , 4 : 3rem , 5 : 5rem )
