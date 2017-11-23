@@ -1,15 +1,30 @@
-.b-input
+//* 1. Input fields */
+//* 2. Input groups */
+//* 3. Form groups */
+
+//* 1. Input fields */
+.g-input
 	display : block
 	font-weight : inherit
-	color : black
+	color : $color-black
 	overflow : hidden
-	margin : 10px 0
+	padding : $fields-inset-y $fields-inset-x
+	@if $global-rounded
+		border :
+			radius : $fields-radius
+			style : $fields-border-style
+			width : $fields-border-width
+			color : $color-gray__light
+	font-size : $font-main-size
 	&_caption
-		font-size : 10pt
-		color : $c-gray
-	&_field
-		display : block
-		width : 100%
-		padding : 7px 10px
-		border : 1px solid lighten($c-gray,20%)
-		margin : 10px 0
+		font-size : $font-main-size * 0.9
+		color : $color-gray
+
+
+//* 2. Input groups */
+.g-input + .g-button
+	border-top-left-radius: 0rem !important
+	border-bottom-left-radius: 0rem !important
+	margin-left : -$fields-radius
+
+//* 3. Form groups */

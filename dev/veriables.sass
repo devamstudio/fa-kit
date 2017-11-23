@@ -2,43 +2,85 @@
 //* 2. Grid */
 //* 3. Text */
 //* 4. Margin and paddings */
+//* 5. Design */
+//* 6. Buttons */
+//* 7. Fields */
+
 
 //* 1. Colors */
-$c-cta : #124388
-$c-cta_sub : #fab51b
-//gray
-$c-gray_light : #eaeaea
-$c-gray : #a4a4a4
-$c-gray_dark : #727272
-//other
-$c-red : #bc1817
+$color-red    : #bc1817
+$color-blue   : #124388
+$color-yellow : #fab51b
+$color-green  : #3baa35
+$color-white  : white
+$color-black  : black
+// Gray
+$color-gray__light : #eaeaea
+$color-gray        : #a4a4a4
+$color-gray__dark  : #727272
+// Interface
+$color-primary   : $color-red
+$color-secondary : $color-yellow
+$color-alert     : $color-red
+$color-warning   : $color-yellow
+$color-ok        : $color-green
 
-//notifications
-$c_alert : $c-red
-$c_warning : #fab51b
-$c_ok : #3baa35
 
 //* 2. Grid */
-$grid_cols : 12
-$containers : ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px )
-$media_quaries : ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px )
+$grid-cols : 12
+$containers         : ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px )
+$media-quaries_up   : ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px )
+$media-quaries_down : ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1220px )
+
 
 //* 3. Text */
 // Family
-$font_heading : Arial, -apple-system, system-ui
-$font_main : Arial, -apple-system, system-ui
+$font-heading : Arial, -apple-system, system-ui
+$font-main    : Arial, -apple-system, system-ui
 // Size
-$font_base_size : 16px
-$font_heading_sizes : ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem )
-$font_main_size : 1rem
+$font-base-size     : 16px
+$font-heading-sizes : ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem )
+$font-main-size     : 1rem
 // Color
-$font_heading_color : black
-$font_main_color : $c-gray_dark
+$font-heading-color : $color-black
+$font-main-color    : $color-gray__dark
 // Align
-$text_align_list : left, right, center, justify
+$text-align-list : left, right, center, justify
 // Other
-$text_line_height : 1.61
+$text-line-height : 1.61
+
 
 //* 4. Margin and paddings */
-$directions : left, right, top, bottom, yy, xx
-$direction_offset : ( 1 : 1rem , 2 : 1.5rem , 3 : 2rem , 4 : 3rem , 5 : 5rem )
+$directions       : left, right, top, bottom, yy, xx
+$direction-offset : ( 0 : 0 , 1 : 1rem , 2 : 1.5rem , 3 : 2rem , 4 : 3rem , 5 : 5rem )
+
+
+//* 5. Design */
+// Rounded
+$global-rounded : true
+$global-rounded-radius : 0.2rem
+// Animation
+$global-animation : true
+$global-animation-delay : 0.2s
+//Inputs
+$global-input-inset-y: .5rem
+$global-input-inset-x: 1rem
+
+
+//* 6. Buttons */
+$buttons-color : ( primary : $color-primary, secondary : $color-secondary, alert : $color-alert, warning : $color-warning, ok : $color-ok, black : $color-black, white : $color-white )
+$buttons-inset-x : $global-input-inset-x
+$buttons-inset-y : $global-input-inset-y
+$buttons-radius : ''
+@if $global-rounded
+	$buttons-radius : $global-rounded-radius
+
+
+//* 7. Fields */
+$fields-inset-x : $global-input-inset-x
+$fields-inset-y : $global-input-inset-y
+$fields-radius : ''
+@if $global-rounded
+	$fields-radius : $global-rounded-radius
+$fields-border-width : 0.1rem
+$fields-border-style : solid

@@ -1,25 +1,26 @@
 .b-pagination
-    list-style-type : none
-    padding : 15px 0
-    margin : 0
-    overflow : hidden
-    &__center
-        text-align : center
-    &_item
-        display : inline-block
-        border : 1px solid $c-gray_light
-        margin : 0
-        padding : 0
-        transition : background-color 0.2s
-        cursor : pointer
-        &:hover
-            background-color : $c-gray_light
-        &__active
-            background-color : $c-cta_sub
-            &:hover
-                background-color : darken($c-cta_sub,5%)
-        a
-            color : black
-            text-decoration : none
-            padding : 7px 15px
-            display : block
+	list-style-type : none
+	padding : 15px 0
+	margin : 0
+	overflow : hidden
+	&__center
+		text-align : center
+	&_item
+		display : inline-block
+		border : 1px solid $color-gray__light
+		margin : 0
+		padding : 0
+		cursor : pointer
+		@if $global-animation
+			transition : background-color $global-animation-delay
+		&:hover
+			background-color : $color-gray__light
+		&__active
+			background-color : $color-secondary
+			&:hover
+				background-color : darken($color-secondary,5%)
+		a
+			color : black
+			text-decoration : none
+			padding : 7px 15px
+			display : block

@@ -33,7 +33,7 @@ span,a,strong,i,b
 	@each $align in $text_align_list
 		&__#{$align}
 			text-align : $align
-	@each $size, $tmp in $media_quaries
+	@each $size, $tmp in $media_quaries_up
 		@include media_query_up($size)
 			@each $align in $text_align_list
 				&__#{$size}-#{$align}

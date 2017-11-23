@@ -1,0 +1,32 @@
+//* 1. Design*/
+
+//* 1. Design*/
+.g-button
+	display : inline-block
+	padding : $buttons-inset-y $buttons-inset-x
+	@if $global-rounded
+		border-radius : $buttons-radius
+	color : $color-white
+	text :
+		align : center
+		decoration : none
+	font-size : $font-main-size
+	cursor : pointer
+	@each $state, $color in $buttons-color
+		&__#{$state}
+			background-color : $color
+			@if $state == white
+				color : $color-white
+			@if $global-animation
+				transition : background-color $global-animation-delay
+			&:hover
+				background-color : lighten( $color, 10% )
+			&:active
+				background-color : darken( $color, 10% )
+	//disabled
+	&__disabled
+		background-color : lighten($color-gray, 10%)
+		border-bottom : 3px solid darken($color-gray, 15%)
+		&:hover
+			background-color : lighten($color-gray, 15%)
+	//disabled end
