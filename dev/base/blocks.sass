@@ -1,0 +1,8 @@
+$block : 'g-block'
+.#{$block}
+	@each $state, $color in $colors
+		&__background-#{$state}
+			background-color : $color
+	@each $state, $color in $colors
+		&__border-#{$state}
+			border : .1rem solid $color

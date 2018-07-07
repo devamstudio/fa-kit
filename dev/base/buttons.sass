@@ -7,16 +7,20 @@
 	@if $global-rounded
 		border-radius : $buttons-radius
 	color : $color-white
+	appearance : none
+	-webkit-appearance : none
+	outline: none
+	border: none
 	text :
 		align : center
 		decoration : none
 	font-size : $font-main-size
 	cursor : pointer
-	@each $state, $color in $buttons-color
+	@each $state, $color in $colors
 		&__#{$state}
 			background-color : $color
 			@if $state == white
-				color : $color-white
+				color : $color-black
 			@if $global-animation
 				transition : background-color $global-animation-delay
 			&:hover

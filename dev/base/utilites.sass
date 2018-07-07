@@ -1,5 +1,4 @@
 //* 1. Margins and paddings */
-//* 2. Visibility*/
 
 //* 1. Margins and paddings */
 $offset_side : margin, padding
@@ -32,34 +31,3 @@ $offset_side : margin, padding
 								@else
 									#{$direction} : $offset_value
 	
-//* 2. Visibility*/
-////hidden-blocks
-.g-hidden
-	&__xs
-		@include media_query_down(xs)
-			display : none!important
-	&__sm
-		@include media_query_between(sm)
-			display : none!important
-	&__md
-		@include media_query_between(md)
-			display : none!important
-	&__lg
-		@include media_query_up(lg)
-			display : none!important
-	&__all
-		display : none!important
-.g-visible
-	&__xs
-		@include media_query_down(xs)
-			display : block
-	&__sm
-		@include media_query_between(sm)
-			display : block
-	&__md
-		@include media_query_between(md)
-			display : block
-	&__lg
-		@include media_query_up(lg)
-			display : block
-////hidden-blocks end

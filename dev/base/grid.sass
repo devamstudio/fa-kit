@@ -40,19 +40,23 @@ body
 	flex :
 		direction : row
 	&__no-offset
-		*[class*='g-cols__']
+		& > [class*='g-cols__']
 			padding :
 				left : 0rem!important
 				right : 0rem!important
+	&__no-inset
+		margin: 0
 .g-column
 	@extend %row
 	flex :
 		direction : column
 	&__no-offset
-		*[class*='g-cols__']
+		& > [class*='g-cols__']
 			padding :
 				left : 0rem!important
 				right : 0rem!important
+	&__no-inset
+		margin: 0
 ////container
 
 ////greed

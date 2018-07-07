@@ -1,21 +1,26 @@
 $text : 'g-text'
+$list : 'g-list'
 
 /* 1. Touch text */
-/* 2. Align text */
+/* 2. Color text */
+/* 3. Align text */
 
 /* 1. Touch text */
 body,html
-	font-size : $font_base_size
+	font :
+		family : $font-main
+		size : $font_base_size
 	line-height : $text_line_height
 
 // Create headings
 @each $heading, $size in $font_heading_sizes
-	#{$heading}
+	#{$heading},.#{$heading}
 		font :
 			size : $size
 			family : $font_heading
-		margin : 15px 0 20px 0
+		margin : 1em 0 .5em 0
 		color : $font_heading_color
+		font-weight : 400
 // Create main text
 p
 	font :
@@ -27,9 +32,16 @@ span,a,strong,i,b
 	font :
 		size : inherit
 		family : inherit
+a
+	text-decoration : none
+	color : $color-primary
 
-/* 2. Align text */
 .#{$text}
+	/* 2. Color text */
+	@each $state, $color in $colors
+		&__#{$state}
+			color : $color
+	/* 3. Align text */
 	@each $align in $text_align_list
 		&__#{$align}
 			text-align : $align
@@ -38,3 +50,15 @@ span,a,strong,i,b
 			@each $align in $text_align_list
 				&__#{$size}-#{$align}
 					text-align : $align
+
+.#{$list}
+	&__unstyled
+		list-style-type : none
+		li
+			a,span
+				text-decoration : none
+				display : inline-block
+				color : $font-main-color
+				padding : $buttons-inset-y/2 0
+				&:hover
+					text-decoration : underline
