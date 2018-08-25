@@ -1,6 +1,8 @@
-//* 1. Margins and paddings */
+//* 1. Margins and paddings
+//* 2. Flex ordering
+//* 3. Flex aligning
 
-//* 1. Margins and paddings */
+//* 1. Margins and paddings
 $offset_side : margin, padding
 @each $item in $offset_side
 	.g-#{$item}
@@ -30,4 +32,35 @@ $offset_side : margin, padding
 									left : $offset_value
 								@else
 									#{$direction} : $offset_value
-	
+
+//* 2. Flex ordering
+.g-order
+	@for $i from 0 through $grid-cols
+		&__#{$i}
+			order: $i
+		@each $size, $tmp in $media_quaries_up
+			@include media_query_up($size)
+				&__#{$size}-#{$i}
+					order: $i
+		&__first
+			order: 0
+		&__last
+			order: $grid-cols
+		@each $size, $tmp in $media_quaries_up
+			@include media_query_up($size)
+				&__#{$size}-first
+					order: 0
+				&__#{$size}-last
+					order: $grid-cols
+
+//* 3. Flex aligning
+.g-align
+	&-items
+		@each $align, $align_value in $flex-align_items-list
+			&__#{$align}
+				align-items: $align_value
+		@each $size, $tmp in $media_quaries_up
+			@include media_query_up($size)
+				@each $align, $align_value in $flex-align_items-list
+					&__#{$size}-#{$align}
+						align-items: $align_value
