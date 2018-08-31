@@ -32,6 +32,7 @@
 			@for $col from 1 through $grid_cols
 				.g-cols__#{$item}-#{$col}
 					max-width : 100% / $grid_cols * $col
+					display: block
 					flex : 0 0 ( 100% / $grid_cols * $col )
 				.g-offset__#{$item}-#{$col}
 					margin-left : 100% - (100% / $grid_cols * ($grid_cols - $col))
