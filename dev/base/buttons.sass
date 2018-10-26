@@ -19,7 +19,7 @@
 	@each $state, $color in $colors
 		&__#{$state}
 			background-color : $color
-			@if $state == white
+			@if $state == white or $state == light
 				color : $color-black
 			@if $global-animation
 				transition : background-color $global-animation-delay
