@@ -20,8 +20,8 @@ body,html
 			size : $size
 			family : $font_heading
 		margin:
-			top: 0
-			bottom: .5em
+			top: .5em
+			bottom: .2em
 		font-weight : 400
 // Create main text
 p
@@ -33,9 +33,11 @@ span,a,strong,i,b
 	font :
 		size : inherit
 		family : inherit
-a
+a:link
 	text-decoration : none
 	color : $color-blue
+	&:hover
+		text-decoration : underline
 
 .#{$text}
 	/* 2. Color text */
