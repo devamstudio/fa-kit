@@ -51,3 +51,70 @@
     <div class="g-column g-column__no-inset">Работает по тому же принципу, что и .g-row__no-inset</div>
 </section>
 ```
+## Сетка
+Ну и наконец поговорим о сетке. В качестве базовой мы разработали сетку на 12 колонок. Но данные параметры можно поменять в [файле настроек](https://github.com/devamstudio/fa-kit/blob/master/dev/variables.sass). Вас должна интересовать переменная `$grid-cols`. В ней можно указать любое количество необходимых колонок. Обычно это 12 и 16.
+<table>
+	<tr>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+		<td>.g-cols__xs-1</td>
+	</tr>
+	<tr>
+		<td colspan="2">.g-cols__xs-2</td>
+		<td colspan="2">.g-cols__xs-2</td>
+		<td colspan="2">.g-cols__xs-2</td>
+		<td colspan="2">.g-cols__xs-2</td>
+		<td colspan="2">.g-cols__xs-2</td>
+		<td colspan="2">.g-cols__xs-2</td>
+	</tr>
+	<tr>
+		<td colspan="3">.g-cols__xs-3</td>
+		<td colspan="3">.g-cols__xs-3</td>
+		<td colspan="3">.g-cols__xs-3</td>
+		<td colspan="3">.g-cols__xs-3</td>
+	</tr>
+	<tr>
+		<td colspan="4">.g-cols__xs-4</td>
+		<td colspan="4">.g-cols__xs-4</td>
+		<td colspan="4">.g-cols__xs-4</td>
+	</tr>
+	<tr>
+		<td colspan="6">.g-cols__xs-6</td>
+		<td colspan="6">.g-cols__xs-6</td>
+	</tr>
+	<tr>
+		<td colspan="12">.g-cols__xs-12</td>
+	</tr>
+</table>
+
+В рамках респонсива, мы создали 5 размерностей:
+
+<table>
+	<thead>
+		<tr>
+			<th></th>
+			<th>XS >0px</th>
+			<th>SM >501px</th>
+			<th>MD >901px</th>
+			<th>LG >1024px</th>
+			<th>XL >1441px</th>
+		</tr>
+	</thead>
+	<tr>
+		<th scope="col">Класс</th>
+		<td>g-cols__xs-*</td>
+		<td>g-cols__sm-*</td>
+		<td>g-cols__md-*</td>
+		<td>g-cols__lg-*</td>
+		<td>g-cols__xl-*</td>
+	</tr>
+</table>
