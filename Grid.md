@@ -97,18 +97,15 @@
 </table>
 
 В рамках респонсива, мы создали 5 размерностей:
-
 <table>
-	<thead>
-		<tr>
-			<th></th>
-			<th>XS >0px</th>
-			<th>SM >501px</th>
-			<th>MD >901px</th>
-			<th>LG >1024px</th>
-			<th>XL >1441px</th>
-		</tr>
-	</thead>
+	<tr>
+		<th></th>
+		<th>XS >0px</th>
+		<th>SM >501px</th>
+		<th>MD >901px</th>
+		<th>LG >1024px</th>
+		<th>XL >1441px</th>
+	</tr>
 	<tr>
 		<th scope="col">Класс</th>
 		<td>g-cols__xs-*</td>
