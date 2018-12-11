@@ -19,8 +19,8 @@ body,html
 		font :
 			size : $size
 			family : $font_heading
-		margin:
-			top: .5em
+		margin: 0
+			top: .5rem
 			bottom: .2em
 		font-weight : 400
 // Create main text
@@ -33,7 +33,7 @@ span,a,strong,i,b
 	font :
 		size : inherit
 		family : inherit
-a:link
+a:link, a[role='link']
 	text-decoration : none
 	color : $color-blue
 	&:hover
@@ -53,8 +53,16 @@ a:link
 			@each $align in $text_align_list
 				&__#{$size}-#{$align}
 					text-align : $align
-img
+img, picture
 	line-height: 1
+	& + p, & + blockquote
+		margin-top: 1em
+
+ol, ul
+	padding:
+		left: 2em
+	margin:
+		bottom: 1em
 
 .#{$list}
 	&__unstyled
@@ -67,3 +75,22 @@ img
 				padding : $buttons-inset-y/2 0
 				&:hover
 					text-decoration : underline
+
+// Text format
+kbd
+	display: inline-block
+	padding: .1em .4em
+	font-size: .8em
+	line-height: inherit
+	background-color: $color-black
+	color: $color-white
+	border-radius: .2em
+// Text format END
+
+// Text decoration
+.g-blockquotes
+	margin:
+		left: 1.5em
+	padding: 1em
+	border-left: .1em solid $color-gray
+// Text decoration END

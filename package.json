@@ -1,30 +1,28 @@
 {
-	"name": "elecplaza",
-	"version": "2.0.0",
-	"description": "reciepes site design",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://Radiogron@bitbucket.org/iamstudiorus/pohlobkin.git"
-	},
-	"keywords": [
-		"theme",
-		"psd",
-		"reciepe"
-	],
-	"author": "Arseny M.O.",
-	"license": "ISC",
-	"homepage": "https://bitbucket.org/iamstudiorus/pohlobkin#readme",
-	"devDependencies": {
-		"gulp": "^3.9.1",
-		"gulp-plumber": "^1.1.0",
-		"gulp-pug": "^3.3.0",
-		"gulp-sass": "^3.1.0",
-		"gulp-sass-glob": "^1.0.8",
-		"gulp-util": "^3.0.8",
-		"gulp-watch": "^4.3.11",
-	}
+  "name": "fa-kit",
+  "version": "1.0.0",
+  "description": "1. About 1. How to use 1. Examples 1. Features 1. TODO",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devamstudio/fa-kit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devamstudio/fa-kit/issues"
+  },
+  "homepage": "https://github.com/devamstudio/fa-kit#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-flatten": "^0.4.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.9"
+  }
 }
