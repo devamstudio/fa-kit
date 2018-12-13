@@ -36,3 +36,12 @@
 					flex : 0 0 ( 100% / $grid_cols * $col )
 				.g-offset__#{$item}-#{$col}
 					margin-left : 100% - (100% / $grid_cols * ($grid_cols - $col))
+
+@function enumerate($list)
+	$map: ()
+
+	@for $index from 1 through  length($list)
+		$value: nth($list, $index)
+		$map: map-merge($map, ($index: $value))
+
+	@return $map

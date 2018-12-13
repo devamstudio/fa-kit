@@ -14,13 +14,15 @@ body,html
 
 // Create headings
 @each $heading, $size in $font_heading_sizes
+	$i_rev: length($font_heading_sizes) - index(($font_heading_sizes), ($heading $size))
+	$offset_top: map-get($font_heading_sizes, h+$i_rev )
 	#{$heading},.#{$heading}
 		display: block
 		font :
 			size : $size
 			family : $font_heading
 		margin: 0
-			top: .5rem
+			top: 1.61rem
 			bottom: .2em
 		font-weight : 400
 // Create main text
