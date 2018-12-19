@@ -12,7 +12,7 @@
 				&-up
 					@include media_query_up($item)
 						display: none !important
-			@elseif $item == 'xl'
+			@else if $item == 'xl'
 				@include media_query_up($item)
 					display : none !important
 				&-down
@@ -36,7 +36,7 @@
 				&-up
 					@include media_query_up($item)
 						display: block !important
-			@elseif $item == 'xl'
+			@else if $item == 'xl'
 				@include media_query_up($item)
 					display : block !important
 				&-down
