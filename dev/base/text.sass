@@ -32,13 +32,14 @@ p
 		size : $font_main_size
 		family : $font_main
 	margin : 0 0 1rem 0
-span,a,strong,i,b
+span,strong,i,b
 	font :
 		size : inherit
 		family : inherit
 a:link:not(.g-button), a[role='link']
 	text-decoration : none
 	color : $color-blue
+	text-decoration-skip: ink
 	&:hover
 		text-decoration : underline
 
@@ -57,7 +58,9 @@ a:link:not(.g-button), a[role='link']
 				&__#{$size}-#{$align}
 					text-align : $align
 img, picture
-	line-height: 1
+	line-height: 0
+	vertical-align: middle
+	border-style: none
 	& + p, & + blockquote
 		margin-top: 1em
 

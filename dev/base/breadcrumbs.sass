@@ -1,16 +1,15 @@
 $breadcrumbs : 'g-breadcrumbs'
 
 .#{$breadcrumbs}
-	ul
-		list-style-type : none
-		padding : 0
-		margin : 0
-		li
-			display : inline-block
-			a
-				&:after
-					content : '→'
-					display : inline-block
-					margin :
-						left : .5rem
-						right : 1rem
+	list-style-type : none
+	padding : 0
+	margin : 0
+	&_item
+		display : inline-block
+		&__link
+			&:after
+				content : '→'
+				display : inline-block
+				margin :
+					left : .5rem
+					right : .5rem

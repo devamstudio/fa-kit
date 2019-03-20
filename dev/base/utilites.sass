@@ -68,3 +68,13 @@ $offset_side : margin, padding
 				@each $align, $align_value in $flex-align_items-list
 					&__#{$size}-#{$align}
 						align-items: $align_value
+//* 3. Flex aligning
+.g-justify-content
+	@each $align, $align_value in $flex-align_items-list
+		&__#{$align}
+			justify-content: $align_value
+	@each $size, $tmp in $media_quaries_up
+		@include media_query_up($size)
+			@each $align, $align_value in $flex-align_items-list
+				&__#{$size}-#{$align}
+					justify-content: $align_value
