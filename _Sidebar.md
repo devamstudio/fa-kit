@@ -1,18 +1,39 @@
 # Основа
-1. [Сброс](/devamstudio/fa-kit/wiki/Grid)
-1. [Сетка](/devamstudio/fa-kit/wiki/02-Grid)
-1. [Типографика](/devamstudio/fa-kit/wiki/)
-1. [Оформление текста](/devamstudio/fa-kit/wiki/04-Text-formatting)
-1. [Медиа-контент](/devamstudio/fa-kit/wiki/07-Media)
-1. [Утилиты](/devamstudio/fa-kit/wiki/03-Utilites)
-1. [Система отображения\скрытия контента](/devamstudio/fa-kit/wiki/05-Hide-and-display)
-1. [Призрачные классы для SASS](/devamstudio/fa-kit/wiki/06-Ghosts)
+
+[Сброс](/devamstudio/fa-kit/wiki/Reset) ***
+
+[Сетка](/devamstudio/fa-kit/wiki/Grid)
+
+[Типографика](/devamstudio/fa-kit/wiki/Typography)
+
+[Оформление текста](/devamstudio/fa-kit/wiki/Article)
+
+[Медиа-контент](/devamstudio/fa-kit/wiki/Media)
+
+[Утилиты](/devamstudio/fa-kit/wiki/Utilites)
+
+[Система отображения\скрытия контента](/devamstudio/fa-kit/wiki/Hide-and-display)
+
+[Призрачные классы для SASS](/devamstudio/fa-kit/wiki/Ghosts)
+
 # Интерфейс
-1. Блоки
-1. Формы и поля ввода
-1. Кнопки
-1. Оформление модальных окон
-1. Уведомления и предупреждения
-1. Хлебные крошки
-1. Пагинация
+
+[Блоки](/devamstudio/fa-kit/wiki/Blocks)
+
+[Формы и поля ввода](/devamstudio/fa-kit/wiki/Forms)
+
+[Кнопки](/devamstudio/fa-kit/wiki/Buttons)
+
+[Оформление модальных окон](/devamstudio/fa-kit/wiki/Modals)
+
+[Уведомления и предупреждения](/devamstudio/fa-kit/wiki/Notifications)
+
+[Хлебные крошки](/devamstudio/fa-kit/wiki/Breadcrumbs)
+
+[Пагинация](/devamstudio/fa-kit/wiki/Pagination)
+
 # Настройка и использование
+
+[Как использовать](/devamstudio/fa-kit/wiki/How-to-use)
+
+[В начало проекта](/devamstudio/fa-kit/wiki/)
