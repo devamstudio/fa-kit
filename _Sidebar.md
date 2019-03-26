@@ -1,4 +1,4 @@
-#### Основа
+# Основа
 1. [Сброс](/devamstudio/fa-kit/wiki/Grid)
 1. [Сетка](/devamstudio/fa-kit/wiki/02-Grid)
 1. [Типографика](/devamstudio/fa-kit/wiki/)
