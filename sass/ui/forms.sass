@@ -1,0 +1,108 @@
+// Form //
+.#{$class-form}
+	display: block
+	.#{$class-form}_fieldset
+		display: flex
+		flex:
+			direction: column
+		margin:
+			bottom: $fields-inset-y * 3
+		padding: 0
+		border:
+			width: 1px
+			left: 0
+			bottom: 0
+			right: 0
+		legend
+			display: flex
+			margin: 0
+				bottom: $fields-inset-y * 2
+				left: $fields-inset-x / 2
+			padding: 0 $fields-inset-x / 2
+			font:
+				family: serif
+				style: italic
+				weight: 100
+				size: 80%
+			text-transform: uppercase
+		&__row
+			flex:
+				direction: row
+	// States
+	&__dark
+		.#{$class-form}_fieldset
+			border-color: white
+		.#{$class-field}
+			.#{$class-field}_input
+				border-width: 0
+					left: 0
+					top: 0
+					right: 0
+					bottom: 0
+
+// Input fields //
+.#{$class-field}
+	display: flex
+	flex:
+		direction: column
+	.#{$class-field}_label
+		margin:
+			bottom: $fields-inset-y * .5
+			left: $fields-inset-x
+		font-size : $font-main-size * 0.9
+	.#{$class-field}_input
+		font-weight : inherit
+		color : $color-black
+		padding : $fields-inset-y $fields-inset-x
+		margin:
+			bottom: $fields-inset-y
+		@if $global-rounded
+			border :
+				radius : $fields-radius
+				style : $fields-border-style
+				width : $fields-border-width
+				color : $color-gray__light
+		font-size : $font-main-size
+		// Rule for select
+		optgroup
+			font-size: 80%
+			option
+				font-size: initial
+				&:before
+					content: '- '
+		&[type="file"]
+			padding:
+				top: $fields-inset-y
+				bottom: $fields-inset-y
+			background-color: white
+			font-size: .8em
+			//border: 1px solid red
+	.#{$class-field}_helper
+		font-size : $font-main-size * 0.8
+		margin:
+			left: $fields-inset-x
+	// Rules
+	&:not(:last-child):not(.#{$class-field}__inline)
+		margin-bottom: $fields-inset-y * 3
+	// States
+	&__inline
+		display: inline-flex
+		flex:
+			direction: row
+		margin-bottom: $fields-inset-y
+		.#{$class-field}_input
+			margin: 0
+				right: $fields-inset-x / 2
+		.#{$class-field}_label
+			margin: 0
+	&__row
+		@include media_query_up(sm)
+			flex:
+				direction: row
+			align-items: center
+			.#{$class-field}_label
+				margin:
+					left: 0
+					right: $fields-inset-x
+			.#{$class-field}_input
+				flex-grow: 10

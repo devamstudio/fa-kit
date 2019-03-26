@@ -1,12 +1,11 @@
-$breadcrumbs : 'g-breadcrumbs'
-
-.#{$breadcrumbs}
+.#{$class-breadcrumbs}
 	list-style-type : none
-	padding : 0
-	margin : 0
+	padding-left: 0
 	&_item
 		display : inline-block
 		&__link
+			a
+				@extend %link
 			&:after
 				content : '→'
 				display : inline-block

@@ -1,37 +1,49 @@
 'use strict';
 
 //dependencies for build
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sass_globbing = require('gulp-sass-glob');
-var pug = require('gulp-pug');
-var plumber = require('gulp-plumber');
-var imagemin = require('gulp-imagemin');
+const gulp = require('gulp');
+const sassToCss = require('gulp-sass');
+const sassGlobbing = require('gulp-sass-glob');
+const pug = require('gulp-pug');
+const plumber = require('gulp-plumber');
+const imagemin = require('gulp-imagemin');
 var flatten = require('gulp-flatten');
 //dependencies for build END
 
 //settings
-var source = 'dev/';
+var sass = 'sass/';
+var js = 'js/';
 var dest = 'dist/';
 var test = 'test/';
 //settings END
-//build project
-gulp.task('sass', function () {
-  return gulp.src( source + 'fa-kit.sass' )
-	.pipe( sass_globbing() )
-	  .pipe( sass().on( 'error', sass.logError ) )
-	.pipe( gulp.dest( dest ) );
-});
-gulp.task('pug', function buildHTML() {
-	return gulp.src(source+'*.pug')
+async function style() {
+	return gulp
+		.src( sass + 'fa-kit.sass' )
+		.pipe( sassGlobbing() )
+		.pipe( sassToCss().on( 'error', sassToCss.logError ) )
+		.pipe( gulp.dest( dest ) );
+}
+
+function markup() {
+	return gulp
+		.src(test+'pug/**/*.pug')
 		.pipe( plumber() )
 		.pipe( pug( { pretty: true } ) )
 		.pipe( gulp.dest( test ) );
-});
+}
 //build project END
-//watchers
-gulp.task('watch', function(){
-	gulp.watch( source+'**/*.sass', ['sass'] ),
-	gulp.watch( source+'**/*.pug', ['pug'] )
-})
-//watchers END
+
+function watch() {
+	gulp.watch(sass+'**/*.sass', style);
+	gulp.watch(test+'**/*.pug', markup);
+}
+
+exports.style = style
+exports.markup = markup
+exports.watch = watch
+
+const build = gulp.series(gulp.parallel(style, markup));
+const workon = gulp.series(build, watch);
+
+exports.build = build
+exports.default = workon

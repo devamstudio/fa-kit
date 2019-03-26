@@ -1,19 +1,26 @@
-//* 1. Design*/
-
-//* 1. Design*/
-.g-button
-	display : inline-block
+.#{$class-button}
+	@extend %none-select
+	display : inline-flex
 	padding : $buttons-inset-y $buttons-inset-x
 	@if $global-rounded
 		border-radius : $buttons-radius
-	color : $color-white
 	outline: none
 	border: none
+
+	color : $color-white
 	text :
 		align : center
 		decoration : none
 	font-size : $font-main-size
-	cursor : pointer
+	line-height: 1
+	text-indent: 0
+	word-spacing: normal
+
+	appearance: none
+	-webkit-appearance: none
+	-moz-appearance: none
+	cursor: pointer
+
 	@each $state, $color in $colors
 		&__#{$state}
 			background-color : $color
@@ -26,14 +33,9 @@
 			&:active
 				background-color : darken( $color, 10% )
 	//disabled
-	&__disabled
+	&__disabled, &[disabled]
+		@extend %disabled
 		background-color : lighten($color-gray, 10%)
-		border-bottom : 3px solid darken($color-gray, 15%)
 		&:hover
-			background-color : lighten($color-gray, 15%)
+			background-color : $color-gray
 	//disabled end
-	// Text rules
-	& + p
-		margin:
-			top: 1em
-	// Text rules END

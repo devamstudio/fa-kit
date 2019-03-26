@@ -3,7 +3,7 @@
 
 //* 1. Visibility*/
 ////hidden-blocks
-.g-hidden
+.#{$class-visible}
 	@each $item in $media_quaries
 		&__#{$item}
 			@if $item == 'xs'
@@ -27,7 +27,7 @@
 				&-up
 					@include media_query_up($item)
 						display: none !important
-.g-visible
+.#{$class-hidden}
 	@each $item in $media_quaries
 		&__#{$item}
 			@if $item == 'xs'

@@ -1,17 +1,11 @@
 //Create by Arseny / i-am.studio
-//reset
-
-*
-	margin : 0
-	padding : 0
-	box-sizing : border-box
 
 body
 	width : 100%
 
 //grid system
 ////container
-.g-container
+.#{$class-container}
 	box-sizing: border-box
 	display : block
 	width : 100%
@@ -22,19 +16,12 @@ body
 	position : relative
 	&__wide
 		max-width : 100%!important
-	@include media_query_up(md)
-		max-width : 920px
-	@include media_query_up(lg)
-		max-width : 1080px
-%row
-	box-sizing: inherit
-	display : flex
-	flex :
-		wrap : wrap
-	margin :
-		left : -1rem
-		right : -1rem
-.g-row
+	@each $size, $tmp in $media_quaries_up
+		@include media_query_up($size)
+			max-width: map-get($containers, $size)
+
+// row
+.#{$class-row}
 	@extend %row
 	flex :
 		direction : row
@@ -45,7 +32,7 @@ body
 				right : 0rem!important
 	&__no-offset
 		margin: 0
-.g-column
+.#{$class-column}
 	@extend %row
 	flex :
 		direction : column

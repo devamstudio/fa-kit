@@ -1,0 +1,86 @@
+////////////
+// Global //
+////////////
+
+body,html
+	font :
+		family : $font-main
+		size : $font_base_size
+
+// Create main text
+p
+	hyphens: auto
+	font :
+		size : $font_main_size
+		family : $font_main
+	line-height : $text_line_height
+	margin : 0 0 1em 0
+
+// Text format
+kbd
+	display: inline-block
+	padding: .1em .4em
+	font-size: .8em
+	line-height: inherit
+	vertical-align: middle
+	background-color: $color-black
+	color: $color-white
+	border-radius: .2em
+
+// Create headings class
+@each $heading, $size in $font_heading_sizes
+	$i_rev: length($font_heading_sizes) - index(($font_heading_sizes), ($heading $size))
+	$offset_top: map-get($font_heading_sizes, h+$i_rev )
+	.#{$heading}
+		display: block
+		font :
+			size : $size
+			family : $font_heading
+		margin: 0
+			top: $font_heading_margin_top
+			bottom: .2em
+		font-weight : 400
+		line-height: $font_heading_line_height
+		hyphens: auto
+
+.#{$class-text}
+	// Color text
+	@each $state, $color in $colors
+		&__#{$state}
+			color : $color
+	// Align text
+	@each $align in $text_align_list
+		&__#{$align}
+			text-align : $align
+	@each $size, $tmp in $media_quaries_up
+		@include media_query_up($size)
+			@each $align in $text_align_list
+				&__#{$size}-#{$align}
+					text-align : $align
+	// Lead
+	&__lead
+		font-size: 1.1em
+
+// Global lists
+.#{$class-list}
+	&__unstyled
+		list-style-type : none
+		padding: 0
+		margin: 0
+
+// Text decoration
+.g-blockquote
+	margin:
+		left: 1.5em
+	padding: 1em
+	border-left: .1em solid $color-gray
+	font-style: italic
+	line-height: $text-line-height
+
+////////////
+//  MAIN  //
+////////////
+
+main
+	a:not(.g-button), a[role='link']
+		@extend %link

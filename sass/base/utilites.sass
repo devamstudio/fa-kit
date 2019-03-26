@@ -38,7 +38,7 @@ $offset_side : margin, padding
 										#{$direction} : $offset_value
 
 //* 2. Flex ordering
-.g-order
+.#{$class-order}
 	@for $i from 0 through $grid-cols
 		&__#{$i}
 			order: $i
@@ -58,7 +58,7 @@ $offset_side : margin, padding
 					order: $grid-cols
 
 //* 3. Flex aligning
-.g-align
+.#{$class-align}
 	&-items
 		@each $align, $align_value in $flex-align_items-list
 			&__#{$align}
@@ -69,7 +69,7 @@ $offset_side : margin, padding
 					&__#{$size}-#{$align}
 						align-items: $align_value
 //* 3. Flex aligning
-.g-justify-content
+.#{$class-justify-content}
 	@each $align, $align_value in $flex-align_items-list
 		&__#{$align}
 			justify-content: $align_value

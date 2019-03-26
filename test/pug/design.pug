@@ -1,0 +1,188 @@
+extends ../layouts/index.pug
+block title
+	| Тесты дизайна
+
+block content
+	.g-container.g-margin__bottom-2
+		.g-row
+			.g-cols__xs.g-padding__yy-3.g-block__background-ok.g-text__white
+				h1 Текст на фоне
+				p Рыбный текст
+				a(href="#") Ссылочгэ
+			.g-cols__xs.g-padding__yy-3.g-block__background-light
+				h1 Текст на фоне
+				p Рыбный текст
+				a(href="#") Ссылочгэ
+	.g-container.g-margin__bottom-2
+		.g-row
+			.g-cols__xs.g-padding__yy-3.g-block__border-ok
+				h1 Текст в border
+				p Рыбный текст
+				a(href="#") Ссылочгэ
+			.g-cols__xs.g-padding__yy-3.g-block__border-light
+				h1 Текст в border
+				p Рыбный текст
+				a(href="#") Ссылочг
+
+	.g-container.g-margin__bottom-2
+		h1 Крошки
+		ul.b-breadcrumbs.g-margin__bottom-3
+			li.b-breadcrumbs_item.b-breadcrumbs_item__link: a(href="back") Ссылка назад
+			li.b-breadcrumbs_item.b-breadcrumbs_item__link: span Или тут конец
+			li.b-breadcrumbs_item Тут конец
+		ul.b-breadcrumbs.g-margin__bottom-3.g-text__center
+			li.b-breadcrumbs_item.b-breadcrumbs_item__link: a(href="back") Ссылка назад
+			li.b-breadcrumbs_item.b-breadcrumbs_item__link: span Или тут конец
+			li.b-breadcrumbs_item Тут конец
+
+	.g-container.g-margin__bottom-2
+		h1 Кнопки
+		button.g-button.g-button__primary Button
+		input.g-button.g-button__primary(type="button" value="input:button")
+		a.g-button.g-button__primary(href="#sdf") С ссылкой
+		a.g-button.g-button__primary Без ссылки
+		span.g-button.g-button__primary.g-button__disabled Disabled
+
+	.g-container.g-margin__bottom-2
+		h1 Формы
+		.g-row
+			form.b-form.g-cols__md.g-block__background-light.g-padding__yy-2.g-margin__bottom-2
+				.b-field
+					input.b-field_input(type="text")
+					span.b-field_helper Помощь утопающего
+				.b-field
+					label.b-field_label(for="inp1") Обычное поле
+					input.b-field_input#inp1(type="text")
+					span.b-field_helper Помощь утопающего
+				.b-field.b-field__row
+					label.b-field_label(for="inp2") Линейное поле
+					input.b-field_input#inp2(type="text")
+					span.b-field_helper Помощь утопающего
+			form.b-form.g-cols__md.g-padding__yy-2.g-margin__bottom-2
+				.b-field
+					input.b-field_input(type="text")
+					span.b-field_helper Помощь утопающего
+				.b-field.b-field__inline
+					input.b-field_input#rabiobutton(type="radio" name="impgroup1")
+					label.b-field_label(for="rabiobutton") Radion inline
+				.b-form_fieldset.b-form_fieldset__row
+					.b-field.b-field__inline
+						input.b-field_input(type="radio" name="impgroup2")
+					.b-field.b-field__inline
+						input.b-field_input(type="radio" name="impgroup2")
+				.b-form_fieldset.b-form_fieldset__column
+					.b-field.b-field__inline
+						input.b-field_input(type="radio" name="impgroup3")
+					.b-field.b-field__inline
+						input.b-field_input(type="radio" name="impgroup3")
+				.b-form_fieldset.b-form_fieldset__row
+					.b-field.b-field__inline
+						input.b-field_input(type="checkbox" name="impgroup4")
+					.b-field.b-field__inline
+						input.b-field_input(type="checkbox" name="impgroup4")
+				.b-field.b-field__inline
+					input.b-field_input#checkbox(type="checkbox" name="impgroup1")
+					label.b-field_label(for="checkbox") Checkbox inline
+		.g-row
+			form.b-form.g-cols__md.g-block__background-light.g-padding__yy-2.g-margin__bottom-2
+				fieldset.b-form_fieldset
+					legend Контактные данные
+					.b-field
+						label.b-field_label(for="inp1") Обычное поле
+						input.b-field_input#inp3(type="text")
+						span.b-field_helper Помощь утопающего
+					.b-field
+						label.b-field_label(for="txt") Обычное поле
+						textarea.b-field_input#txt
+						span.b-field_helper Помощь утопающего
+					.b-field.b-field__row
+						label.b-field_label(for="inp2") Линейное поле
+						input.b-field_input#inp4(type="text")
+						span.b-field_helper Помощь утопающего
+					.b-field
+						label.b-field_label(for="file") Линейное поле
+						input.b-field_input#file(type="file")
+						span.b-field_helper Помощь утопающего
+					.g-text__right
+						input.g-button.g-button__primary(type="submit" value="Отправить")
+			form.b-form.g-cols__md.g-padding__yy-2.g-margin__bottom-2
+				fieldset.b-form_fieldset
+					legend Контактные данные
+					.b-field
+						label.b-field_label(for="form11") ФИО
+						input.b-field_input#form11(type="text")
+					.b-field
+						label.b-field_label(for="form12") email
+						input.b-field_input#form12(type="text")
+					.b-field
+						label.b-field_label(for="form12") email
+						input.b-field_input#form12(type="text")
+				fieldset.b-form_fieldset
+					legend Контактные данные
+					.b-field
+						label.b-field_label(for="form11") ФИО
+						input.b-field_input#form11(type="text")
+		.g-row
+			form.b-form.g-cols__md.g-block__background-light.g-padding__yy-2.g-margin__bottom-2
+				fieldset.b-form_fieldset
+					legend Контактные данные
+					.b-field
+						label.b-field_label(for="select") Select
+						select.b-field_input#select(type="text")
+							option Привет мир
+							option Привет Фармир
+							option Привет Тандыр
+						span.b-field_helper Помощь утопающего
+					.b-field
+						label.b-field_label(for="select") Select
+						select.b-field_input#select(type="text" multiple)
+							option Привет мир
+							option Привет Фармир
+							option Привет Тандыр
+						span.b-field_helper Помощь утопающего
+			form.b-form.b-form__dark.g-cols__md.g-block__background-alert.g-padding__yy-2.g-margin__bottom-2.g-text__white
+				fieldset.b-form_fieldset
+					legend Контактные данные
+					.b-field
+						label.b-field_label(for="select") Select
+						select.b-field_input#select(type="text")
+							option Привет мир
+							option Привет Фармир
+							option(disabled) Привет Тандыр
+						span.b-field_helper Помощь утопающего
+					
+					.b-field
+						label.b-field_label(for="select") Select
+						select.b-field_input#select(type="text" multiple)
+							option Привет мир
+							optgroup(label="Group")
+								option Привет Фармир
+								option Привет Тандыр
+							optgroup(label="Grouppy" disabled)
+								option Привет Фармир
+								option Привет Тандыр
+						span.b-field_helper Помощь утопающего
+				button.g-button.g-button__white Привет форма
+	.g-container.g-margin__bottom-2
+		h1 Уведомления
+		.g-row
+			.b-notification.b-notification__alert.g-cols__md-6.g-margin__bottom-1
+				.h1 Привет мир
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+			.b-notification.b-notification__ok.g-cols__md-6.g-margin__bottom-1
+				.h1 Привет мир
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+			.b-notification.b-notification__warning.g-cols__md-6.g-margin__bottom-1
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+			.b-notification.b-notification__ok.g-cols__md-6.g-margin__bottom-1
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+			.b-notification.b-notification__warning.g-cols__md-6.g-padding__yy-0.g-margin__bottom-1
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+			.b-notification.b-notification__ok.g-cols__md-6.g-padding__yy-0.g-margin__bottom-1
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+	.g-container.g-margin__bottom-2
+		h1 Пагинация
+		ul.b-pagination
+			li.b-pagination_item: a(href="1") 1
+			li.b-pagination_item.b-pagination__active: a(href="2") 2
+			li.b-pagination_item: a(href="next") next
