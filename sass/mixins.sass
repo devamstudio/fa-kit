@@ -22,7 +22,7 @@
 //* 2. Grid mixins */
 // 2.1 Create grid
 @mixin touch_grid($cols, $media_quaries)
-	*[class*='g-cols__']
+	*[class*='#{$prefix__global}cols__']
 		padding : 0 1rem
 		position : relative
 		width : 100%
@@ -30,15 +30,15 @@
 	@each $item, $size in $media_quaries_up
 		@include media_query_up($item)
 			@for $col from 1 through $grid_cols
-				.g-cols__#{$item}-#{$col}
+				.#{$prefix__global}cols__#{$item}-#{$col}
 					max-width : 100% / $grid_cols * $col
 					flex : 0 0 ( 100% / $grid_cols * $col )
-				.g-cols__#{$item}
+				.#{$prefix__global}cols__#{$item}
 					//display: flex
 					flex:
 						basis: 0
 						grow: 1
-				.g-offset__#{$item}-#{$col}
+				.#{$prefix__global}offset__#{$item}-#{$col}
 					margin-left : 100% - (100% / $grid_cols * ($grid_cols - $col))
 
 @function enumerate($list)
