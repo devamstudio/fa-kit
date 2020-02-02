@@ -1,24 +1,24 @@
 .#{$class-pagination}
-	list-style-type : none
-	padding : 15px 0
-	margin : 0
-	overflow : hidden
+	list-style-type: none
+	padding: 15px 0
+	margin: 0
+	overflow: hidden
 	&_item
-		display : inline-block
-		border : 1px solid $color-gray__light
-		margin : 0
-		padding : 0
-		cursor : pointer
+		display: inline-block
+		border: 1px solid $color-gray__light
+		margin: 0
+		padding: 0
+		cursor: pointer
 		@if $global-animation
-			transition : background-color $global-animation-delay
+			transition: background-color $global-animation-delay
 		&:hover
-			background-color : $color-gray__light
+			background-color: $color-gray__light
 		&__active
-			background-color : $color-secondary
+			background-color: $color-secondary
 			&:hover
-				background-color : darken($color-secondary,5%)
+				background-color: darken($color-secondary,5%)
 		a
-			color : black
-			text-decoration : none
-			padding : 7px 15px
-			display : block
+			color: black
+			text-decoration: none
+			padding: 7px 15px
+			display: block

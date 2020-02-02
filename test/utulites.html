@@ -4,55 +4,59 @@
     <title>Тесты утилит
     </title>
     <link rel="stylesheet" href="../dist/fa-kit.css"/>
+    <link rel="stylesheet" href="https://space.i-am.studio/font-icons-rage/releases/v1.2/css/font-rage.css"/>
   </head>
-  <body>
-    <div style="position:fixed;top:50%;left:0;transform:translateY(-50%);z-index:100;">
-      <ul>
-        <li><a href="grid.html">Сетка</a></li>
-        <li><a href="text.html">Текст</a></li>
-        <li><a href="utulites.html">Утилиты</a></li>
-        <li><a href="design.html">Дизигн</a></li>
-      </ul>
-    </div>
+  <body style="display:flex;">
+    <aside style="width: 250px;">
+      <div style="position:sticky;top:3rem;">
+        <h5 class="heading heading__h5 margin__xx-1">Навигация по тестам</h5>
+        <ul class="list">
+          <li class="list_item"><a class="link" href="grid.html">Сетка</a></li>
+          <li class="list_item"><a class="link" href="text.html">Текст</a></li>
+          <li class="list_item"><a class="link" href="utulites.html">Утилиты</a></li>
+          <li class="list_item"><a class="link" href="design.html">Дизигн</a></li>
+        </ul>
+      </div>
+    </aside>
     <main>
-      <div class="g-container g-padding__yy-3 g-block__background-light g-margin__bottom-2">
+      <div class="container container__wide padding__yy-2 block__background-light margin__bottom-2">
         <h1>Тесты утилит</h1>
       </div>
-      <div class="g-container g-margin__bottom-2">
+      <div class="container container__wide margin__bottom-2">
         <h2>Ordering</h2>
-        <div class="g-row">
-          <div class="g-cols__xs g-order__2 g-padding__yy-3"><span>#1 (order-2)</span></div>
-          <div class="g-cols__xs g-order__1 g-padding__yy-3 g-block__background-light"><span>#2 (order-1)</span></div>
-          <div class="g-cols__xs g-order__0 g-padding__yy-3"><span>#3 (order-0)</span></div>
+        <div class="row">
+          <div class="cols__xs order__2 padding__yy-2"><span>#1 (order-2)</span></div>
+          <div class="cols__xs order__1 padding__yy-2 block__background-light"><span>#2 (order-1)</span></div>
+          <div class="cols__xs order__0 padding__yy-2"><span>#3 (order-0)</span></div>
         </div>
       </div>
-      <hr/>
-      <div class="g-container g-margin__bottom-2">
+      <hr class="hr"/>
+      <div class="container container__wide margin__bottom-2">
         <h2>Offsets</h2>
-        <div class="g-row">
-          <div class="g-cols__xs-4 g-offset__xs-4 g-padding__yy-3"><span>← offset=4</span></div>
-          <div class="g-cols__xs-4 g-padding__yy-3 g-block__background-light"><span>None offset</span></div>
-          <div class="g-cols__xs-4 g-padding__yy-3"><span>None offset</span></div>
+        <div class="row">
+          <div class="cols__xs-4 offset__xs-4 padding__yy-2"><span>← offset=4</span></div>
+          <div class="cols__xs-4 padding__yy-2 block__background-light"><span>None offset</span></div>
+          <div class="cols__xs-4 padding__yy-2"><span>None offset</span></div>
         </div>
       </div>
-      <hr/>
-      <div class="g-container g-margin__bottom-2">
+      <hr class="hr"/>
+      <div class="container container__wide margin__bottom-2">
         <h2>Align items</h2>
-        <div class="g-row g-align-items__center">
-          <div class="g-cols__xs-4 g-padding__yy-3"><span>← offset=4</span></div>
-          <div class="g-cols__xs-4 g-padding__yy-3 g-block__background-light"><span>None offset</span></div>
-          <div class="g-cols__xs-4 g-padding__yy-3">
+        <div class="row align-items__center">
+          <div class="cols__xs-4 padding__yy-2"><span>← offset=4</span></div>
+          <div class="cols__xs-4 padding__yy-2 block__background-light"><span>None offset</span></div>
+          <div class="cols__xs-4 padding__yy-2">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
             <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.</p>
           </div>
         </div>
       </div>
-      <hr/>
-      <div class="g-container g-margin__bottom-2">
+      <hr class="hr"/>
+      <div class="container container__wide margin__bottom-2">
         <h2>Justify-content + выравнивание в конец</h2>
-        <div class="g-row g-justify-content__end g-align-items__end">
-          <div class="g-cols__xs-4 g-padding__yy-3 g-block__background-light"><span>None offset</span></div>
-          <div class="g-cols__xs-4 g-padding__yy-3">
+        <div class="row justify-content__end align-items__end">
+          <div class="cols__xs-4 padding__yy-2 block__background-light"><span>None offset</span></div>
+          <div class="cols__xs-4 padding__yy-2">
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
             <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis</p>
           </div>
