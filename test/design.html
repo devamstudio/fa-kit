@@ -4,61 +4,65 @@
     <title>Тесты дизайна
     </title>
     <link rel="stylesheet" href="../dist/fa-kit.css"/>
+    <link rel="stylesheet" href="https://space.i-am.studio/font-icons-rage/releases/v1.2/css/font-rage.css"/>
   </head>
-  <body>
-    <div style="position:fixed;top:50%;left:0;transform:translateY(-50%);z-index:100;">
-      <ul>
-        <li><a href="grid.html">Сетка</a></li>
-        <li><a href="text.html">Текст</a></li>
-        <li><a href="utulites.html">Утилиты</a></li>
-        <li><a href="design.html">Дизигн</a></li>
-      </ul>
-    </div>
+  <body style="display:flex;">
+    <aside style="width: 250px;">
+      <div style="position:sticky;top:3rem;">
+        <h5 class="heading heading__h5 margin__xx-1">Навигация по тестам</h5>
+        <ul class="list">
+          <li class="list_item"><a class="link" href="grid.html">Сетка</a></li>
+          <li class="list_item"><a class="link" href="text.html">Текст</a></li>
+          <li class="list_item"><a class="link" href="utulites.html">Утилиты</a></li>
+          <li class="list_item"><a class="link" href="design.html">Дизигн</a></li>
+        </ul>
+      </div>
+    </aside>
     <main>
-      <div class="container margin__bottom-2">
+      <div class="container container__wide margin__bottom-2">
         <div class="row">
-          <div class="cols__xs padding__yy-3 block__background-ok text__white">
-            <h1>Текст на фоне</h1>
-            <p>Рыбный текст</p><a href="#">Ссылочгэ</a>
+          <div class="cols__xs padding__yy-2 block__background-ok text__white">
+            <h1 class="heading heading__h1 margin__top-0">Текст на фоне</h1>
+            <p class="paragraph">Рыбный текст</p><a class="link" href="#">Ссылочгэ</a>
           </div>
-          <div class="cols__xs padding__yy-3 block__background-light">
-            <h1>Текст на фоне</h1>
-            <p>Рыбный текст</p><a href="#">Ссылочгэ</a>
+          <div class="cols__xs padding__yy-2 block__background-light">
+            <h1 class="heading heading__h1 margin__top-0">Текст на фоне</h1>
+            <p class="paragraph">Рыбный текст</p><a class="link" href="#">Ссылочгэ</a>
           </div>
         </div>
       </div>
-      <div class="container margin__bottom-2">
+      <div class="container container__wide margin__bottom-2">
         <div class="row">
-          <div class="cols__xs padding__yy-3 block__border-ok">
-            <h1>Текст в border</h1>
-            <p>Рыбный текст</p><a href="#">Ссылочгэ</a>
+          <div class="cols__xs padding__yy-2 block__border-ok">
+            <h1 class="heading heading__h1 margin__top-0">Текст в border</h1>
+            <p class="paragraph">Рыбный текст</p><a class="link" href="#">Ссылочгэ</a>
           </div>
-          <div class="cols__xs padding__yy-3 block__border-light">
-            <h1>Текст в border</h1>
-            <p>Рыбный текст</p><a href="#">Ссылочг</a>
+          <div class="cols__xs padding__yy-2 block__border-light">
+            <h1 class="heading heading__h1 margin__top-0">Текст в border</h1>
+            <p class="paragraph">Рыбный текст</p><a class="link" href="#">Ссылочг</a>
           </div>
         </div>
       </div>
-      <div class="container margin__bottom-2">
-        <h1>Крошки</h1>
+      <div class="container container__wide margin__bottom-2">
+        <h1 class="heading heading__h1 margin__top-0">Крошки</h1>
         <ul class="breadcrumbs margin__bottom-3">
-          <li class="breadcrumbs_item breadcrumbs_item__link"><a href="back">Ссылка назад</a></li>
+          <li class="breadcrumbs_item breadcrumbs_item__link"><a class="link" href="back">Ссылка назад</a></li>
           <li class="breadcrumbs_item breadcrumbs_item__link"><span>Или тут конец</span></li>
           <li class="breadcrumbs_item">Тут конец</li>
         </ul>
         <ul class="breadcrumbs margin__bottom-3 text__center">
-          <li class="breadcrumbs_item breadcrumbs_item__link"><a href="back">Ссылка назад</a></li>
+          <li class="breadcrumbs_item breadcrumbs_item__link"><a class="link" href="back">Ссылка назад</a></li>
           <li class="breadcrumbs_item breadcrumbs_item__link"><span>Или тут конец</span></li>
           <li class="breadcrumbs_item">Тут конец</li>
         </ul>
       </div>
-      <div class="container margin__bottom-2">
-        <h1>Кнопки</h1>
+      <div class="container container__wide margin__bottom-2">
+        <h1 class="heading heading__h1 margin__top-0">Кнопки</h1>
         <button class="button button__primary">Button</button>
         <input class="button button__primary" type="button" value="input:button"/><a class="button button__primary" href="#sdf">С ссылкой</a><a class="button button__primary">Без ссылки</a><span class="button button__primary button__disabled">Disabled</span>
       </div>
-      <div class="container margin__bottom-2">
-        <h1>Формы</h1>
+      <div class="container container__wide margin__bottom-2">
+        <h1 class="heading heading__h1 margin__top-0">Формы</h1>
         <div class="row">
           <form class="form cols__md block__background-light padding__yy-2 margin__bottom-2">
             <div class="field">
@@ -213,37 +217,37 @@
           </form>
         </div>
       </div>
-      <div class="container margin__bottom-2">
-        <h1>Уведомления</h1>
+      <div class="container container__wide margin__bottom-2">
+        <h1 class="heading heading__h1 margin__top-0">Уведомления</h1>
         <div class="row">
           <div class="notification notification__alert cols__md-6 margin__bottom-1">
-            <div class="h1">Привет мир</div>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            <div class="heading heading__h1 margin__top-0">Привет мир</div>
+            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
           </div>
           <div class="notification notification__ok cols__md-6 margin__bottom-1">
-            <div class="h1">Привет мир</div>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            <div class="heading heading__h1 margin__top-0">Привет мир</div>
+            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
           </div>
           <div class="notification notification__warning cols__md-6 margin__bottom-1">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
           </div>
           <div class="notification notification__ok cols__md-6 margin__bottom-1">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
           </div>
           <div class="notification notification__warning cols__md-6 padding__yy-0 margin__bottom-1">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
           </div>
           <div class="notification notification__ok cols__md-6 padding__yy-0 margin__bottom-1">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
           </div>
         </div>
       </div>
-      <div class="container margin__bottom-2">
-        <h1>Пагинация</h1>
+      <div class="container container__wide margin__bottom-2">
+        <h1 class="heading heading__h1 margin__top-0">Пагинация</h1>
         <ul class="pagination">
-          <li class="pagination_item"><a href="1">1</a></li>
-          <li class="pagination_item pagination__active"><a href="2">2</a></li>
-          <li class="pagination_item"><a href="next">next</a></li>
+          <li class="pagination_item"><a class="link" href="1">1</a></li>
+          <li class="pagination_item pagination__active"><a class="link" href="2">2</a></li>
+          <li class="pagination_item"><a class="link" href="next">next</a></li>
         </ul>
       </div>
     </main>
