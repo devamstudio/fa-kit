@@ -1,19 +1,23 @@
 .#{$class-button}
 	@extend %none-select
 	display: inline-flex
-	padding: $buttons-inset-y $buttons-inset-x
+	//align-items: center
+	padding: 0 $buttons-inset-x
 	@if $global-rounded
 		border-radius: $buttons-radius
 	outline: none
 	border: none
+	height: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+	line-height: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
 
 	color: $color-white
 	text:
 		align: center
 		decoration: none
 	font-size: $font-base-size
-	line-height: 1
-	text-indent: 0
+	text:
+		decoration: none	
+		indent: 0
 	word-spacing: normal
 
 	appearance: none

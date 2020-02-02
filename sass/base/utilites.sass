@@ -13,13 +13,13 @@ $offset_side: margin, padding
 					&__#{$direction}-#{$offset}
 						#{$item}:
 							@if $direction == yy
-								top: $offset_value !important
-								bottom: $offset_value !important
+								top: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
+								bottom: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
 							@else if $direction == xx
-								right: $offset_value !important
-								left: $offset_value !important
+								right: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
+								left: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
 							@else
-								#{$direction}: $offset_value !important
+								#{$direction}: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
 		@each $size, $tmp in $media_quaries_up
 			@include media_query_up($size)
 				@each $direction in $directions
@@ -29,13 +29,13 @@ $offset_side: margin, padding
 							&__#{$size}-#{$direction}-#{$offset}
 								#{$item}:
 									@if $direction == yy
-										top: $offset_value !important
-										bottom: $offset_value !important
+										top: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
+										bottom: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
 									@else if $direction == xx
-										right: $offset_value !important
-										left: $offset_value !important
+										right: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
+										left: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
 									@else
-										#{$direction}: $offset_value !important
+										#{$direction}: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
 
 //* 2. Flex ordering
 .#{$class-order}
