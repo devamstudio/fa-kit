@@ -3,7 +3,7 @@
 //* 3. Flex aligning
 
 //* 1. Margins and paddings
-$offset_side : margin, padding
+$offset_side: margin, padding
 @each $item in $offset_side
 	.#{$item}
 		@each $direction in $directions
@@ -11,15 +11,15 @@ $offset_side : margin, padding
 				@if $item == padding and $offset == auto
 				@else
 					&__#{$direction}-#{$offset}
-						#{$item} :
+						#{$item}:
 							@if $direction == yy
-								top : $offset_value
-								bottom : $offset_value
+								top: $offset_value !important
+								bottom: $offset_value !important
 							@else if $direction == xx
-								right : $offset_value
-								left : $offset_value
+								right: $offset_value !important
+								left: $offset_value !important
 							@else
-								#{$direction} : $offset_value
+								#{$direction}: $offset_value !important
 		@each $size, $tmp in $media_quaries_up
 			@include media_query_up($size)
 				@each $direction in $directions
@@ -27,15 +27,15 @@ $offset_side : margin, padding
 						@if $item == padding and $offset == auto
 						@else
 							&__#{$size}-#{$direction}-#{$offset}
-								#{$item} :
+								#{$item}:
 									@if $direction == yy
-										top : $offset_value
-										bottom : $offset_value
+										top: $offset_value !important
+										bottom: $offset_value !important
 									@else if $direction == xx
-										right : $offset_value
-										left : $offset_value
+										right: $offset_value !important
+										left: $offset_value !important
 									@else
-										#{$direction} : $offset_value
+										#{$direction}: $offset_value !important
 
 //* 2. Flex ordering
 .#{$class-order}

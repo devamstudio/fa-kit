@@ -1,17 +1,17 @@
 .#{$class-button}
 	@extend %none-select
-	display : inline-flex
-	padding : $buttons-inset-y $buttons-inset-x
+	display: inline-flex
+	padding: $buttons-inset-y $buttons-inset-x
 	@if $global-rounded
-		border-radius : $buttons-radius
+		border-radius: $buttons-radius
 	outline: none
 	border: none
 
-	color : $color-white
-	text :
-		align : center
-		decoration : none
-	font-size : $font-main-size
+	color: $color-white
+	text:
+		align: center
+		decoration: none
+	font-size: $font-base-size
 	line-height: 1
 	text-indent: 0
 	word-spacing: normal
@@ -23,19 +23,19 @@
 
 	@each $state, $color in $colors
 		&__#{$state}
-			background-color : $color
+			background-color: $color
 			@if $state == white or $state == light
-				color : $color-black
+				color: $color-black
 			@if $global-animation
-				transition : background-color $global-animation-delay
+				transition: background-color $global-animation-delay
 			&:hover
-				background-color : lighten( $color, 10% )
+				background-color: lighten( $color, 10% )
 			&:active
-				background-color : darken( $color, 10% )
+				background-color: darken( $color, 10% )
 	//disabled
 	&__disabled, &[disabled]
 		@extend %disabled
-		background-color : lighten($color-gray, 10%)
+		background-color: lighten($color-gray, 10%)
 		&:hover
-			background-color : $color-gray
+			background-color: $color-gray
 	//disabled end
