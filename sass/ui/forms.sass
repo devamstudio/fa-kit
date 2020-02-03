@@ -1,68 +1,76 @@
 // Form //
 .#{$class-form}
-	display: block
-	.#{$class-form}_fieldset
-		display: flex
-		flex:
-			direction: column
-		margin:
-			bottom: $fields-inset-y * 3
-		padding: 0
-		border:
-			width: 1px
-			left: 0
-			bottom: 0
-			right: 0
-		legend
-			display: flex
-			margin: 0
-				bottom: $fields-inset-y * 2
-				left: $fields-inset-x / 2
-			padding: 0 $fields-inset-x / 2
-			font:
-				family: serif
-				style: italic
-				weight: 100
-				size: 80%
-			text-transform: uppercase
-		&__row
-			flex:
-				direction: row
-	// States
-	&__dark
-		.#{$class-form}_fieldset
-			border-color: white
-		.#{$class-field}
-			.#{$class-field}_input
-				border-width: 0
-					left: 0
-					top: 0
-					right: 0
-					bottom: 0
+    display: block
+    .#{$class-form}_fieldset
+        display: flex
+        flex:
+            direction: column
+        //margin:
+            bottom: $fields-inset-y * 3
+        padding: 0
+        border:
+            width: 1px
+            left: 0
+            bottom: 0
+            right: 0
+        legend
+            display: flex
+            //margin: 0
+                bottom: $fields-inset-y * 2
+                left: $fields-inset-x / 2
+            //padding: 0 $fields-inset-x / 2
+            font:
+                family: serif
+                style: italic
+                weight: 100
+                size: 80%
+            text-transform: uppercase
+        &__row
+            flex:
+                direction: row
+    // States
+    &__dark
+        .#{$class-form}_fieldset
+            border-color: white
+        .#{$class-field}
+            .#{$class-field}_input
+                border-width: 0
+                    left: 0
+                    top: 0
+                    right: 0
+                    bottom: 0
 
 // Input fields //
-.#{$class-field}
+@mixin vertical_field
     display: flex
     flex:
         direction: column
     .#{$class-field}_label
         margin:
-            bottom: $fields-inset-y * .5
-            //left: $fields-inset-x
-        font-size : $font-base-size * 0.9
-    .#{$class-field}_input
-        font-weight : inherit
-        color : $color-black
-        background-color: darken($color-gray__light, 1%)
-        padding : $fields-inset-y $fields-inset-x
+            bottom: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
+    .#{$class-field}_helper
         margin:
-            bottom: $fields-inset-y
+            top: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
+
+.#{$class-field}
+    .#{$class-field}_label
+        font-size: $font-base-size * 0.9
+    .#{$class-field}_input
+        font-weight: inherit
+        color: $color-black
+        background-color: lighten($color-gray__light, 5%)
+        min-height: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+        line-height: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+        padding: 
+            top: calc(var(--grid-square) * 4 / var(--font-size) * #{$fields-inset-y} * 1rem) 
+            bottom: calc(var(--grid-square) * 4 / var(--font-size) * #{$fields-inset-y} * 1rem) 
+            left: calc(var(--grid-square) * 4 / var(--font-size) * #{$fields-inset-x} * 1rem)
+            right: calc(var(--grid-square) * 4 / var(--font-size) * #{$fields-inset-x} * 1rem)
         border: 0
-            //bottom: 1px solid black
-        font-size : $font-base-size
+        font-size: $font-base-size * .9
+
         // States
         &.#{$class-field}_input__disabled
-            //pointer-events: none
             cursor: not-allowed
             opacity: .5
         // Rule for select
@@ -71,43 +79,45 @@
             option
                 font-size: initial
                 &:before
-                    content: '- '
+                    content: '— '
+        // Field types
         &[type="file"]
-            padding:
-                top: $fields-inset-y
-                bottom: $fields-inset-y
             background-color: white
             font-size: .8em
+            padding: 1em
             //border: 1px solid red
     .#{$class-field}_helper
-        font-size : $font-base-size * 0.8
-        //margin:
-            left: $fields-inset-x
-    // Rules
-    //&:not(:last-child):not(.#{$class-field}__inline)
-    margin-bottom: $fields-inset-y * 3
+        font-size: $font-base-size * 0.8
     // States
-    &__inline
-        display: inline-flex
-        flex:
-            direction: row
-        margin-bottom: $fields-inset-y
+    &.#{$class-field}__vertical
+        @include vertical_field
+    &.#{$class-field}__inline
+        line-height: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
         .#{$class-field}_input
+            display: inline
             margin: 0
-                right: $fields-inset-x / 2
+            vertical-align: baseline
         .#{$class-field}_label
+            display: inline
             margin: 0
-    &__row
+            vertical-align: baseline
+
+    &.#{$class-field}__row, &.#{$class-field}__horisontal
+        @include media_query_down(xs)
+            @include vertical_field
         @include media_query_up(sm)
             flex:
                 direction: row
-            align-items: center
             .#{$class-field}_label
                 margin:
                     left: 0
                     right: $fields-inset-x
             .#{$class-field}_input
                 flex-grow: 10
+                color: red
+            .#{$class-field}_helper
+                margin: 0
+                    left: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
     // States
     &.#{$class-field}__error
         .#{$class-field}_label
