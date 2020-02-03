@@ -19,236 +19,246 @@
       </div>
     </aside>
     <main style="flex-grow:10;">
-      <div class="container container__wide margin__bottom-2">
-        <div class="row">
-          <div class="cols__xs padding__yy-2 block__background-ok text__white">
-            <h1 class="heading heading__h1 margin__top-0">Текст на фоне</h1>
-            <p class="paragraph">Рыбный текст</p><a class="link" href="#">Ссылочгэ</a>
-          </div>
-          <div class="cols__xs padding__yy-2 block__background-light">
-            <h1 class="heading heading__h1 margin__top-0">Текст на фоне</h1>
-            <p class="paragraph">Рыбный текст</p><a class="link" href="#">Ссылочгэ</a>
-          </div>
-        </div>
-      </div>
-      <div class="container container__wide margin__bottom-2">
-        <div class="row">
-          <div class="cols__xs padding__yy-2 block__border-ok">
-            <h1 class="heading heading__h1 margin__top-0">Текст в border</h1>
-            <p class="paragraph">Рыбный текст</p><a class="link" href="#">Ссылочгэ</a>
-          </div>
-          <div class="cols__xs padding__yy-2 block__border-light">
-            <h1 class="heading heading__h1 margin__top-0">Текст в border</h1>
-            <p class="paragraph">Рыбный текст</p><a class="link" href="#">Ссылочг</a>
+      <div style="background-image: repeating-linear-gradient(to bottom, rgba(0,0,0, 0) 0, rgba(0,0,0, 0) calc((var(--grid-square) * 4 - 1) * 1px), red calc((var(--grid-square) * 4 - 1) * 1px), red calc(var(--grid-square) * 4 * 1px)">
+        <div class="container container__wide margin__bottom-2">
+          <div class="row">
+            <div class="cols__xs padding__yy-2 background__ok text__white">
+              <h1 class="heading heading__h1 margin__top-0">Текст на фоне</h1>
+              <p class="paragraph">Рыбный текст</p>
+              <p class="paragraph"><a class="link" href="#">Ссылочгэ</a></p>
+            </div>
+            <div class="cols__xs padding__yy-2 background__light">
+              <h1 class="heading heading__h1 margin__top-0">Текст на фоне</h1>
+              <p class="paragraph">Рыбный текст</p>
+              <p class="paragraph"><a class="link" href="#">Ссылочгэ</a></p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container container__wide margin__bottom-2">
-        <h1 class="heading heading__h1 margin__top-0">Крошки</h1>
-        <ul class="breadcrumbs margin__bottom-3">
-          <li class="breadcrumbs_item breadcrumbs_item__link"><a class="link" href="back">Ссылка назад</a></li>
-          <li class="breadcrumbs_item breadcrumbs_item__link"><span>Или тут конец</span></li>
-          <li class="breadcrumbs_item">Тут конец</li>
-        </ul>
-        <ul class="breadcrumbs margin__bottom-3 text__center">
-          <li class="breadcrumbs_item breadcrumbs_item__link"><a class="link" href="back">Ссылка назад</a></li>
-          <li class="breadcrumbs_item breadcrumbs_item__link"><span>Или тут конец</span></li>
-          <li class="breadcrumbs_item">Тут конец</li>
-        </ul>
-      </div>
-      <div class="container container__wide margin__bottom-2">
-        <h1 class="heading heading__h1 margin__top-0">Кнопки</h1>
-        <button class="button button__primary">Button</button>
-        <input class="button button__primary" type="button" value="input:button"/><a class="button button__primary" href="#sdf">С ссылкой</a><a class="button button__primary">Без ссылки</a><span class="button button__primary button__disabled">Disabled</span>
-      </div>
-      <div class="container container__wide margin__bottom-2">
-        <h1 class="heading heading__h1 margin__top-0">Формы</h1>
-        <div class="row">
-          <form class="form cols__md block__background-light padding__yy-2 margin__bottom-2">
-            <div class="field">
-              <input class="field_input" type="text"/><span class="field_helper">Помощь утопающего</span>
-            </div>
-            <div class="field">
-              <label class="field_label" for="inp1">Обычное поле</label>
-              <input class="field_input" id="inp1" type="text"/><span class="field_helper">Помощь утопающего</span>
-            </div>
-            <div class="field field__row">
-              <label class="field_label" for="inp2">Линейное поле</label>
-              <input class="field_input" id="inp2" type="text"/><span class="field_helper">Помощь утопающего</span>
-            </div>
-          </form>
-          <form class="form cols__md padding__yy-2 margin__bottom-2">
-            <div class="field">
-              <input class="field_input" type="text"/><span class="field_helper">Помощь утопающего</span>
-            </div>
-            <div class="field field__inline">
-              <input class="field_input" id="rabiobutton" type="radio" name="impgroup1"/>
-              <label class="field_label" for="rabiobutton">Radion inline</label>
-            </div>
-            <div class="form_fieldset form_fieldset__row">
-              <div class="field field__inline">
-                <input class="field_input" type="radio" name="impgroup2"/>
-              </div>
-              <div class="field field__inline">
-                <input class="field_input" type="radio" name="impgroup2"/>
+        <div class="container container__wide margin__bottom-2">
+          <div class="row">
+            <div class="cols__xs padding__yy-2 border__ok">
+              <div class="border_height-compensation">
+                <h1 class="heading heading__h1 margin__top-0">Текст в border</h1>
+                <p class="paragraph">Рыбный текст</p>
+                <p class="paragraph"><a class="link" href="#">Ссылочгэ</a></p>
               </div>
             </div>
-            <div class="form_fieldset form_fieldset__column">
-              <div class="field field__inline">
-                <input class="field_input" type="radio" name="impgroup3"/>
-              </div>
-              <div class="field field__inline">
-                <input class="field_input" type="radio" name="impgroup3"/>
-              </div>
-            </div>
-            <div class="form_fieldset form_fieldset__row">
-              <div class="field field__inline">
-                <input class="field_input" type="checkbox" name="impgroup4"/>
-              </div>
-              <div class="field field__inline">
-                <input class="field_input" type="checkbox" name="impgroup4"/>
+            <div class="cols__xs padding__yy-2 border__light">
+              <div class="border_height-compensation">
+                <h1 class="heading heading__h1 margin__top-0">Текст в border</h1>
+                <p class="paragraph">Рыбный текст</p>
+                <p class="paragraph"><a class="link" href="#">Ссылочг</a></p>
               </div>
             </div>
-            <div class="field field__inline">
-              <input class="field_input" id="checkbox" type="checkbox" name="impgroup1"/>
-              <label class="field_label" for="checkbox">Checkbox inline</label>
-            </div>
-          </form>
+          </div>
         </div>
-        <div class="row">
-          <form class="form cols__md block__background-light padding__yy-2 margin__bottom-2">
-            <fieldset class="form_fieldset">
-              <legend>Контактные данные</legend>
+        <div class="container container__wide margin__bottom-2">
+          <h1 class="heading heading__h1 margin__top-0">Крошки</h1>
+          <ul class="breadcrumbs margin__bottom-3">
+            <li class="breadcrumbs_item breadcrumbs_item__link"><a class="link" href="back">Ссылка назад</a></li>
+            <li class="breadcrumbs_item breadcrumbs_item__link"><span>Или тут конец</span></li>
+            <li class="breadcrumbs_item">Тут конец</li>
+          </ul>
+          <ul class="breadcrumbs margin__bottom-3 text__center">
+            <li class="breadcrumbs_item breadcrumbs_item__link"><a class="link" href="back">Ссылка назад</a></li>
+            <li class="breadcrumbs_item breadcrumbs_item__link"><span>Или тут конец</span></li>
+            <li class="breadcrumbs_item">Тут конец</li>
+          </ul>
+        </div>
+        <div class="container container__wide margin__bottom-2">
+          <h1 class="heading heading__h1 margin__top-0">Кнопки</h1>
+          <button class="button button__primary">Button</button>
+          <input class="button button__primary" type="button" value="input:button"/><a class="button button__primary" href="#sdf">С ссылкой</a><a class="button button__primary">Без ссылки</a><span class="button button__primary button__disabled">Disabled</span>
+        </div>
+        <div class="container container__wide margin__bottom-2">
+          <h1 class="heading heading__h1 margin__top-0">Формы</h1>
+          <div class="row">
+            <form class="form cols__md background__light padding__yy-2 margin__bottom-2">
+              <div class="field">
+                <input class="field_input" type="text"/><span class="field_helper">Помощь утопающего</span>
+              </div>
               <div class="field">
                 <label class="field_label" for="inp1">Обычное поле</label>
-                <input class="field_input" id="inp3" type="text"/><span class="field_helper">Помощь утопающего</span>
-              </div>
-              <div class="field">
-                <label class="field_label" for="txt">Обычное поле</label>
-                <textarea class="field_input" id="txt"></textarea><span class="field_helper">Помощь утопающего</span>
+                <input class="field_input" id="inp1" type="text"/><span class="field_helper">Помощь утопающего</span>
               </div>
               <div class="field field__row">
                 <label class="field_label" for="inp2">Линейное поле</label>
-                <input class="field_input" id="inp4" type="text"/><span class="field_helper">Помощь утопающего</span>
+                <input class="field_input" id="inp2" type="text"/><span class="field_helper">Помощь утопающего</span>
               </div>
+            </form>
+            <form class="form cols__md padding__yy-2 margin__bottom-2">
               <div class="field">
-                <label class="field_label" for="file">Линейное поле</label>
-                <input class="field_input" id="file" type="file"/><span class="field_helper">Помощь утопающего</span>
+                <input class="field_input" type="text"/><span class="field_helper">Помощь утопающего</span>
               </div>
-              <div class="text__right">
-                <input class="button button__primary" type="submit" value="Отправить"/>
+              <div class="field field__inline">
+                <input class="field_input" id="rabiobutton" type="radio" name="impgroup1"/>
+                <label class="field_label" for="rabiobutton">Radion inline</label>
               </div>
-            </fieldset>
-          </form>
-          <form class="form cols__md padding__yy-2 margin__bottom-2">
-            <fieldset class="form_fieldset">
-              <legend>Контактные данные</legend>
-              <div class="field">
-                <label class="field_label" for="form11">ФИО</label>
-                <input class="field_input" id="form11" type="text"/>
+              <div class="form_fieldset form_fieldset__row">
+                <div class="field field__inline">
+                  <input class="field_input" type="radio" name="impgroup2"/>
+                </div>
+                <div class="field field__inline">
+                  <input class="field_input" type="radio" name="impgroup2"/>
+                </div>
               </div>
-              <div class="field">
-                <label class="field_label" for="form12">email</label>
-                <input class="field_input" id="form12" type="text"/>
+              <div class="form_fieldset form_fieldset__column">
+                <div class="field field__inline">
+                  <input class="field_input" type="radio" name="impgroup3"/>
+                </div>
+                <div class="field field__inline">
+                  <input class="field_input" type="radio" name="impgroup3"/>
+                </div>
               </div>
-              <div class="field">
-                <label class="field_label" for="form12">email</label>
-                <input class="field_input" id="form12" type="text"/>
+              <div class="form_fieldset form_fieldset__row">
+                <div class="field field__inline">
+                  <input class="field_input" type="checkbox" name="impgroup4"/>
+                </div>
+                <div class="field field__inline">
+                  <input class="field_input" type="checkbox" name="impgroup4"/>
+                </div>
               </div>
-            </fieldset>
-            <fieldset class="form_fieldset">
-              <legend>Контактные данные</legend>
-              <div class="field">
-                <label class="field_label" for="form11">ФИО</label>
-                <input class="field_input" id="form11" type="text"/>
+              <div class="field field__inline">
+                <input class="field_input" id="checkbox" type="checkbox" name="impgroup1"/>
+                <label class="field_label" for="checkbox">Checkbox inline</label>
               </div>
-            </fieldset>
-          </form>
-        </div>
-        <div class="row">
-          <form class="form cols__md block__background-light padding__yy-2 margin__bottom-2">
-            <fieldset class="form_fieldset">
-              <legend>Контактные данные</legend>
-              <div class="field">
-                <label class="field_label" for="select">Select</label>
-                <select class="field_input" id="select" type="text">
-                  <option>Привет мир</option>
-                  <option>Привет Фармир</option>
-                  <option>Привет Тандыр</option>
-                </select><span class="field_helper">Помощь утопающего</span>
-              </div>
-              <div class="field">
-                <label class="field_label" for="select">Select</label>
-                <select class="field_input" id="select" type="text" multiple="multiple">
-                  <option>Привет мир</option>
-                  <option>Привет Фармир</option>
-                  <option>Привет Тандыр</option>
-                </select><span class="field_helper">Помощь утопающего</span>
-              </div>
-            </fieldset>
-          </form>
-          <form class="form form__dark cols__md block__background-alert padding__yy-2 margin__bottom-2 text__white">
-            <fieldset class="form_fieldset">
-              <legend>Контактные данные</legend>
-              <div class="field">
-                <label class="field_label" for="select">Select</label>
-                <select class="field_input" id="select" type="text">
-                  <option>Привет мир</option>
-                  <option>Привет Фармир</option>
-                  <option disabled="disabled">Привет Тандыр</option>
-                </select><span class="field_helper">Помощь утопающего</span>
-              </div>
-              <div class="field">
-                <label class="field_label" for="select">Select</label>
-                <select class="field_input" id="select" type="text" multiple="multiple">
-                  <option>Привет мир</option>
-                  <optgroup label="Group">
+            </form>
+          </div>
+          <div class="row">
+            <form class="form cols__md background__light padding__yy-2 margin__bottom-2">
+              <fieldset class="form_fieldset">
+                <legend>Контактные данные</legend>
+                <div class="field">
+                  <label class="field_label" for="inp1">Обычное поле</label>
+                  <input class="field_input" id="inp3" type="text"/><span class="field_helper">Помощь утопающего</span>
+                </div>
+                <div class="field">
+                  <label class="field_label" for="txt">Обычное поле</label>
+                  <textarea class="field_input" id="txt"></textarea><span class="field_helper">Помощь утопающего</span>
+                </div>
+                <div class="field field__row">
+                  <label class="field_label" for="inp2">Линейное поле</label>
+                  <input class="field_input" id="inp4" type="text"/><span class="field_helper">Помощь утопающего</span>
+                </div>
+                <div class="field">
+                  <label class="field_label" for="file">Линейное поле</label>
+                  <input class="field_input" id="file" type="file"/><span class="field_helper">Помощь утопающего</span>
+                </div>
+                <div class="text__right">
+                  <input class="button button__primary" type="submit" value="Отправить"/>
+                </div>
+              </fieldset>
+            </form>
+            <form class="form cols__md padding__yy-2 margin__bottom-2">
+              <fieldset class="form_fieldset">
+                <legend>Контактные данные</legend>
+                <div class="field">
+                  <label class="field_label" for="form11">ФИО</label>
+                  <input class="field_input" id="form11" type="text"/>
+                </div>
+                <div class="field">
+                  <label class="field_label" for="form12">email</label>
+                  <input class="field_input" id="form12" type="text"/>
+                </div>
+                <div class="field">
+                  <label class="field_label" for="form12">email</label>
+                  <input class="field_input" id="form12" type="text"/>
+                </div>
+              </fieldset>
+              <fieldset class="form_fieldset">
+                <legend>Контактные данные</legend>
+                <div class="field">
+                  <label class="field_label" for="form11">ФИО</label>
+                  <input class="field_input" id="form11" type="text"/>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="row">
+            <form class="form cols__md background__light padding__yy-2 margin__bottom-2">
+              <fieldset class="form_fieldset">
+                <legend>Контактные данные</legend>
+                <div class="field">
+                  <label class="field_label" for="select">Select</label>
+                  <select class="field_input" id="select" type="text">
+                    <option>Привет мир</option>
                     <option>Привет Фармир</option>
                     <option>Привет Тандыр</option>
-                  </optgroup>
-                  <optgroup label="Grouppy" disabled="disabled">
+                  </select><span class="field_helper">Помощь утопающего</span>
+                </div>
+                <div class="field">
+                  <label class="field_label" for="select">Select</label>
+                  <select class="field_input" id="select" type="text" multiple="multiple">
+                    <option>Привет мир</option>
                     <option>Привет Фармир</option>
                     <option>Привет Тандыр</option>
-                  </optgroup>
-                </select><span class="field_helper">Помощь утопающего</span>
-              </div>
-            </fieldset>
-            <button class="button button__white">Привет форма</button>
-          </form>
+                  </select><span class="field_helper">Помощь утопающего</span>
+                </div>
+              </fieldset>
+            </form>
+            <form class="form form__dark cols__md background__alert padding__yy-2 margin__bottom-2 text__white">
+              <fieldset class="form_fieldset">
+                <legend>Контактные данные</legend>
+                <div class="field">
+                  <label class="field_label" for="select">Select</label>
+                  <select class="field_input" id="select" type="text">
+                    <option>Привет мир</option>
+                    <option>Привет Фармир</option>
+                    <option disabled="disabled">Привет Тандыр</option>
+                  </select><span class="field_helper">Помощь утопающего</span>
+                </div>
+                <div class="field">
+                  <label class="field_label" for="select">Select</label>
+                  <select class="field_input" id="select" type="text" multiple="multiple">
+                    <option>Привет мир</option>
+                    <optgroup label="Group">
+                      <option>Привет Фармир</option>
+                      <option>Привет Тандыр</option>
+                    </optgroup>
+                    <optgroup label="Grouppy" disabled="disabled">
+                      <option>Привет Фармир</option>
+                      <option>Привет Тандыр</option>
+                    </optgroup>
+                  </select><span class="field_helper">Помощь утопающего</span>
+                </div>
+              </fieldset>
+              <button class="button button__white">Привет форма</button>
+            </form>
+          </div>
         </div>
-      </div>
-      <div class="container container__wide margin__bottom-2">
-        <h1 class="heading heading__h1 margin__top-0">Уведомления</h1>
-        <div class="row">
-          <div class="notification notification__alert cols__md-6 margin__bottom-1">
-            <div class="heading heading__h1 margin__top-0">Привет мир</div>
-            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-          </div>
-          <div class="notification notification__ok cols__md-6 margin__bottom-1">
-            <div class="heading heading__h1 margin__top-0">Привет мир</div>
-            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-          </div>
-          <div class="notification notification__warning cols__md-6 margin__bottom-1">
-            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-          </div>
-          <div class="notification notification__ok cols__md-6 margin__bottom-1">
-            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-          </div>
-          <div class="notification notification__warning cols__md-6 padding__yy-0 margin__bottom-1">
-            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-          </div>
-          <div class="notification notification__ok cols__md-6 padding__yy-0 margin__bottom-1">
-            <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+        <div class="container container__wide margin__bottom-2">
+          <h1 class="heading heading__h1 margin__top-0">Уведомления</h1>
+          <div class="row">
+            <div class="notification notification__alert cols__md-6 margin__bottom-1">
+              <div class="heading heading__h1 margin__top-0">Привет мир</div>
+              <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            </div>
+            <div class="notification notification__ok cols__md-6 margin__bottom-1">
+              <div class="heading heading__h1 margin__top-0">Привет мир</div>
+              <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            </div>
+            <div class="notification notification__warning cols__md-6 margin__bottom-1">
+              <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            </div>
+            <div class="notification notification__ok cols__md-6 margin__bottom-1">
+              <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            </div>
+            <div class="notification notification__warning cols__md-6 padding__yy-0 margin__bottom-1">
+              <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            </div>
+            <div class="notification notification__ok cols__md-6 padding__yy-0 margin__bottom-1">
+              <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container container__wide margin__bottom-2">
-        <h1 class="heading heading__h1 margin__top-0">Пагинация</h1>
-        <ul class="pagination">
-          <li class="pagination_item"><a class="link" href="1">1</a></li>
-          <li class="pagination_item pagination__active"><a class="link" href="2">2</a></li>
-          <li class="pagination_item"><a class="link" href="next">next</a></li>
-        </ul>
+        <div class="container container__wide margin__bottom-2">
+          <h1 class="heading heading__h1 margin__top-0">Пагинация</h1>
+          <ul class="pagination">
+            <li class="pagination_item"><a class="link" href="1">1</a></li>
+            <li class="pagination_item pagination__active"><a class="link" href="2">2</a></li>
+            <li class="pagination_item"><a class="link" href="next">next</a></li>
+          </ul>
+        </div>
       </div>
     </main>
   </body>
