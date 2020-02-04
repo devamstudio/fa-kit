@@ -15,15 +15,16 @@
             right: 0
         legend
             display: flex
-            //margin: 0
-                bottom: $fields-inset-y * 2
-                left: $fields-inset-x / 2
-            //padding: 0 $fields-inset-x / 2
+            margin: 0
+                bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .25rem)
+            padding:
+                right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
             font:
                 family: serif
                 style: italic
                 weight: 100
                 size: 80%
+            line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem)
             text-transform: uppercase
         &__row
             flex:
@@ -45,27 +46,32 @@
     display: flex
     flex:
         direction: column
+    .#{$class-field}_input
+        min-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
     .#{$class-field}_label
         margin:
-            bottom: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
+            bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .25rem)
     .#{$class-field}_helper
         margin:
-            top: calc(var(--grid-square) * 4 / var(--font-size) * .25rem)
+            top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .25rem)
 
 .#{$class-field}
+    min-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+    &:not(.#{$class-field}__row):not(.#{$class-field}__horisontal):not(.#{$class-field}__inline)
+        @include vertical_field
     .#{$class-field}_label
         font-size: $font-base-size * 0.9
+        line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
     .#{$class-field}_input
         font-weight: inherit
         color: $color-black
         background-color: lighten($color-gray__light, 5%)
-        min-height: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
-        line-height: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+        line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
         padding: 
-            top: calc(var(--grid-square) * 4 / var(--font-size) * #{$fields-inset-y} * 1rem) 
-            bottom: calc(var(--grid-square) * 4 / var(--font-size) * #{$fields-inset-y} * 1rem) 
-            left: calc(var(--grid-square) * 4 / var(--font-size) * #{$fields-inset-x} * 1rem)
-            right: calc(var(--grid-square) * 4 / var(--font-size) * #{$fields-inset-x} * 1rem)
+            top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$fields-inset-y} * 1rem) 
+            bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$fields-inset-y} * 1rem) 
+            left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$fields-inset-x} * 1rem)
+            right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$fields-inset-x} * 1rem)
         border: 0
         font-size: $font-base-size * .9
 
@@ -73,57 +79,85 @@
         &.#{$class-field}_input__disabled
             cursor: not-allowed
             opacity: .5
+
         // Rule for select
-        optgroup
-            font-size: 80%
-            option
-                font-size: initial
-                &:before
-                    content: '— '
+        @at-root
+            select.#{$class-field}_input
+                height: auto
+                option
+                    display: flex
+                    height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+                    align-items: center
+                optgroup
+                    font-size: 80%
+                    option
+                        font-size: initial
+                        line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+                        &:before
+                            content: '— '
         // Field types
         &[type="file"]
+            display: inline-flex
+            align-items: center
             background-color: white
             font-size: .8em
-            padding: 1em
-            //border: 1px solid red
+            //line-height: 0
+            height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+            padding:
+                top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .1rem)
+                bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .1rem)
+            &::-webkit-file-upload-button
+                vertical-align: middle
+                height: 100%
+            
     .#{$class-field}_helper
         font-size: $font-base-size * 0.8
-    // States
-    &.#{$class-field}__vertical
-        @include vertical_field
+        line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
+
     &.#{$class-field}__inline
-        line-height: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+        display: inline-block
+        line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
         .#{$class-field}_input
             display: inline
-            margin: 0
+            margin: 
+                top: 0
+                left: 0
             vertical-align: baseline
+        &::before
+            display: inline-block
+            content: '\00A0'
+            width: 0
         .#{$class-field}_label
             display: inline
             margin: 0
             vertical-align: baseline
 
     &.#{$class-field}__row, &.#{$class-field}__horisontal
+        display: flex
         @include media_query_down(xs)
             @include vertical_field
         @include media_query_up(sm)
             flex:
                 direction: row
+            align-items: center
+            line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
             .#{$class-field}_label
                 margin:
                     left: 0
-                    right: $fields-inset-x
+                    right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
             .#{$class-field}_input
                 flex-grow: 10
-                color: red
             .#{$class-field}_helper
                 margin: 0
-                    left: calc(var(--grid-square) * 4 / var(--font-size) * .5rem)
+                    left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
     // States
     &.#{$class-field}__error
         .#{$class-field}_label
             font-weight: bold
-        .#{$class-field}_input
-            border:
-                left: 6px solid $color-red
-                top: 0
-                bottom: 0
+            color: $color-red
+        &:not(.#{$class-field}__row):not(.#{$class-field}__horisontal):not(.#{$class-field}__inline)
+            .#{$class-field}_input
+                border:
+                    left: 6px solid $color-red
+                    top: 0
+                    bottom: 0

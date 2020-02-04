@@ -8,10 +8,10 @@
 	font:
 		size: $font-base-size
 		family: $font_main
-	line-height: calc(var(--grid-square) * 4 / var(--font-size)  * 1rem)
+	line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
 	margin:
 		top: 0
-		bottom: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
 
 	*
 		vertical-align: baseline
@@ -19,7 +19,7 @@
 	// Lead
 	&.paragraph__lead
 		font-size: $font-base-size * 1.2
-		line-height: calc(var(--grid-square) * 4 / var(--font-size)  * 1rem)
+		line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
 
 // Text format
 .kbd
@@ -34,8 +34,8 @@
 // Create headings class
 .heading
 	margin:
-		top: calc(var(--grid-square) * 4 / var(--font-size) * #{$font_heading_margin_top} * 1rem)
-		bottom: calc(var(--grid-square) * 4 / var(--font-size) * #{$font_heading_margin_bottom} * 1rem)
+		top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$font_heading_margin_top} * 1rem)
+		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$font_heading_margin_bottom} * 1rem)
 	display: block
 	font:
 		family: $font_heading
@@ -50,7 +50,7 @@
 			font:
 				size: $size
 				weight: $font-weight
-			line-height: calc(var(--grid-square) * 4 / var(--font-size) * #{$line-height} * 1rem)
+			line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$line-height} * 1rem)
 
 .#{$class-text}
 	// Color text
@@ -71,9 +71,9 @@
 .#{$class-list}
 	margin:
 		top: 0
-		bottom: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
+		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
 	&_item
-		line-height: calc(var(--grid-square) * 4 / var(--font-size)  * 1rem)
+		line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
 	&__unstyled
 		list-style-type: none
 		padding: 0
@@ -82,23 +82,23 @@
 // Text decoration
 .#{$class-blockquote}
 	margin: 
-		top: calc(var(--grid-square) * 4 / var(--font-size) * 1.5rem)
-		bottom: calc(var(--grid-square) * 4 / var(--font-size) * 1.5rem)
+		top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.5rem)
+		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.5rem)
 		left: 0
 	padding:
-		left: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
-		top: calc(var(--grid-square) * 4 / var(--font-size) * 1rem - 1em)
-		bottom: calc(var(--grid-square) * 4 / var(--font-size) * 1rem - 1em)
+		left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+		top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem - 1em)
+		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem - 1em)
 	border:
 		top: .1em solid $color-gray
 		bottom: .1em solid $color-gray
 	font-style: italic
-	line-height: calc(var(--grid-square) * 4 / var(--font-size)  * 1rem)
+	line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
 
 .link
 	@extend %link
 
 .hr
 	margin: 
-		top: calc(var(--grid-square) * 4 / var(--font-size) * 1.5rem)
-		bottom: calc(var(--grid-square) * 4 / var(--font-size) * 1.5rem)
+		top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.5rem)
+		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1.5rem)

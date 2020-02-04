@@ -31,12 +31,13 @@ $body-background-color : $color-white!default
 
 
 //* 2. Grid */
-$grid-square		: 8 !default // Module system value
-$grid-cols 			: 12 !default
-$containers         : ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px ) !default
-$media-quaries      : ( xs, sm, md, lg, xl)!default
-$media-quaries_up   : ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px ) !default
-$media-quaries_down : ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1220px ) !default
+$grid-square			: 8 !default // Module system value
+$grid-squares-per-line 	: 4 !default
+$grid-cols 				: 12 !default
+$containers         	: ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px ) !default
+$media-quaries      	: ( xs, sm, md, lg, xl)!default
+$media-quaries_up   	: ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px ) !default
+$media-quaries_down 	: ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1220px ) !default
 
 
 //* 3. Text */
@@ -61,7 +62,7 @@ $flex-align_items-list : ( start : flex-start , end : flex-end , center : center
 
 //* 4. Margin and paddings */
 $directions       : left, right, top, bottom, yy, xx !default
-$direction-offset : ( 0: 0 , half: .5 , 1: 1 , 2: 2 , 3: 3 , 4: 4 , 5: 5 ) !default
+$direction-offset : ( 0: 0 , 1_2: .5, 1_4: .25, 3_4: .75 , 1: 1 , 2: 2 , 3: 3 , 4: 4 , 5: 5 ) !default
 
 
 //* 5. Design */
@@ -72,15 +73,15 @@ $global-rounded-radius : 0.2rem !default
 $global-animation : true !default
 $global-animation-delay : 0.2s !default
 //Inputs
-$global-input-inset-y: .5rem !default
-$global-input-inset-x: 1rem !default
+$global-input-inset-y: 0 !default
+$global-input-inset-x: .25 !default
 // Coloring
 $border-width: .1rem !default
 
 
 //* 6. Buttons */
-$colors : ( primary : $color-primary, secondary : $color-secondary, alert : $color-alert, warning : $color-warning, ok : $color-ok, black : $color-black, white : $color-white , light : $color-gray__light , dark : $color-gray__dark ) !default
-$buttons-inset-x : $global-input-inset-x !default
+$colors : ( primary : $color-primary, secondary : $color-secondary, alert : $color-alert, warning : $color-warning, ok : $color-ok, black : $color-black, white : $color-white , light : $color-gray__light , dark : $color-gray__dark, red: $color-red ) !default
+$buttons-inset-x : $global-input-inset-x * 3 !default
 $buttons-inset-y : $global-input-inset-y !default
 $buttons-radius : '' !default
 @if $global-rounded
