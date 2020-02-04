@@ -1,29 +1,29 @@
 article, .#{$class-article}
 	// Create headings
 	@each $heading, $size in $font_heading_sizes
-		$i_rev: length($font_heading_sizes) - index(($font_heading_sizes), ($heading $size)) + 1
-		$line-height: map-get($font-heading-lineheight, $i_rev )
-		$font-weight: map-get($font-heading-weight, $i_rev )
+		$i_rev: length($font_heading_sizes) - index(($font_heading_sizes), ($heading $size))
+		$offset_top: map-get($font_heading_sizes, h+$i_rev )
 		#{$heading}
-			margin:
-				top: calc(var(--grid-square) * 4 / var(--font-size) * #{$font_heading_margin_top} * 1rem)
-				bottom: calc(var(--grid-square) * 4 / var(--font-size) * #{$font_heading_margin_bottom} * 1rem)
 			display: block
-			font:
-				family: $font_heading
+			font :
+				size : $size
+				family : $font_heading
+			margin: 0
+				top: $font_heading_margin_top
+				bottom: .2em
+			font-weight : 400
+			line-height: $font_heading_line_height
 			hyphens: auto
-			font:
-				size: $size
-				weight: $font-weight
-			line-height: calc(var(--grid-square) * 4 / var(--font-size) * #{$line-height} * 1rem)
+	img, picture
+		& + p, & + blockquote
+			margin-top: 1em
 
 	ol, ul
+		padding:
+			left: 2em
 		margin:
-			top: 0
-			bottom: calc(var(--grid-square) * 4 / var(--font-size) * 1rem)
-		li
-			line-height: calc(var(--grid-square) * 4 / var(--font-size)  * 1rem)
-			
+			bottom: 1em
+		line-height: $text-line-height
 	span,strong,i,b
 		font :
 			size : inherit
