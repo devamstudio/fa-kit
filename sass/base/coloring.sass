@@ -5,6 +5,10 @@
 
     .border__#{$state}
         border: .1rem solid $color
+        .border_height-compensation
+            margin:
+                top: - $border-width
+                bottom: - $border-width
     
     .color__#{$state}
         color: $color

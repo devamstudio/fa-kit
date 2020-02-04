@@ -1,5 +1,6 @@
 html:root
     --grid-square: #{$grid-square}
+    --grid-squares-per-line: #{$grid-squares-per-line}
     @each $query, $size in $font-base-ratio
         @include media_query_up($query)
             --font-size: #{$size}

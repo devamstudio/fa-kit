@@ -8,88 +8,91 @@
 
 
 //* 1. Colors */
-$color-red    : #bc1817
-$color-blue   : #124388
-$color-yellow : #fab51b
-$color-green  : #3baa35
-$color-purple : purple
-$color-white  : white
-$color-black  : black
+$color-red    : #bc1817!default
+$color-blue   : #124388!default
+$color-yellow : #fab51b!default
+$color-green  : #3baa35!default
+$color-purple : purple!default
+$color-white  : white!default
+$color-black  : black!default
 // Gray
-$color-gray__light : #eaeaea
-$color-gray        : #a4a4a4
-$color-gray__dark  : #727272
+$color-gray__light : #eaeaea!default
+$color-gray        : #a4a4a4!default
+$color-gray__dark  : #727272!default
 // Interface
-$color-primary   : $color-red
-$color-secondary : $color-yellow
-$color-alert     : $color-red
-$color-warning   : $color-yellow
-$color-ok        : $color-green
+$color-primary   : $color-red!default
+$color-secondary : $color-yellow!default
+$color-alert     : $color-red!default
+$color-warning   : $color-yellow!default
+$color-ok        : $color-green!default
 
-$body-text-color       : $color-black
-$body-background-color : $color-white
+$body-text-color       : $color-black!default
+$body-background-color : $color-white!default
 
 
 //* 2. Grid */
-$grid-square		: 8 // Module system value
-$grid-cols 			: 12
-$containers         : ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px )
-$media-quaries      : ( xs, sm, md, lg, xl)
-$media-quaries_up   : ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px )
-$media-quaries_down : ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1220px )
+$grid-square			: 8 !default // Module system value
+$grid-squares-per-line 	: 4 !default
+$grid-cols 				: 12 !default
+$containers         	: ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px ) !default
+$media-quaries      	: ( xs, sm, md, lg, xl)!default
+$media-quaries_up   	: ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px ) !default
+$media-quaries_down 	: ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1220px ) !default
 
 
 //* 3. Text */
 // Family
-$font-heading : Arial, -apple-system, system-ui
-$font-main    : Arial, -apple-system, system-ui
+$font-heading : Arial, -apple-system, system-ui!default
+$font-main    : Arial, -apple-system, system-ui!default
 // Size
-$font-base-ratio   		 	: ( xs: 16, lg: 18 )
-$font-base-size    		 	: 1rem
+$font-base-ratio   		 	: ( xs: 16, lg: 18 ) !default
+$font-base-size    		 	: 1rem !default
 
-$font-heading-sizes 	 	: ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem )
-$font-heading-weight 	 	: ( 6 : normal, 5 : normal, 4 : bold, 3 : bold, 2 : bold, 1 : bold ) // May have reversed mode 1 eq h6 heading, h1 = 6
-$font-heading-lineheight 	: ( 6 : 2, 5 : 2, 4 : 2, 3 : 1, 2 : 1, 1 : 1 ) // May have reversed mode 1 eq h6 heading, h1 = 6
-$font_heading_margin_top 	: 2
-$font_heading_margin_bottom : 1
+$font-heading-sizes 	 	: ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem ) !default
+$font-heading-weight 	 	: ( 6 : normal, 5 : normal, 4 : bold, 3 : bold, 2 : bold, 1 : bold ) !default // May have reversed mode 1 eq h6 heading, h1 = 6
+$font-heading-lineheight 	: ( 6 : 2, 5 : 2, 4 : 2, 3 : 1, 2 : 1, 1 : 1 ) !default // May have reversed mode 1 eq h6 heading, h1 = 6
+$font_heading_margin_top 	: 2 !default
+$font_heading_margin_bottom : 1 !default
 
 // Align
-$text-align-list : left, right, center, justify
-$flex-align_items-list : ( start : flex-start , end : flex-end , center : center , baseline : baseline , stretch : stretch )
+$text-align-list : left, right, center, justify !default
+$flex-align_items-list : ( start : flex-start , end : flex-end , center : center , baseline : baseline , stretch : stretch ) !default
 // Other
 
 
 //* 4. Margin and paddings */
-$directions       : left, right, top, bottom, yy, xx
-$direction-offset : ( 0: 0 , half: .5 , 1: 1 , 2: 2 , 3: 3 , 4: 4 , 5: 5 )
+$directions       : left, right, top, bottom, yy, xx !default
+$direction-offset : ( 0: 0 , 1_2: .5, 1_4: .25, 3_4: .75 , 1: 1 , 2: 2 , 3: 3 , 4: 4 , 5: 5 ) !default
 
 
 //* 5. Design */
 // Rounded
-$global-rounded : true
-$global-rounded-radius : 0.2rem
+$global-rounded : true !default
+$global-rounded-radius : 0.2rem !default
 // Animation
-$global-animation : true
-$global-animation-delay : 0.2s
+$global-animation : true !default
+$global-animation-delay : 0.2s !default
 //Inputs
-$global-input-inset-y: .5rem
-$global-input-inset-x: 1rem
+$global-input-inset-y: 0 !default
+$global-input-inset-x: .25 !default
+// Coloring
+$border-width: .1rem !default
 
 
 //* 6. Buttons */
-$colors : ( primary : $color-primary, secondary : $color-secondary, alert : $color-alert, warning : $color-warning, ok : $color-ok, black : $color-black, white : $color-white , light : $color-gray__light , dark : $color-gray__dark )
-$buttons-inset-x : $global-input-inset-x
-$buttons-inset-y : $global-input-inset-y
-$buttons-radius : ''
+$colors : ( primary : $color-primary, secondary : $color-secondary, alert : $color-alert, warning : $color-warning, ok : $color-ok, black : $color-black, white : $color-white , light : $color-gray__light , dark : $color-gray__dark, red: $color-red ) !default
+$buttons-inset-x : $global-input-inset-x * 3 !default
+$buttons-inset-y : $global-input-inset-y !default
+$buttons-radius : '' !default
 @if $global-rounded
-	$buttons-radius : $global-rounded-radius
+	$buttons-radius : $global-rounded-radius !default
 
 
 //* 7. Fields */
-$fields-inset-x : $global-input-inset-x
-$fields-inset-y : $global-input-inset-y
-$fields-radius : ''
+$fields-inset-x : $global-input-inset-x !default
+$fields-inset-y : $global-input-inset-y !default
+$fields-radius : '' !default
 @if $global-rounded
-	$fields-radius : $global-rounded-radius
-$fields-border-width : 0.1rem
-$fields-border-style : solid
+	$fields-radius : $global-rounded-radius !default
+$fields-border-width : $border-width !default
+$fields-border-style : solid !default
