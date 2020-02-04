@@ -1,27 +1,13 @@
 @charset "UTF-8";
-/* Hi this is a custom template that you can use in you project. Copy it to your src folder and import before FA-Kit config. Then add set up you values to vars. You can remove all or add any you needed, build of FA-Kit might not be crashed. */
-html:root {
-  --grid-square: 8;
-  --grid-squares-per-line: 4; }
-  @media (min-width: 0) {
-    html:root {
-      --font-size: 16; } }
-  @media (min-width: 1024px) {
-    html:root {
-      --font-size: 18; } }
-
 *,
 *::before,
 *::after {
   box-sizing: border-box; }
 
-html {
-  font-family: Arial, -apple-system, system-ui;
-  font-size: calc(var(--font-size) * 1px);
-  color: black; }
-
 body {
   margin: 0;
+  line-height: 1;
+  color: black;
   background: white; }
 
 img, picture {
@@ -567,27 +553,32 @@ body {
   .offset__xl-12 {
     margin-left: 100%; } }
 
-.paragraph {
+body, html {
+  font-family: Arial, -apple-system, system-ui;
+  font-size: 1rem; }
+
+p {
   hyphens: auto;
   font-size: 1rem;
   font-family: Arial, -apple-system, system-ui;
   line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem);
   margin-top: 0;
   margin-bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem); }
-  .paragraph * {
+  p * {
     vertical-align: baseline; }
-  .paragraph.paragraph__lead {
+  p.paragraph__lead {
     font-size: 1.2rem;
     line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem); }
 
-.kbd {
+kbd {
   display: inline-block;
-  padding: .3em .4em;
-  font-size: .9em;
-  line-height: 1;
+  padding: .1em .4em;
+  font-size: .8em;
+  line-height: inherit;
+  vertical-align: middle;
   background-color: black;
   color: white;
-  border-radius: .2rem; }
+  border-radius: .2em; }
 
 .heading {
   margin-top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 2 * 1rem);
@@ -713,6 +704,9 @@ body {
   .text__xl-justify {
     text-align: justify; } }
 
+.text__lead {
+  font-size: 1.1em; }
+
 .list {
   margin-top: 0;
   margin-bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem); }
@@ -816,126 +810,6 @@ article span, article strong, article i, article b, .article span, .article stro
 
 .image__shaped-circle {
   border-radius: 50%; }
-
-.background__primary {
-  background-color: #bc1817; }
-
-.border__primary {
-  border: 0.1rem solid #bc1817; }
-  .border__primary .border_height-compensation {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem; }
-
-.color__primary {
-  color: #bc1817; }
-
-.background__secondary {
-  background-color: #fab51b; }
-
-.border__secondary {
-  border: 0.1rem solid #fab51b; }
-  .border__secondary .border_height-compensation {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem; }
-
-.color__secondary {
-  color: #fab51b; }
-
-.background__alert {
-  background-color: #bc1817; }
-
-.border__alert {
-  border: 0.1rem solid #bc1817; }
-  .border__alert .border_height-compensation {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem; }
-
-.color__alert {
-  color: #bc1817; }
-
-.background__warning {
-  background-color: #fab51b; }
-
-.border__warning {
-  border: 0.1rem solid #fab51b; }
-  .border__warning .border_height-compensation {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem; }
-
-.color__warning {
-  color: #fab51b; }
-
-.background__ok {
-  background-color: #3baa35; }
-
-.border__ok {
-  border: 0.1rem solid #3baa35; }
-  .border__ok .border_height-compensation {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem; }
-
-.color__ok {
-  color: #3baa35; }
-
-.background__black {
-  background-color: black; }
-
-.border__black {
-  border: 0.1rem solid black; }
-  .border__black .border_height-compensation {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem; }
-
-.color__black {
-  color: black; }
-
-.background__white {
-  background-color: white; }
-
-.border__white {
-  border: 0.1rem solid white; }
-  .border__white .border_height-compensation {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem; }
-
-.color__white {
-  color: white; }
-
-.background__light {
-  background-color: #eaeaea; }
-
-.border__light {
-  border: 0.1rem solid #eaeaea; }
-  .border__light .border_height-compensation {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem; }
-
-.color__light {
-  color: #eaeaea; }
-
-.background__dark {
-  background-color: #727272; }
-
-.border__dark {
-  border: 0.1rem solid #727272; }
-  .border__dark .border_height-compensation {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem; }
-
-.color__dark {
-  color: #727272; }
-
-.background__red {
-  background-color: #bc1817; }
-
-.border__red {
-  border: 0.1rem solid #bc1817; }
-  .border__red .border_height-compensation {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem; }
-
-.color__red {
-  color: #bc1817; }
 
 .form {
   display: block; }
@@ -1298,17 +1172,17 @@ article span, article strong, article i, article b, .article span, .article stro
   -webkit-user-select: none;
   user-select: none; }
 
-.link, .breadcrumbs_item__link a {
+.breadcrumbs_item__link a {
   text-decoration: none;
   color: #124388;
   line-height: inherit; }
-  .link:hover, .breadcrumbs_item__link a:hover {
+  .breadcrumbs_item__link a:hover {
     text-decoration: underline; }
-  .link:active, .breadcrumbs_item__link a:active {
+  .breadcrumbs_item__link a:active {
     color: #092244; }
-  .link:visited, .breadcrumbs_item__link a:visited {
+  .breadcrumbs_item__link a:visited {
     color: purple; }
-    .link:visited:active, .breadcrumbs_item__link a:visited:active {
+    .breadcrumbs_item__link a:visited:active {
       color: #340034; }
 
 .button__disabled, .button[disabled] {

@@ -4,111 +4,107 @@
     <title>Тесты блоков и сетки
     </title>
     <link rel="stylesheet" href="../dist/fa-kit.css"/>
-    <link rel="stylesheet" href="https://space.i-am.studio/font-icons-rage/releases/v1.2/css/font-rage.css"/>
   </head>
-  <body style="display:flex;">
-    <aside style="width: 250px;">
-      <div style="position:sticky;top:3rem;">
-        <h5 class="heading heading__h5 margin__xx-1">Навигация по тестам</h5>
-        <ul class="list">
-          <li class="list_item"><a class="link" href="grid.html">Сетка</a></li>
-          <li class="list_item"><a class="link" href="text.html">Текст</a></li>
-          <li class="list_item"><a class="link" href="utulites.html">Утилиты</a></li>
-          <li class="list_item"><a class="link" href="design.html">Дизигн</a></li>
-        </ul>
+  <body>
+    <div style="position:fixed;top:50%;left:0;transform:translateY(-50%);z-index:100;">
+      <ul>
+        <li><a href="grid.html">Сетка</a></li>
+        <li><a href="text.html">Текст</a></li>
+        <li><a href="utulites.html">Утилиты</a></li>
+        <li><a href="design.html">Дизигн</a></li>
+      </ul>
+    </div>
+    <main>
+      <div class="g-container g-padding__yy-3 g-container__wide g-block__background-light g-text__center">
+        <div class="h1">Привет широкий контейнер</div><code>.g-container.g-container__wide</code>
       </div>
-    </aside>
-    <main style="flex-grow:10;">
-      <div class="container container__wide padding__yy-2 block__background-light text__center">
-        <div class="h1">Привет широкий контейнер</div><code>.container.container__wide</code>
-      </div>
-      <div class="container container__wide padding__yy-2 text__center">
-        <div class="row">
-          <div class="cols__xs-12 padding__yy-2 block__background-light"><span>.cols__xs-12</span></div>
+      <div class="g-container g-padding__yy-3 g-text__center">
+        <div class="g-row">
+          <div class="g-cols__xs-12 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-12</span></div>
         </div>
-        <div class="row">
-          <div class="cols__xs-4 padding__yy-2 block__background-light"><span>.cols__xs-4</span></div>
-          <div class="cols__xs-8 padding__yy-2"><span>.cols__xs-8</span></div>
+        <div class="g-row">
+          <div class="g-cols__xs-4 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-4</span></div>
+          <div class="g-cols__xs-8 g-padding__yy-3"><span>.g-cols__xs-8</span></div>
         </div>
-        <div class="row">
-          <div class="cols__xs-7 padding__yy-2"><span>.cols__xs-7</span></div>
-          <div class="cols__xs-5 padding__yy-2 block__background-light"><span>.cols__xs-5</span></div>
+        <div class="g-row">
+          <div class="g-cols__xs-7 g-padding__yy-3"><span>.g-cols__xs-7</span></div>
+          <div class="g-cols__xs-5 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-5</span></div>
         </div>
-        <div class="row">
-          <div class="cols__xs-6 padding__yy-2"><span>.cols__xs-6</span></div>
-          <div class="cols__xs-6 padding__yy-2 block__background-light"><span>.cols__xs-6</span></div>
+        <div class="g-row">
+          <div class="g-cols__xs-6 g-padding__yy-3"><span>.g-cols__xs-6</span></div>
+          <div class="g-cols__xs-6 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-6</span></div>
         </div>
-        <div class="row">
-          <div class="cols__xs-4 padding__yy-2"><span>.cols__xs-4</span></div>
-          <div class="cols__xs-4 padding__yy-2 block__background-light"><span>.cols__xs-4</span></div>
-          <div class="cols__xs-4 padding__yy-2"><span>.cols__xs-4</span></div>
+        <div class="g-row">
+          <div class="g-cols__xs-4 g-padding__yy-3"><span>.g-cols__xs-4</span></div>
+          <div class="g-cols__xs-4 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-4</span></div>
+          <div class="g-cols__xs-4 g-padding__yy-3"><span>.g-cols__xs-4</span></div>
         </div>
-        <div class="row">
-          <div class="cols__xs-5 padding__yy-2 block__background-light"><span>.cols__xs-5</span></div>
-          <div class="cols__xs-5 padding__yy-2"><span>.cols__xs-5</span></div>
-          <div class="cols__xs-2 padding__yy-2 block__background-light"><span>.cols__xs-2</span></div>
+        <div class="g-row">
+          <div class="g-cols__xs-5 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-5</span></div>
+          <div class="g-cols__xs-5 g-padding__yy-3"><span>.g-cols__xs-5</span></div>
+          <div class="g-cols__xs-2 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-2</span></div>
         </div>
-        <div class="row">
-          <div class="cols__xs-3 padding__yy-2 block__background-light"><span>.cols__xs-3</span></div>
-          <div class="cols__xs-3 padding__yy-2"><span>.cols__xs-3</span></div>
-          <div class="cols__xs-3 padding__yy-2 block__background-light"><span>.cols__xs-3</span></div>
-          <div class="cols__xs-3 padding__yy-2"><span>.cols__xs-3</span></div>
+        <div class="g-row">
+          <div class="g-cols__xs-3 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-3</span></div>
+          <div class="g-cols__xs-3 g-padding__yy-3"><span>.g-cols__xs-3</span></div>
+          <div class="g-cols__xs-3 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-3</span></div>
+          <div class="g-cols__xs-3 g-padding__yy-3"><span>.g-cols__xs-3</span></div>
         </div>
-        <div class="row">
-          <div class="cols__xs-2 padding__yy-2 block__background-light"><span>.cols__xs-2</span></div>
-          <div class="cols__xs-2 padding__yy-2"><span>.cols__xs-2</span></div>
-          <div class="cols__xs-2 padding__yy-2 block__background-light"><span>.cols__xs-2</span></div>
-          <div class="cols__xs-2 padding__yy-2"><span>.cols__xs-2</span></div>
-          <div class="cols__xs-2 padding__yy-2 block__background-light"><span>.cols__xs-2</span></div>
-          <div class="cols__xs-2 padding__yy-2"><span>.cols__xs-2</span></div>
+        <div class="g-row">
+          <div class="g-cols__xs-2 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-2</span></div>
+          <div class="g-cols__xs-2 g-padding__yy-3"><span>.g-cols__xs-2</span></div>
+          <div class="g-cols__xs-2 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-2</span></div>
+          <div class="g-cols__xs-2 g-padding__yy-3"><span>.g-cols__xs-2</span></div>
+          <div class="g-cols__xs-2 g-padding__yy-3 g-block__background-light"><span>.g-cols__xs-2</span></div>
+          <div class="g-cols__xs-2 g-padding__yy-3"><span>.g-cols__xs-2</span></div>
         </div>
-        <div class="row">
-          <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-          <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
+        <div class="g-row">
+          <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+          <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
         </div>
-        <div class="row">
-          <div class="cols__sm padding__yy-2 block__background-light"><span>1</span></div>
-          <div class="cols__sm padding__yy-2"><span>1</span></div>
-          <div class="cols__sm padding__yy-2 block__background-light"><span>1</span></div>
-          <div class="cols__sm padding__yy-2"><span>1</span></div>
+        <div class="g-row">
+          <div class="g-cols__sm g-padding__yy-3 g-block__background-light"><span>1</span></div>
+          <div class="g-cols__sm g-padding__yy-3"><span>1</span></div>
+          <div class="g-cols__sm g-padding__yy-3 g-block__background-light"><span>1</span></div>
+          <div class="g-cols__sm g-padding__yy-3"><span>1</span></div>
         </div>
       </div>
-      <div class="container container__wide padding__yy-2 text__center">
-        <div class="row">
-          <div class="cols__xs-6 padding__yy-2"><span>.cols__xs-12</span>
-            <div class="row">
-              <div class="cols__xs-2 padding__yy-2 block__background-light"><span>2</span></div>
-              <div class="cols__xs-2 padding__yy-2"><span>2</span></div>
-              <div class="cols__xs-2 padding__yy-2 block__background-light"><span>2</span></div>
-              <div class="cols__xs-2 padding__yy-2"><span>2</span></div>
-              <div class="cols__xs-2 padding__yy-2 block__background-light"><span>2</span></div>
-              <div class="cols__xs-2 padding__yy-2"><span>2</span></div>
+      <div class="g-container g-padding__yy-3 g-text__center">
+        <div class="g-row">
+          <div class="g-cols__xs-6 g-padding__yy-3"><span>.g-cols__xs-12</span>
+            <div class="g-row">
+              <div class="g-cols__xs-2 g-padding__yy-3 g-block__background-light"><span>2</span></div>
+              <div class="g-cols__xs-2 g-padding__yy-3"><span>2</span></div>
+              <div class="g-cols__xs-2 g-padding__yy-3 g-block__background-light"><span>2</span></div>
+              <div class="g-cols__xs-2 g-padding__yy-3"><span>2</span></div>
+              <div class="g-cols__xs-2 g-padding__yy-3 g-block__background-light"><span>2</span></div>
+              <div class="g-cols__xs-2 g-padding__yy-3"><span>2</span></div>
             </div>
           </div>
-          <div class="cols__xs-6 padding__yy-2"><span>.cols__xs-12</span>
-            <div class="row">
-              <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2 block__background-light"><span>1</span></div>
-              <div class="cols__xs-1 padding__yy-2"><span>1</span></div>
+          <div class="g-cols__xs-6 g-padding__yy-3"><span>.g-cols__xs-12</span>
+            <div class="g-row">
+              <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3 g-block__background-light"><span>1</span></div>
+              <div class="g-cols__xs-1 g-padding__yy-3"><span>1</span></div>
             </div>
           </div>
         </div>

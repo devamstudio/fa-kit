@@ -2,8 +2,13 @@
 // Global //
 ////////////
 
+body,html
+	font :
+		family : $font-main
+		size : $font_base_size
+
 // Create main text
-.paragraph
+p
 	hyphens: auto
 	font:
 		size: $font-base-size
@@ -22,14 +27,15 @@
 		line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
 
 // Text format
-.kbd
+kbd
 	display: inline-block
-	padding: .3em .4em
-	font-size: .9em
-	line-height: 1
+	padding: .1em .4em
+	font-size: .8em
+	line-height: inherit
+	vertical-align: middle
 	background-color: $color-black
 	color: $color-white
-	border-radius: .2rem
+	border-radius: .2em
 
 // Create headings class
 .heading
@@ -56,16 +62,19 @@
 	// Color text
 	@each $state, $color in $colors
 		&__#{$state}
-			color: $color
+			color : $color
 	// Align text
 	@each $align in $text_align_list
 		&__#{$align}
-			text-align: $align
+			text-align : $align
 	@each $size, $tmp in $media_quaries_up
 		@include media_query_up($size)
 			@each $align in $text_align_list
 				&__#{$size}-#{$align}
-					text-align: $align
+					text-align : $align
+	// Lead
+	&__lead
+		font-size: 1.1em
 
 // Global lists
 .#{$class-list}
@@ -75,7 +84,7 @@
 	&_item
 		line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
 	&__unstyled
-		list-style-type: none
+		list-style-type : none
 		padding: 0
 		margin: 0
 
@@ -95,8 +104,9 @@
 	font-style: italic
 	line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
 
-.link
-	@extend %link
+////////////
+//  MAIN  //
+////////////
 
 .hr
 	margin: 
