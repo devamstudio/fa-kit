@@ -15,10 +15,13 @@ html:root {
 *::after {
   box-sizing: border-box; }
 
+html {
+  font-family: Arial, -apple-system, system-ui;
+  font-size: calc(var(--font-size) * 1px);
+  color: black; }
+
 body {
   margin: 0;
-  line-height: 1;
-  color: black;
   background: white; }
 
 img, picture {
