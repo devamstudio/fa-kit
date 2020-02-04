@@ -3,7 +3,7 @@
 //* 3. Flex aligning
 
 //* 1. Margins and paddings
-$offset_side: margin, padding
+$offset_side : margin, padding
 @each $item in $offset_side
 	.#{$item}
 		@each $direction in $directions
@@ -11,15 +11,15 @@ $offset_side: margin, padding
 				@if $item == padding and $offset == auto
 				@else
 					&__#{$direction}-#{$offset}
-						#{$item}:
+						#{$item} :
 							@if $direction == yy
-								top: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
-								bottom: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
+								top : $offset_value
+								bottom : $offset_value
 							@else if $direction == xx
-								right: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
-								left: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
+								right : $offset_value
+								left : $offset_value
 							@else
-								#{$direction}: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
+								#{$direction} : $offset_value
 		@each $size, $tmp in $media_quaries_up
 			@include media_query_up($size)
 				@each $direction in $directions
@@ -27,15 +27,15 @@ $offset_side: margin, padding
 						@if $item == padding and $offset == auto
 						@else
 							&__#{$size}-#{$direction}-#{$offset}
-								#{$item}:
+								#{$item} :
 									@if $direction == yy
-										top: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
-										bottom: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
+										top : $offset_value
+										bottom : $offset_value
 									@else if $direction == xx
-										right: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
-										left: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
+										right : $offset_value
+										left : $offset_value
 									@else
-										#{$direction}: calc(var(--grid-square) * 4 / var(--font-size) * #{$offset_value} *  1rem) !important
+										#{$direction} : $offset_value
 
 //* 2. Flex ordering
 .#{$class-order}
