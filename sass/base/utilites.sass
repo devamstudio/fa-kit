@@ -3,7 +3,7 @@
 //* 3. Flex aligning
 
 //* 1. Margins and paddings
-$offset_side : margin, padding
+$offset_side: margin, padding
 @each $item in $offset_side
 	.#{$item}
 		@each $direction in $directions
@@ -11,7 +11,7 @@ $offset_side : margin, padding
 				@if $item == padding and $offset == auto
 				@else
 					&__#{$direction}-#{$offset}
-						#{$item} :
+						#{$item}:
 							@if $direction == yy
 								top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
 								bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
@@ -27,7 +27,7 @@ $offset_side : margin, padding
 						@if $item == padding and $offset == auto
 						@else
 							&__#{$size}-#{$direction}-#{$offset}
-								#{$item} :
+								#{$item}:
 									@if $direction == yy
 										top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
 										bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
