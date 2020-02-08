@@ -2,7 +2,18 @@
 /* Hi this is a custom template that you can use in you project. Copy it to your src folder and import before FA-Kit config. Then add set up you values to vars. You can remove all or add any you needed, build of FA-Kit might not be crashed. */
 html:root {
   --grid-square: 8;
-  --grid-squares-per-line: 4; }
+  --grid-squares-per-line: 4;
+  --grid-cols: 12;
+  --media-query-xs-up: 0;
+  --media-query-sm-up: 500px;
+  --media-query-md-up: 900px;
+  --media-query-lg-up: 1024px;
+  --media-query-xl-up: 1220px;
+  --media-query-xs-down: 500px;
+  --media-query-sm-down: 900px;
+  --media-query-md-down: 1024px;
+  --media-query-lg-down: 1220px;
+  --media-query-xl-down: 1220px; }
   @media (min-width: 0) {
     html:root {
       --font-size: 16; } }
@@ -798,6 +809,16 @@ article h6, .article h6 {
   font-size: 1rem;
   font-weight: bold;
   line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1 * 1rem); }
+
+article p, .article p {
+  hyphens: auto;
+  font-size: 1rem;
+  font-family: Arial, -apple-system, system-ui;
+  line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem);
+  margin-top: 0;
+  margin-bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem); }
+  article p *, .article p * {
+    vertical-align: baseline; }
 
 article ol, article ul, .article ol, .article ul {
   margin-top: 0;
