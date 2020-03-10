@@ -13,13 +13,13 @@ $offset_side: margin, padding
 					&__#{$direction}-#{$offset}
 						#{$item}:
 							@if $direction == yy
-								top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
-								bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
+								top: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+								bottom: calc(var(--grid-square) * #{$offset_value} *  1px) !important
 							@else if $direction == xx
-								right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
-								left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
+								right: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+								left: calc(var(--grid-square) * #{$offset_value} *  1px) !important
 							@else
-								#{$direction}: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
+								#{$direction}: calc(var(--grid-square) * #{$offset_value} *  1px) !important
 		@each $size, $tmp in $media_quaries_up
 			@include media_query_up($size)
 				@each $direction in $directions
@@ -29,13 +29,13 @@ $offset_side: margin, padding
 							&__#{$size}-#{$direction}-#{$offset}
 								#{$item}:
 									@if $direction == yy
-										top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
-										bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
+										top: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+										bottom: calc(var(--grid-square) * #{$offset_value} *  1px) !important
 									@else if $direction == xx
-										right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
-										left: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
+										right: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+										left: calc(var(--grid-square) * #{$offset_value} *  1px) !important
 									@else
-										#{$direction}: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$offset_value} *  1rem) !important
+										#{$direction}: calc(var(--grid-square) * #{$offset_value} *  1px) !important
 
 //* 2. Flex ordering
 .#{$class-order}
