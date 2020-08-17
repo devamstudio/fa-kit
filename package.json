@@ -1,7 +1,7 @@
 {
-  "name": "fa-kit",
-  "version": "1.0.0",
-  "description": "1. About 1. How to use 1. Examples 1. Features 1. TODO",
+  "name": "@fakit/fakit",
+  "version": "1.5.1",
+  "description": "Flexible Asix Kit",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/devamstudio/fa-kit.git"
   },
-  "author": "iAmStudio",
+  "author": "iAmStudio <info@i-am.studio>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/devamstudio/fa-kit/issues"
@@ -28,5 +28,9 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "css",
+    "framework"
+  ]
 }
