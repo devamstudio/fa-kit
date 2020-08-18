@@ -1,0 +1,42 @@
+// Form //
+.#{$class-form}
+    display: block
+    .#{$class-form}_fieldset
+        display: flex
+        flex:
+            direction: column
+        //margin:
+            bottom: $fields-inset-y * 3
+        padding: 0
+        border:
+            width: 1px
+            left: 0
+            bottom: 0
+            right: 0
+        legend
+            display: flex
+            margin: 0
+                bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .25rem)
+            padding:
+                right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
+            font:
+                family: serif
+                style: italic
+                weight: 100
+                size: 80%
+            line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem)
+            text-transform: uppercase
+        &__row
+            flex:
+                direction: row
+    // States
+    &__dark
+        .#{$class-form}_fieldset
+            border-color: white
+        .#{$class-field}
+            .#{$class-field}_input
+                border-width: 0
+                    left: 0
+                    top: 0
+                    right: 0
+                    bottom: 0
