@@ -4,160 +4,151 @@ block title
 
 block content
 	div(style="background-image: repeating-linear-gradient(to bottom, rgba(0,0,0, 0) 0, rgba(0,0,0, 0) calc((var(--grid-square) * var(--grid-squares-per-line) - 1) * 1px), red calc((var(--grid-square) * var(--grid-squares-per-line) - 1) * 1px), red calc(var(--grid-square) * var(--grid-squares-per-line) * 1px)")
-		.container.container__wide.margin__bottom-2
+		.container.container--wide.margin--bottom-2
 			.row
-				.cols__xs.padding__yy-2.background__ok.text__white
-					h1.heading.heading__h1.margin__top-0 Текст на фоне
+				.cols--xs.padding--yy-2.background--light
+					h1.heading.heading--h1.margin--top-0 Текст на фоне
 					p.paragraph Рыбный текст
 					p.paragraph: a.link(href="#") Ссылочгэ
-				.cols__xs.padding__yy-2.background__light
-					h1.heading.heading__h1.margin__top-0 Текст на фоне
-					p.paragraph Рыбный текст
-					p.paragraph: a.link(href="#") Ссылочгэ
-		.container.container__wide.margin__bottom-2
+		.container.container--wide.margin--bottom-2
 			.row
-				.cols__xs.padding__yy-2.border__ok
-					.border_height-compensation
-						h1.heading.heading__h1.margin__top-0 Текст в border
+				.cols--xs.padding--yy-2
+					.border__height-compensation
+						h1.heading.heading--h1.margin--top-0 Текст в border
 						p.paragraph Рыбный текст
 						p.paragraph: a.link(href="#") Ссылочгэ
-				.cols__xs.padding__yy-2.border__light
-					.border_height-compensation
-						h1.heading.heading__h1.margin__top-0 Текст в border
-						p.paragraph Рыбный текст
-						p.paragraph: a.link(href="#") Ссылочг
 
-		.container.container__wide.margin__bottom-2
-			h1.heading.heading__h1.margin__top-0 Крошки
-			ul.breadcrumbs.margin__bottom-1
-				li.breadcrumbs_item.breadcrumbs_item__link: a.link(href="back") Ссылка назад
-				li.breadcrumbs_item.breadcrumbs_item__link: span Или тут конец
-				li.breadcrumbs_item Тут конец
-			ul.breadcrumbs.margin__bottom-1.text__center
-				li.breadcrumbs_item.breadcrumbs_item__link: a.link(href="back") Ссылка назад
-				li.breadcrumbs_item.breadcrumbs_item__link: span Или тут конец
-				li.breadcrumbs_item Тут конец
+		.container.container--wide.margin--bottom-2
+			h1.heading.heading--h1.margin--top-0 Крошки
+			ul.breadcrumbs.margin--bottom-1
+				li.breadcrumbs__item.breadcrumbs__item--link: a.link(href="back") Ссылка назад
+				li.breadcrumbs__item.breadcrumbs__item--link: span Или тут конец
+				li.breadcrumbs__item Тут конец
+			ul.breadcrumbs.margin--bottom-1.text--center
+				li.breadcrumbs__item.breadcrumbs__item--link: a.link(href="back") Ссылка назад
+				li.breadcrumbs__item.breadcrumbs__item--link: span Или тут конец
+				li.breadcrumbs__item Тут конец
 
-		.container.container__wide.margin__bottom-2
-			h1.heading.heading__h1.margin__top-0 Кнопки
-			button.button.button__primary Button
-			input.button.button__primary(type="button" value="input:button")
-			a.button.button__primary(href="#sdf") С ссылкой
-			a.button.button__primary Без ссылки
-			span.button.button__primary.button__disabled Disabled
+		.container.container--wide.margin--bottom-2
+			h1.heading.heading--h1.margin--top-0 Кнопки
+			button.button.button--primary Button
+			input.button.button--primary(type="button" value="input:button")
+			a.button.button--primary(href="#sdf") С ссылкой
+			a.button.button--primary Без ссылки
+			span.button.button--primary.button--disabled Disabled
 
-		.container.container__wide.margin__bottom-2
-			h1.heading.heading__h1.margin__top-0 Формы
+		.container.container--wide.margin--bottom-2
+			h1.heading.heading--h1.margin--top-0 Формы
 			.row
-				form.form.cols__md.background__light.padding__yy-2.margin__bottom-2
-					.field.field__error
-						input.field_input(type="text")
-						span.field_helper 
-							span.color__red Error 
+				form.form.cols--md.background--light.padding--yy-2.margin--bottom-2
+					.field.field--error
+						input.field__input(type="text")
+						span.field__helper
+							span.color--red Error
 							| in this field. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-					.field.margin__top-3_4
-						label.field_label(for="inp1") Обычное поле
-						input.field_input#inp1(type="text")
-						span.field_helper Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-					.field.field__row.margin__top-1
-						label.field_label.text__right(for="inp2") Линейное поле
-						input.field_input#inp2(type="text")
-						span.field_helper Помощь утопающего
-				form.form.cols__md.padding__yy-2.margin__bottom-2
-					.field.margin__bottom-1_4
-						input.field_input(type="text")
-						span.field_helper Помощь утопающего
-					.field.field__inline
-						input.field_input#rabiobutton(type="radio" name="impgroup1")
-						label.field_label(for="rabiobutton") Radion inline
-					.form_fieldset.form_fieldset__row.field__error
-						p.paragraph.margin__bottom-0.field.field__inline
-							input.field_input(type="radio" name="impgroup2")
-						p.paragraph.margin__bottom-0.field.field__inline
-							input.field_input(type="radio" name="impgroup2")
-					.form_fieldset.form_fieldset__column
-						.field.field__inline
-							input.field_input(type="radio" name="impgroup3")
-						.field.field__inline
-							input.field_input(type="radio" name="impgroup3")
-					.form_fieldset.form_fieldset__row
-						.field.field__inline
-							input.field_input(type="checkbox" name="impgroup4")
-						.field.field__inline
-							input.field_input(type="checkbox" name="impgroup4")
-					.field.field__inline
-						input.field_input#checkbox(type="checkbox" name="impgroup1")
-						label.field_label(for="checkbox") Checkbox inline
+					.field.margin--top-3__4
+						label.field__label(for="inp1") Обычное поле
+						input.field__input#inp1(type="text")
+						span.field__helper Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					.field.field--row.margin--top-1
+						label.field__label.text--right(for="inp2") Линейное поле
+						input.field__input#inp2(type="text")
+						span.field__helper Помощь утопающего
+				form.form.cols--md.padding--yy-2.margin--bottom-2
+					.field.margin--bottom-1__4
+						input.field__input(type="text")
+						span.field__helper Помощь утопающего
+					.field.field--inline
+						input.field__input#rabiobutton(type="radio" name="impgroup1")
+						label.field__label(for="rabiobutton") Radion inline
+					.form__fieldset.form__fieldset--row.field--error
+						p.paragraph.margin--bottom-0.field.field--inline
+							input.field__input(type="radio" name="impgroup2")
+						p.paragraph.margin--bottom-0.field.field--inline
+							input.field__input(type="radio" name="impgroup2")
+					.form__fieldset.form__fieldset--column
+						.field.field--inline
+							input.field__input(type="radio" name="impgroup3")
+						.field.field--inline
+							input.field__input(type="radio" name="impgroup3")
+					.form__fieldset.form__fieldset--row
+						.field.field--inline
+							input.field__input(type="checkbox" name="impgroup4")
+						.field.field--inline
+							input.field__input(type="checkbox" name="impgroup4")
+					.field.field--inline
+						input.field__input#checkbox(type="checkbox" name="impgroup1")
+						label.field__label(for="checkbox") Checkbox inline
 			.row
-				form.form.cols__md.background__light.padding__yy-2.margin__bottom-2
-					fieldset.form_fieldset
+				form.form.cols--md.background--light.padding--yy-2.margin--bottom-2
+					fieldset.form__fieldset
 						legend Контактные данные
 						.field
-							label.field_label(for="inp1") Обычное поле
-							input.field_input#inp3(type="text")
-							span.field_helper Помощь утопающего
-						.field.margin__top-3_4.margin__bottom-1
-							label.field_label(for="txt") Обычное поле
-							textarea.field_input#txt
-							span.field_helper Помощь утопающего
-						.field.field__row.field__error.margin__top-3_4
-							label.field_label.text__right(for="inp2") Линейное поле
-							input.field_input#inp4(type="text")
-							span.field_helper Помощь утопающего
-						.field.field__horisontal.margin__top-3_4.margin__bottom-1_2
-							label.field_label.text__right(for="file") Линейное поле
-							input.field_input#file(type="file")
-							span.field_helper Помощь утопающего
-						.text__right
-							input.button.button__primary(type="submit" value="Отправить")
-				form.form.cols__md.padding__yy-2.margin__bottom-2
-					fieldset.form_fieldset
+							label.field__label(for="inp1") Обычное поле
+							input.field__input#inp3(type="text")
+							span.field__helper Помощь утопающего
+						.field.margin--top-3__4.margin--bottom-1
+							label.field__label(for="txt") Обычное поле
+							textarea.field__input#txt
+							span.field__helper Помощь утопающего
+						.field.field--row.field--error.margin--top-3__4
+							label.field__label.text--right(for="inp2") Линейное поле
+							input.field__input#inp4(type="text")
+							span.field__helper Помощь утопающего
+						.field.field--horisontal.margin--top-3__4.margin--bottom-1__2
+							label.field__label.text--right(for="file") Линейное поле
+							input.field__input#file(type="file")
+							span.field__helper Помощь утопающего
+						.text--right
+							input.button.button--primary(type="submit" value="Отправить")
+				form.form.cols--md.padding--yy-2.margin--bottom-2
+					fieldset.form__fieldset
 						legend Контактные данные
-						.field.margin__bottom-1
-							label.field_label(for="form11") ФИО
-							input.field_input#form11(type="text")
-						.field.padding__top-1_4.margin__bottom-1
-							label.field_label(for="form12") email
-							input.field_input#form12(type="text")
-						.field.padding__top-1_4.padding__bottom-1_4
-							label.field_label(for="form12") email
-							input.field_input#form12(type="text")
-					fieldset.form_fieldset.margin__top-1
+						.field.margin--bottom-1
+							label.field__label(for="form11") ФИО
+							input.field__input#form11(type="text")
+						.field.padding--top-1__4.margin--bottom-1
+							label.field__label(for="form12") email
+							input.field__input#form12(type="text")
+						.field.padding--top-1__4.padding--bottom-1__4
+							label.field__label(for="form12") email
+							input.field__input#form12(type="text")
+					fieldset.form__fieldset.margin--top-1
 						legend Контактные данные
-						.field.padding__top-1_4
-							label.field_label(for="form11") ФИО
-							input.field_input#form11(type="text")
+						.field.padding--top-1__4
+							label.field__label(for="form11") ФИО
+							input.field__input#form11(type="text")
 			.row
-				form.form.cols__md.background__light.padding__yy-2.margin__bottom-2
-					fieldset.form_fieldset
+				form.form.cols--md.background--light.padding--yy-2.margin--bottom-2
+					fieldset.form__fieldset
 						legend Контактные данные
-						.field.margin__bottom-1_2
-							label.field_label(for="select") Select
-							select.field_input#select(type="text")
+						.field.margin--bottom-1__2
+							label.field__label(for="select") Select
+							select.field__input#select(type="text")
 								option Привет мир
 								option Привет Фармир
 								option Привет Тандыр
-							span.field_helper Помощь утопающего
-						.field.padding__top-1_2
-							label.field_label(for="select") Select
-							select.field_input#select(type="text" multiple size="3")
+							span.field__helper Помощь утопающего
+						.field.padding--top-1__2
+							label.field__label(for="select") Select
+							select.field__input#select(type="text" multiple size="3")
 								option Привет мир
 								option Привет Фармир
 								option Привет Тандыр
-							span.field_helper Помощь утопающего
-				form.form.form__dark.cols__md.padding__yy-2.margin__bottom-2.text__white.background__alert
-					fieldset.form_fieldset
+							span.field__helper Помощь утопающего
+				form.form.form--dark.cols--md.padding--yy-2.margin--bottom-2.text--white.background--alert
+					fieldset.form__fieldset
 						legend Контактные данные
-						.field.margin__bottom-1_2
-							label.field_label(for="select") Select
-							select.field_input#select(type="text")
+						.field.margin--bottom-1__2
+							label.field__label(for="select") Select
+							select.field__input#select(type="text")
 								option Привет мир
 								option Привет Фармир
 								option(disabled) Привет Тандыр
-							span.field_helper Помощь утопающего
-						.field.padding__top-1_2
-							label.field_label(for="select") Select
-							select.field_input#select(type="text" multiple)
+							span.field__helper Помощь утопающего
+						.field.padding--top-1__2
+							label.field__label(for="select") Select
+							select.field__input#select(type="text" multiple)
 								option Привет мир
 								optgroup(label="Group")
 									option Привет Фармир
@@ -165,29 +156,29 @@ block content
 								optgroup(label="Grouppy" disabled)
 									option Привет Фармир
 									option Привет Тандыр
-							span.field_helper Помощь утопающего
-					p.paragraph.margin__yy-1_2
-						button.button.button__white Привет форма
-		.container.container__wide.margin__bottom-2
-			h1.heading.heading__h1.margin__top-0 Уведомления
+							span.field__helper Помощь утопающего
+					p.paragraph.margin--yy-1__2
+						button.button.button--white Привет форма
+		.container.container--wide.margin--bottom-2
+			h1.heading.heading--h1.margin--top-0 Уведомления
 			.row
-				.notification.notification__alert.cols__md-6.margin__bottom-1
-					h5.heading.heading__h5.margin__top-0 Привет мир
+				.notification.notification--alert.cols--md-6.margin--bottom-1
+					h5.heading.heading--h5.margin--top-0 Привет мир
 					p.paragraph Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-				.notification.notification__ok.cols__md-6.margin__bottom-1
-					h5.heading.heading__h5.margin__top-0 Привет мир
+				.notification.notification--ok.cols--md-6.margin--bottom-1
+					h5.heading.heading--h5.margin--top-0 Привет мир
 					p.paragraph Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-				.notification.notification__warning.cols__md-6.margin__bottom-1
+				.notification.notification--warning.cols--md-6.margin--bottom-1
 					p.paragraph Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-				.notification.notification__ok.cols__md-6.margin__bottom-1
+				.notification.notification--ok.cols--md-6.margin--bottom-1
 					p.paragraph Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-				.notification.notification__warning.cols__md-6.padding__yy-0.margin__bottom-1
+				.notification.notification--warning.cols--md-6.padding--yy-0.margin--bottom-1
 					p.paragraph Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-				.notification.notification__ok.cols__md-6.padding__yy-0.margin__bottom-1
+				.notification.notification--ok.cols--md-6.padding--yy-0.margin--bottom-1
 					p.paragraph Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-		.container.container__wide.margin__bottom-2
-			h1.heading.heading__h1.margin__top-0 Пагинация
+		.container.container--wide.margin--bottom-2
+			h1.heading.heading--h1.margin--top-0 Пагинация
 			ul.pagination
-				li.pagination_item: a.link(href="1") 1
-				li.pagination_item.pagination_item__active: a.link(href="2") 2
-				li.pagination_item: a.link(href="next") next
+				li.pagination__item: a.link(href="1") 1
+				li.pagination__item.pagination__item--active: a.link(href="2") 2
+				li.pagination__item: a.link(href="next") next
