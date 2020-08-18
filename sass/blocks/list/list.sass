@@ -2,9 +2,11 @@
 	margin:
 		top: 0
 		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
-	&.#{$class-list}_item
+    // Elements
+	&.#{$class-list}__item
 		line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
-	&__unstyled
+    // States
+	&--unstyled
 		list-style-type: none
 		padding: 0
 		margin: 0

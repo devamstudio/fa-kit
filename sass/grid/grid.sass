@@ -10,11 +10,11 @@ body
 	display : block
 	width : 100%
 	padding : 0 1rem
-	margin : 
+	margin :
 		left : auto
 		right : auto
 	position : relative
-	&__wide
+	&--wide
 		max-width : 100%!important
 	@each $size, $tmp in $media_quaries_up
 		@include media_query_up($size)
@@ -25,23 +25,23 @@ body
 	@extend %row
 	flex :
 		direction : row
-	&__no-inset
-		& > [class*='g-cols__']
+	&--no-inset
+		& > [class*='g-cols--']
 			padding :
 				left : 0rem!important
 				right : 0rem!important
-	&__no-offset
+	&--no-offset
 		margin: 0
 .#{$class-column}
 	@extend %row
 	flex :
 		direction : column
-	&__no-inset
-		& > [class*='g-cols__']
+	&--no-inset
+		& > [class*='g-cols--']
 			padding :
 				left : 0rem!important
 				right : 0rem!important
-	&__no-offset
+	&--no-offset
 		margin: 0
 ////container
 

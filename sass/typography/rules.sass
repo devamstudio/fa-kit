@@ -3,25 +3,25 @@
 .#{$class-text}
 	// Color text
 	@each $state, $color in $colors
-		&__#{$state}
+		&--#{$state}
 			color: $color
 
 	// Align text
 	@each $align in $text_align_list
-		&__#{$align}
+		&--#{$align}
 			text-align: $align
 	@each $size, $tmp in $media_quaries_up
 		@include media_query_up($size)
 			@each $align in $text_align_list
-				&__#{$size}-#{$align}
+				&--#{$size}-#{$align}
 					text-align: $align
 
 	// Lineheight
 	@each $lineheight, $value in $text-lineheight
-		&__lineheight-#{$lineheight}
+		&--lineheight-#{$lineheight}
 			line-height: $value!important
 	@each $size, $tmp in $media_quaries_up
 		@include media_query_up($size)
 			@each $lineheight, $value in $text-lineheight
-				&__#{$size}-lineheight-#{$lineheight}
+				&--#{$size}-lineheight-#{$lineheight}
 					line-height: $value!important

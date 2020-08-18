@@ -1,4 +1,4 @@
-.heading
+.#{$class-heading}
 	margin:
 		top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$font_heading_margin_top} * 1rem)
 		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$font_heading_margin_bottom} * 1rem)
@@ -12,7 +12,7 @@
 		$i_rev: length($font_heading_sizes) - index(($font_heading_sizes), ($heading $size)) + 1
 		$line-height: map-get($font-heading-lineheight, $i_rev )
 		$font-weight: map-get($font-heading-weight, $i_rev )
-		&.heading__#{$heading}
+		&--#{$heading}
 			font:
 				size: $size
 				weight: $font-weight

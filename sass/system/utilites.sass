@@ -5,78 +5,77 @@
 //* 1. Margins and paddings
 $offset_side: margin, padding
 @each $item in $offset_side
-	.#{$item}
-		@each $direction in $directions
-			@each $offset, $offset_value in $direction_offset
-				@if $item == padding and $offset == auto
-				@else
-					&__#{$direction}-#{$offset}
-						#{$item}:
-							@if $direction == yy
-								top: calc(var(--grid-square) * #{$offset_value} *  1px) !important
-								bottom: calc(var(--grid-square) * #{$offset_value} *  1px) !important
-							@else if $direction == xx
-								right: calc(var(--grid-square) * #{$offset_value} *  1px) !important
-								left: calc(var(--grid-square) * #{$offset_value} *  1px) !important
-							@else
-								#{$direction}: calc(var(--grid-square) * #{$offset_value} *  1px) !important
-		@each $size, $tmp in $media_quaries_up
-			@include media_query_up($size)
-				@each $direction in $directions
-					@each $offset, $offset_value in $direction_offset
-						@if $item == padding and $offset == auto
-						@else
-							&__#{$size}-#{$direction}-#{$offset}
-								#{$item}:
-									@if $direction == yy
-										top: calc(var(--grid-square) * #{$offset_value} *  1px) !important
-										bottom: calc(var(--grid-square) * #{$offset_value} *  1px) !important
-									@else if $direction == xx
-										right: calc(var(--grid-square) * #{$offset_value} *  1px) !important
-										left: calc(var(--grid-square) * #{$offset_value} *  1px) !important
-									@else
-										#{$direction}: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+    .#{$item}
+        @each $direction in $directions
+            @each $offset, $offset_value in $direction_offset
+                @if $item == padding and $offset == auto
+                @else
+                    &--#{$direction}-#{$offset}
+                        #{$item}:
+                            @if $direction == yy
+                                top: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+                                bottom: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+                            @else if $direction == xx
+                                right: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+                                left: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+                            @else
+                                #{$direction}: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+        @each $size, $tmp in $media_quaries_up
+            @include media_query_up($size)
+                @each $direction in $directions
+                    @each $offset, $offset_value in $direction_offset
+                        @if $item == padding and $offset == auto
+                        @else
+                            &--#{$size}-#{$direction}-#{$offset}
+                                #{$item}:
+                                    @if $direction == yy
+                                        top: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+                                        bottom: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+                                    @else if $direction == xx
+                                        right: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+                                        left: calc(var(--grid-square) * #{$offset_value} *  1px) !important
+                                    @else
+                                        #{$direction}: calc(var(--grid-square) * #{$offset_value} *  1px) !important
 
 //* 2. Flex ordering
 .#{$class-order}
-	@for $i from 0 through $grid-cols
-		&__#{$i}
-			order: $i
-		@each $size, $tmp in $media_quaries_up
-			@include media_query_up($size)
-				&__#{$size}-#{$i}
-					order: $i
-		&__first
-			order: 0
-		&__last
-			order: $grid-cols
-		@each $size, $tmp in $media_quaries_up
-			@include media_query_up($size)
-				&__#{$size}-first
-					order: 0
-				&__#{$size}-last
-					order: $grid-cols
+    @for $i from 0 through $grid-cols
+        &--#{$i}
+            order: $i
+        @each $size, $tmp in $media_quaries_up
+            @include media_query_up($size)
+                &--#{$size}-#{$i}
+                    order: $i
+        &--first
+            order: 0
+        &--last
+            order: $grid-cols
+        @each $size, $tmp in $media_quaries_up
+            @include media_query_up($size)
+                &--#{$size}-first
+                    order: 0
+                &--#{$size}-last
+                    order: $grid-cols
 
 //* 3. Flex aligning
-.#{$class-align}
-	&-items
-		@each $align, $align_value in $flex-align_items-list
-			@if $align_value != baseline
-				&__#{$align}
-					align-items: $align_value
-		@each $size, $tmp in $media_quaries_up
-			@include media_query_up($size)
-				@each $align, $align_value in $flex-align_items-list
-					@if $align_value != baseline
-						&__#{$size}-#{$align}
-							align-items: $align_value
+.#{$class-align-items}
+    @each $align, $align_value in $flex-align_items-list
+        @if $align_value != baseline
+            &--#{$align}
+                align-items: $align_value
+    @each $size, $tmp in $media_quaries_up
+        @include media_query_up($size)
+            @each $align, $align_value in $flex-align_items-list
+                @if $align_value != baseline
+                    &--#{$size}-#{$align}
+                        align-items: $align_value
 //* 3. Flex aligning
 .#{$class-justify-content}
-	@each $align, $align_value in $flex-align_items-list
-		&__#{$align}
-			justify-content: $align_value
-	@each $size, $tmp in $media_quaries_up
-		@include media_query_up($size)
-			@each $align, $align_value in $flex-align_items-list
-				&__#{$size}-#{$align}
-					justify-content: $align_value
+    @each $align, $align_value in $flex-align_items-list
+        &--#{$align}
+            justify-content: $align_value
+    @each $size, $tmp in $media_quaries_up
+        @include media_query_up($size)
+            @each $align, $align_value in $flex-align_items-list
+                &--#{$size}-#{$align}
+                    justify-content: $align_value

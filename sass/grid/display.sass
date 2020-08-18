@@ -3,7 +3,7 @@
 ////hidden-blocks
 .#{$class-hidden}
 	@each $item in $media_quaries
-		&__#{$item}
+		&--#{$item}
 			@if $item == 'xs'
 				@include media_query_down($item)
 					display : none !important
@@ -27,7 +27,7 @@
 						display: none !important
 .#{$class-visible}
 	@each $item in $media_quaries
-		&__#{$item}
+		&--#{$item}
 			@if $item == 'xs'
 				@include media_query_down($item)
 					display : block !important
