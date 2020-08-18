@@ -1,18 +1,17 @@
 // Form //
 .#{$class-form}
     display: block
-    .#{$class-form}_fieldset
+    .#{$class-form}__fieldset
         display: flex
         flex:
             direction: column
-        //margin:
-            bottom: $fields-inset-y * 3
         padding: 0
         border:
             width: 1px
             left: 0
             bottom: 0
             right: 0
+        // Elements
         legend
             display: flex
             margin: 0
@@ -26,17 +25,11 @@
                 size: 80%
             line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem)
             text-transform: uppercase
-        &__row
+        // States
+        &--row
             flex:
                 direction: row
     // States
-    &__dark
-        .#{$class-form}_fieldset
+    &--dark
+        .#{$class-form}__fieldset
             border-color: white
-        .#{$class-field}
-            .#{$class-field}_input
-                border-width: 0
-                    left: 0
-                    top: 0
-                    right: 0
-                    bottom: 0

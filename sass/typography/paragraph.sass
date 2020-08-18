@@ -1,4 +1,4 @@
-.paragraph
+.#{$class-paragraph}
 	hyphens: auto
 	font:
 		size: $font-base-size
@@ -7,11 +7,10 @@
 	margin:
 		top: 0
 		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
-
+    // Elems
 	*
 		vertical-align: baseline
-
-	// Lead
-	&.paragraph__lead
+	// States
+	&--lead
 		font-size: $font-base-size * 1.2
 		line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)

@@ -1,4 +1,4 @@
-article, .#{$class-article}
+.#{$class-article}
 	// Create headings
 	@each $heading, $size in $font_heading_sizes
 		$i_rev: length($font_heading_sizes) - index(($font_heading_sizes), ($heading $size)) + 1
@@ -28,7 +28,7 @@ article, .#{$class-article}
 			bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
 
 		*
-			vertical-align: baseline	
+			vertical-align: baseline
 
 	ol, ul
 		margin:
@@ -36,9 +36,9 @@ article, .#{$class-article}
 			bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
 		li
 			line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
-			
+
 	span,strong,i,b
-		font :
-			size : inherit
-			family : inherit
-		line-height : inherit
+		font:
+			size: inherit
+			family: inherit
+		line-height: inherit
