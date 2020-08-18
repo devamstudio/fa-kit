@@ -14,7 +14,7 @@ var flatten = require('gulp-flatten');
 var sass = 'sass/';
 var js = 'js/';
 var dest = 'dist/';
-var test = 'test/';
+var test = 'test/build/';
 //settings END
 async function style() {
 	return gulp
