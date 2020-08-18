@@ -22,7 +22,7 @@
     "gulp-imagemin": "latest",
     "gulp-plumber": "latest",
     "gulp-pug": "latest",
-    "gulp-sass": "latest",
+    "gulp-sass": "^4.1.0",
     "gulp-sass-glob": "latest"
   },
   "directories": {
