@@ -1,48 +1,48 @@
 //Create by Arseny / i-am.studio
 
 body
-	width : 100%
+    width: 100%
 
 //grid system
 ////container
 .#{$class-container}
-	box-sizing: border-box
-	display : block
-	width : 100%
-	padding : 0 1rem
-	margin :
-		left : auto
-		right : auto
-	position : relative
-	&--wide
-		max-width : 100%!important
-	@each $size, $tmp in $media_quaries_up
-		@include media_query_up($size)
-			max-width: map-get($containers, $size)
+    box-sizing: border-box
+    display: block
+    width: 100%
+    padding: 0 1rem
+    margin:
+        left: auto
+        right: auto
+    position: relative
+    &--wide
+        max-width: 100%!important
+    @each $size, $tmp in $media_quaries_up
+        @include media_query_up($size)
+            max-width: map-get($containers, $size)
 
 // row
 .#{$class-row}
-	@extend %row
-	flex :
-		direction : row
-	&--no-inset
-		& > [class*='g-cols--']
-			padding :
-				left : 0rem!important
-				right : 0rem!important
-	&--no-offset
-		margin: 0
+    @extend %row
+    flex:
+        direction: row
+    &--no-inset
+        & > [class*='g-cols--']
+            padding:
+                left: 0rem!important
+                right: 0rem!important
+    &--no-offset
+        margin: 0
 .#{$class-column}
-	@extend %row
-	flex :
-		direction : column
-	&--no-inset
-		& > [class*='g-cols--']
-			padding :
-				left : 0rem!important
-				right : 0rem!important
-	&--no-offset
-		margin: 0
+    @extend %row
+    flex:
+        direction: column
+    &--no-inset
+        & > [class*='g-cols--']
+            padding:
+                left: 0rem!important
+                right: 0rem!important
+    &--no-offset
+        margin: 0
 ////container
 
 ////greed

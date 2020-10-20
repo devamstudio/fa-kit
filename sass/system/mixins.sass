@@ -5,47 +5,47 @@
 //* 1. Media mixins */
 // 1.1 Get media query up
 @mixin media_query_up($breakpoint)
-	@if map-has-key($media_quaries_up, $breakpoint)
-		@media (min-width: #{map-get($media_quaries_up, $breakpoint)})
-			@content
+    @if map-has-key($media_quaries_up, $breakpoint)
+        @media (min-width: #{map-get($media_quaries_up, $breakpoint)})
+            @content
 // 1.2 Get media query down
 @mixin media_query_down($breakpoint)
-	@if map-has-key($media_quaries_down, $breakpoint)
-		@media (max-width: #{map-get($media_quaries_down, $breakpoint)})
-			@content
+    @if map-has-key($media_quaries_down, $breakpoint)
+        @media (max-width: #{map-get($media_quaries_down, $breakpoint)})
+            @content
 // 1.3 Get media query between
 @mixin media_query_between($breakpoint)
-	@if map-has-key($media_quaries_up, $breakpoint) and ($media_quaries_down, $breakpoint)
-		@media (min-width: #{map-get($media_quaries_up, $breakpoint)}) and (max-width: #{map-get($media_quaries_down, $breakpoint)} )
-			@content
+    @if map-has-key($media_quaries_up, $breakpoint) and ($media_quaries_down, $breakpoint)
+        @media (min-width: #{map-get($media_quaries_up, $breakpoint)}) and (max-width: #{map-get($media_quaries_down, $breakpoint)} )
+            @content
 
 //* 2. Grid mixins */
 // 2.1 Create grid
 @mixin touch_grid($cols, $media_quaries)
-	*[class*='#{$prefix__global}cols--']
-		padding : 0 1rem
-		position : relative
-		width : 100%
-		min-height : 1px
-	@each $item, $size in $media_quaries_up
-		@include media_query_up($item)
-			@for $col from 1 through $grid_cols
-				.#{$prefix__global}cols--#{$item}-#{$col}
-					max-width : 100% / $grid_cols * $col
-					flex : 0 0 ( 100% / $grid_cols * $col )
-				.#{$prefix__global}cols--#{$item}
-					//display: flex
-					flex:
-						basis: 0
-						grow: 1
-				.#{$prefix__global}offset--#{$item}-#{$col}
-					margin-left : 100% - (100% / $grid_cols * ($grid_cols - $col))
+    *[class*='#{$prefix__global}cols--']
+        padding : 0 1rem
+        position : relative
+        width : 100%
+        min-height : 1px
+    @each $item, $size in $media_quaries_up
+        @include media_query_up($item)
+            @for $col from 1 through $grid_cols
+                .#{$prefix__global}cols--#{$item}-#{$col}
+                    max-width : 100% / $grid_cols * $col
+                    flex : 0 0 ( 100% / $grid_cols * $col )
+                .#{$prefix__global}cols--#{$item}
+                    //display: flex
+                    flex:
+                        basis: 0
+                        grow: 1
+                .#{$prefix__global}offset--#{$item}-#{$col}
+                    margin-left : 100% - (100% / $grid_cols * ($grid_cols - $col))
 
 @function enumerate($list)
-	$map: ()
+    $map: ()
 
-	@for $index from 1 through  length($list)
-		$value: nth($list, $index)
-		$map: map-merge($map, ($index: $value))
+    @for $index from 1 through  length($list)
+        $value: nth($list, $index)
+        $map: map-merge($map, ($index: $value))
 
-	@return $map
+    @return $map
