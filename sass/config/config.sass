@@ -30,13 +30,12 @@ $body-background-color : $color-white!default
 
 
 /*  2. Grid
-$grid-square			: 8 !default // Module system value
-$grid-squares-per-line 	: 4 !default
-$grid-cols 				: 12 !default
-$containers         	: ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px ) !default
-$media-quaries      	: ( xs, sm, md, lg, xl)!default
-$media-quaries_up   	: ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px ) !default
-$media-quaries_down 	: ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1220px ) !default
+$base-grid              : 8 !default // Module system value
+$grid-cols              : 12 !default
+$containers             : ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px ) !default
+$media-quaries          : ( xs, sm, md, lg, xl)!default
+$media-quaries_up       : ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px ) !default
+$media-quaries_down     : ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1220px ) !default
 
 
 /*  3. Text
@@ -44,14 +43,13 @@ $media-quaries_down 	: ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 
 $font-heading : Arial, -apple-system, system-ui!default
 $font-main    : Arial, -apple-system, system-ui!default
 // Size
-$font-base-ratio   		 	: ( xs: 16, lg: 18 ) !default
-$font-base-size    		 	: 1rem !default
-$text-lineheight 			: ( 0 : 0, 0_5 : 0.5, 0_6 : 0.6, 0_7 : 0.7, 0_8 : 0.8, 0_9 : 0.9, 1 : 1, 1_1 : 1.1, 1_2 : 1.2, 1_3 : 1.3, 1_4 : 1.4, 1_5 : 1.5, 1_6 : 1.6, 1_7 : 1.7, 1_8 : 1.8, 1_9 : 1.9, 2 : 2) !default
-$font-heading-sizes 	 	: ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem ) !default
-$font-heading-weight 	 	: ( 6 : normal, 5 : normal, 4 : bold, 3 : bold, 2 : bold, 1 : bold ) !default // May have reversed mode 1 eq h6 heading, h1 = 6
+$font-base-ratio            : ( xs: 16, lg: 18 ) !default
+$font-base-size             : 1rem !default
+$font-base-lineheight       : 1.3 !default
+$font-heading-sizes         : ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem ) !default
+$font-heading-weight        : ( 6 : normal, 5 : normal, 4 : bold, 3 : bold, 2 : bold, 1 : bold ) !default // May have reversed mode 1 eq h6 heading, h1 = 6
 $font-heading-lineheight 	: ( 6 : 2, 5 : 2, 4 : 2, 3 : 1, 2 : 1, 1 : 1 ) !default // May have reversed mode 1 eq h6 heading, h1 = 6
-$font_heading_margin_top 	: 2 !default
-$font_heading_margin_bottom : 1 !default
+
 // Align
 $text-align-list : left, right, center, justify !default
 $flex-align_items-list : ( start : flex-start , end : flex-end , center : center , baseline : baseline , stretch : stretch ) !default

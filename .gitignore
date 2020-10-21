@@ -1,2 +1,5 @@
 **/desktop.ini
 node_modules/
+
+# Builds
+docs_build/

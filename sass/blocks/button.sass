@@ -2,13 +2,13 @@
     @extend %none-select
     display: inline-flex
     align-items: center
-    padding: 0 calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$buttons-inset-x} * 1rem)
+    padding: 0 #{$base-grid * $buttons-inset-x}
     @if $global-rounded
         border-radius: $buttons-radius
     outline: none
     border: none
-    height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
-    line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+    height: $base-grid
+    line-height: $base-grid
     color: $color-white
     text:
         align: center

@@ -1,10 +1,10 @@
 {
-  "name": "@fakit/fakit",
+  "name": "@fakit/core",
   "version": "1.5.1",
   "description": "Flexible Asix Kit",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -17,20 +17,30 @@
   },
   "homepage": "https://github.com/devamstudio/fa-kit#readme",
   "devDependencies": {
-    "gulp": "latest",
-    "gulp-flatten": "latest",
-    "gulp-imagemin": "latest",
-    "gulp-plumber": "latest",
-    "gulp-pug": "latest",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.0",
+    "node-sass": "^4.14.1",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.3",
+    "style-loader": "^2.0.0",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.1.0",
+    "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
-    "gulp-sass-glob": "latest"
+    "gulp-sass-glob": "^1.1.0",
+    "webpack-stream": "^6.1.0"
   },
   "directories": {
-    "test": "test"
+    "docs": "docs"
   },
   "dependencies": {},
   "keywords": [
     "css",
-    "framework"
+    "sass",
+    "library"
   ]
 }

@@ -15,13 +15,3 @@
             @each $align in $text_align_list
                 &--#{$size}-#{$align}
                     text-align: $align
-
-    // Lineheight
-    @each $lineheight, $value in $text-lineheight
-        &--lineheight-#{$lineheight}
-            line-height: $value!important
-    @each $size, $tmp in $media_quaries_up
-        @include media_query_up($size)
-            @each $lineheight, $value in $text-lineheight
-                &--#{$size}-lineheight-#{$lineheight}
-                    line-height: $value!important

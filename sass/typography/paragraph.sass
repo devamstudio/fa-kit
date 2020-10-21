@@ -3,14 +3,13 @@
     font:
         size: $font-base-size
         family: $font_main
-    line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
+    line-height: $font-base-lineheight
     margin:
         top: 0
-        bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+        bottom: $base-grid
     // Elems
     *
         vertical-align: baseline
     // States
     &--lead
         font-size: $font-base-size * 1.2
-        line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)

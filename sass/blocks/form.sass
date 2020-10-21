@@ -15,15 +15,15 @@
         legend
             display: flex
             margin: 0
-                bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .25rem)
+                bottom: $base-grid * 2
             padding:
-                right: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .5rem)
+                right: $base-grid * 2
             font:
                 family: serif
                 style: italic
                 weight: 100
                 size: 80%
-            line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * .75rem)
+            line-height: $base-grid * 2
             text-transform: uppercase
         // States
         &--row

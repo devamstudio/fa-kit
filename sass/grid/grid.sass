@@ -1,9 +1,5 @@
-//Create by Arseny / i-am.studio
+// Grid system
 
-body
-    width: 100%
-
-//grid system
 ////container
 .#{$class-container}
     box-sizing: border-box
@@ -20,7 +16,7 @@ body
         @include media_query_up($size)
             max-width: map-get($containers, $size)
 
-// row
+// Row
 .#{$class-row}
     @extend %row
     flex:
