@@ -5,12 +5,12 @@
 /*  Blocks */
 /* Hi this is a custom template that you can use in you project. Copy it to your src folder and import before FA-Kit config. Then add set up you values to vars. You can remove all or add any you needed, build of FA-Kit might not be crashed. */
 /*  1. Colors
-    2. Grid
-    3. Text
-    4. Margin and paddings
-    5. Design
-    6. Buttons
-    7. Fields */
+ 2. Grid
+ 3. Text
+ 4. Margin and paddings
+ 5. Design
+ 6. Buttons
+ 7. Fields */
 /*  1. Colors */
 /*  2. Grid */
 /*  3. Text */
@@ -712,12 +712,15 @@ body {
 
 .kbd {
   display: inline-block;
-  padding: .3em .4em;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
   font-size: .9em;
   line-height: 1;
   background-color: black;
   color: white;
-  border-radius: .2rem; }
+  border-radius: 2px; }
 
 .paragraph {
   hyphens: auto;
