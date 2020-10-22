@@ -4,8 +4,6 @@
 
 [Сетка](/devamstudio/fa-kit/wiki/Grid)
 
-[Типографика](/devamstudio/fa-kit/wiki/Typography)
-
 [Оформление текста](/devamstudio/fa-kit/wiki/Article)
 
 [Медиа-контент](/devamstudio/fa-kit/wiki/Media)
@@ -15,6 +13,12 @@
 [Система отображения\скрытия контента](/devamstudio/fa-kit/wiki/Hide-and-display)
 
 [Призрачные классы для SASS](/devamstudio/fa-kit/wiki/Ghosts)
+
+# Типографика
+
+[Типографика](/devamstudio/fa-kit/wiki/Typography)
+
+[KDB](/devamstudio/fa-kit/wiki/KBD)
 
 # Интерфейс
 
