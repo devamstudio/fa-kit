@@ -3,3 +3,6 @@ node_modules/
 
 # Builds
 docs_build/
+
+# Test
+dist/index.html

@@ -30,12 +30,13 @@ $body-background-color : $color-white!default
 
 
 /*  2. Grid
-$base-grid              : 8 !default // Module system value
-$grid-cols              : 12 !default
-$containers             : ( xs : 100%, sm : 100%, md : 1000px, lg : 1200px ) !default
+$base-grid              : 8px !default
+$columns                : 12 !default
+$columns-gap            : $base-grid * 2 !default
+$containers             : ( xs: 100%, sm: 100%, md: 1000px, lg: 1200px, xl: 1300px ) !default
 $media-quaries          : ( xs, sm, md, lg, xl)!default
-$media-quaries_up       : ( xs : 0, sm : 500px, md : 900px, lg : 1024px, xl : 1220px ) !default
-$media-quaries_down     : ( xs : 500px, sm : 900px, md : 1024px, lg : 1220px, xl : 1220px ) !default
+$media-quaries_up       : ( xs: 0, sm: 500px, md: 900px, lg: 1024px, xl: 1220px ) !default
+$media-quaries_down     : ( xs: 500px, sm: 900px, md: 1024px, lg: 1220px, xl: 1220px ) !default
 
 
 /*  3. Text
@@ -46,13 +47,13 @@ $font-main    : Arial, -apple-system, system-ui!default
 $font-base-ratio            : ( xs: 16, lg: 18 ) !default
 $font-base-size             : 1rem !default
 $font-base-lineheight       : 1.3 !default
-$font-heading-sizes         : ( h1 : 2.5rem, h2 : 2.1rem, h3 : 1.8rem, h4 : 1.5rem, h5 : 1.2rem, h6 : 1rem ) !default
-$font-heading-weight        : ( 6 : normal, 5 : normal, 4 : bold, 3 : bold, 2 : bold, 1 : bold ) !default // May have reversed mode 1 eq h6 heading, h1 = 6
-$font-heading-lineheight 	: ( 6 : 2, 5 : 2, 4 : 2, 3 : 1, 2 : 1, 1 : 1 ) !default // May have reversed mode 1 eq h6 heading, h1 = 6
+$font-heading-sizes         : ( h1: 2.5rem, h2: 2.1rem, h3: 1.8rem, h4: 1.5rem, h5: 1.2rem, h6: 1rem ) !default
+$font-heading-weight        : ( 6: normal, 5: normal, 4: bold, 3: bold, 2: bold, 1: bold ) !default // May have reversed mode 1 eq h6 heading, h1 = 6
+$font-heading-lineheight 	: ( 6: 2, 5: 2, 4: 2, 3: 1, 2: 1, 1: 1 ) !default // May have reversed mode 1 eq h6 heading, h1 = 6
 
 // Align
 $text-align-list : left, right, center, justify !default
-$flex-align_items-list : ( start : flex-start , end : flex-end , center : center , baseline : baseline , stretch : stretch ) !default
+$flex-align_items-list : ( start: flex-start , end: flex-end , center: center , baseline: baseline , stretch: stretch ) !default
 
 
 /*  4. Margin and paddings
@@ -75,7 +76,7 @@ $border-width: .1rem !default
 
 
 /*  6. Buttons
-$colors : ( primary : $color-primary, secondary : $color-secondary, alert : $color-alert, warning : $color-warning, ok : $color-ok, black : $color-black, white : $color-white , light : $color-gray__light , dark : $color-gray__dark, red: $color-red ) !default
+$colors : ( primary: $color-primary, secondary: $color-secondary, alert: $color-alert, warning: $color-warning, ok: $color-ok, black: $color-black, white: $color-white , light: $color-gray__light , dark: $color-gray__dark, red: $color-red ) !default
 $buttons-inset-x : $global-input-inset-x * 3 !default
 $buttons-inset-y : $global-input-inset-y !default
 $buttons-radius : '' !default
