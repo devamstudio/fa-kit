@@ -7,17 +7,16 @@
 Кнопки можно применить практически к любому тегу, так как в них указано отключение стандартного поведения:
 
 ```html
-<button class="g-button g-button__primary">Button</button>
-<input class="g-button g-button__primary" type="button" value="input:button"/>
-<a class="g-button g-button__primary" href="#">С ссылкой</a>
-<a class="g-button g-button__primary">Без ссылки</a>
-<span class="g-button g-button__primary g-button__disabled">Disabled</span>
+<button class="button button--primary">Button</button>
+<input class="button button--primary" type="button" value="input:button"/>
+<a class="button button--primary" href="#">С ссылкой</a>
+<a class="button button--primary">Без ссылки</a>
+<span class="button button--primary button--disabled">Disabled</span>
+<span class="button button--primary" disabled>Disabled</span>
 ```
 
-Цвета кнопок формируются из массива с цветами. И так, как предусмотрены светлые кнопки, для таки классов, как `.g-button__white` и `.g-button__light` предусмотрена проверка, в них текст кнопки будет темным.
+Цвета кнопок формируются из массива с цветами. И так, как предусмотрены светлые кнопки, для таки классов, как `.button--white` и `.button--light` предусмотрена проверка, в них текст кнопки будет темным. Цвета для них можно поменять, они формируются из массива, который соответствует маркеру цвета.
 
-Использование кнопки без модификатора цвета не предусмотрено.
+Если использовать кнопку без модификатора, то цвет будет такой же, как если бы это был primary цвет.
 
-```html
-<button class="g-button">Button</button> <!-- Во так неверно -->
-```
+Кнопки — это строчные элементы, которые, если будут расположены в коде с переносами, образуют соседние отступы друг-от-друга. Это специфика рендера строчных элементов.

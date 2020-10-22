@@ -3,20 +3,6 @@
 /*  Prefix rules */
 /*  Variables */
 /*  Blocks */
-/*  1. Colors
-    2. Grid
-    3. Text
-    4. Margin and paddings
-    5. Design
-    6. Buttons
-    7. Fields */
-/*  1. Colors */
-/*  2. Grid */
-/*  3. Text */
-/*  4. Margin and paddings */
-/*  5. Design */
-/*  6. Buttons */
-/* 7. Fields */
 *,
 *::before,
 *::after {
@@ -9421,11 +9407,11 @@ img, picture {
     font-weight: inherit;
     color: black;
     background-color: #f7f7f7;
-    line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem);
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 2px;
-    padding-right: 2px;
+    line-height: 1;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
     border: 0;
     font-size: 0.9rem; }
     .field .field__input--disabled {
@@ -9508,34 +9494,47 @@ img, picture {
     border-bottom: 0; }
 
 .button {
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
-  padding: 0 6px;
-  border-radius: "";
-  outline: none;
-  border: none;
-  height: 8px;
-  line-height: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 2px;
+  transition: all 0.2s;
+  appearance: none;
+  cursor: pointer;
+  max-width: 100%;
+  overflow: hidden;
   color: white;
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
   text-decoration: none;
   text-indent: 0;
+  font-size: 1rem;
   word-spacing: normal;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  cursor: pointer; }
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  line-height: 1;
+  outline: none;
+  border: none;
+  background-color: black; }
+  .button:hover {
+    background-color: #1a1a1a; }
+  .button:active {
+    background-color: black; }
   .button--primary {
-    background-color: #bc1817;
+    background-color: black;
+    color: white;
     transition: background-color 0.2s; }
     .button--primary:hover {
-      background-color: #e42322; }
+      background-color: #1a1a1a; }
     .button--primary:active {
-      background-color: #8f1211; }
+      background-color: black; }
   .button--secondary {
     background-color: #fab51b;
+    color: white;
     transition: background-color 0.2s; }
     .button--secondary:hover {
       background-color: #fbc54d; }
@@ -9543,6 +9542,7 @@ img, picture {
       background-color: #dd9a05; }
   .button--alert {
     background-color: #bc1817;
+    color: white;
     transition: background-color 0.2s; }
     .button--alert:hover {
       background-color: #e42322; }
@@ -9550,20 +9550,23 @@ img, picture {
       background-color: #8f1211; }
   .button--warning {
     background-color: #fab51b;
+    color: white;
     transition: background-color 0.2s; }
     .button--warning:hover {
       background-color: #fbc54d; }
     .button--warning:active {
       background-color: #dd9a05; }
-  .button--ok {
+  .button--success {
     background-color: #3baa35;
+    color: white;
     transition: background-color 0.2s; }
-    .button--ok:hover {
+    .button--success:hover {
       background-color: #51c74b; }
-    .button--ok:active {
+    .button--success:active {
       background-color: #2e8329; }
   .button--black {
     background-color: black;
+    color: white;
     transition: background-color 0.2s; }
     .button--black:hover {
       background-color: #1a1a1a; }
@@ -9587,6 +9590,7 @@ img, picture {
       background-color: #d1d1d1; }
   .button--dark {
     background-color: #727272;
+    color: white;
     transition: background-color 0.2s; }
     .button--dark:hover {
       background-color: #8c8c8c; }
@@ -9594,15 +9598,16 @@ img, picture {
       background-color: #595959; }
   .button--red {
     background-color: #bc1817;
+    color: white;
     transition: background-color 0.2s; }
     .button--red:hover {
       background-color: #e42322; }
     .button--red:active {
       background-color: #8f1211; }
   .button--disabled, .button[disabled] {
-    background-color: #bebebe; }
-    .button--disabled:hover, .button[disabled]:hover {
-      background-color: #a4a4a4; }
+    pointer-events: none;
+    background-color: #bebebe;
+    color: black; }
 
 .notification {
   display: block;
@@ -9610,17 +9615,6 @@ img, picture {
   border-width: 0;
   border-left-width: 6px;
   border-style: solid; }
-  .notification--alert {
-    border-color: #bc1817; }
-  .notification--warning {
-    border-color: #fab51b; }
-  .notification--ok {
-    border-color: #3baa35; }
-  .notification h1, .notification h2, .notification h3, .notification h4, .notification h5, .notification .heading {
-    margin-top: 0;
-    margin-bottom: 0; }
-  .notification p:last-child {
-    margin: 0; }
 
 .breadcrumbs {
   list-style-type: none;
