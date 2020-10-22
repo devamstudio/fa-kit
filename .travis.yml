@@ -2,6 +2,6 @@ language: node_js
 node_js:
   - "node"
 cache: npm
-# script: npm run build
+script: npm run build
 after_success:
   - git subtree push --prefix=wiki/ru https://github.com/devamstudio/fa-kit.wiki.git master
