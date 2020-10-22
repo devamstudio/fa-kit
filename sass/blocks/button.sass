@@ -1,0 +1,59 @@
+.#{$class-button}
+    @extend %none-select
+    // Core params
+    display: inline-block
+    align-items: center
+    padding:
+        top: $buttons-inset-y
+        bottom: $buttons-inset-y
+        left: $buttons-inset-x
+        right: $buttons-inset-x
+    @if $global-rounded
+        border-radius: $buttons-radius
+    @if $global-animation
+        transition: all #{$global-animation-delay}
+    appearance: none
+    cursor: pointer
+    max-width: 100%
+    overflow: hidden
+    // Text
+    color: $color-primary-text
+    text:
+        align: center
+        decoration: none
+        decoration: none
+        indent: 0
+    font-size: $font-base-size
+    word-spacing: normal
+    white-space: nowrap
+    text-overflow: ellipsis
+    vertical-align: middle
+    line-height: 1
+    // Coloring
+    outline: none
+    border: none
+    background-color: $color-primary
+
+    // States
+    &:hover
+        background-color: lighten($color-primary, 10%)
+    &:active
+        background-color: darken($color-primary, 10%)
+
+    @each $state, $color in $colors
+        &--#{$state}
+            background-color: $color
+            color: map-get($text-colors, $state)
+            @if $global-animation
+                transition: background-color $global-animation-delay
+            &:hover
+                background-color: lighten($color, 10%)
+            &:active
+                background-color: darken($color, 10%)
+
+    //disabled
+    &--disabled, &[disabled]
+        @extend %disabled
+        pointer-events: none
+        background-color: lighten($color-gray, 10%)
+        color: $color-black

@@ -1,19 +1,19 @@
 .#{$class-heading}
-	margin:
-		top: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$font_heading_margin_top} * 1rem)
-		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * #{$font_heading_margin_bottom} * 1rem)
-	display: block
-	font:
-		family: $font_heading
-	font-weight: 400
-	hyphens: auto
+    margin:
+        top: 0
+        bottom: 0
+    display: block
+    font:
+        family: $font_heading
+    font-weight: 400
+    hyphens: auto
 
-	@each $heading, $size in $font_heading_sizes
-		$i_rev: length($font_heading_sizes) - index(($font_heading_sizes), ($heading $size)) + 1
-		$line-height: map-get($font-heading-lineheight, $i_rev )
-		$font-weight: map-get($font-heading-weight, $i_rev )
-		&--#{$heading}
-			font:
-				size: $size
-				weight: $font-weight
-			line-height: $line-height
+    @each $heading, $size in $font_heading_sizes
+        $i_rev: length($font_heading_sizes) - index(($font_heading_sizes), ($heading $size)) + 1
+        $line-height: map-get($font-heading-lineheight, $i_rev )
+        $font-weight: map-get($font-heading-weight, $i_rev )
+        &--#{$heading}
+            font:
+                size: $size
+                weight: $font-weight
+            line-height: $line-height

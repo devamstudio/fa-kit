@@ -1,0 +1,35 @@
+// Form //
+.#{$class-form}
+    display: block
+    .#{$class-form}__fieldset
+        display: flex
+        flex:
+            direction: column
+        padding: 0
+        border:
+            width: 1px
+            left: 0
+            bottom: 0
+            right: 0
+        // Elements
+        legend
+            display: flex
+            margin: 0
+                bottom: $base-grid * 2
+            padding:
+                right: $base-grid * 2
+            font:
+                family: serif
+                style: italic
+                weight: 100
+                size: 80%
+            line-height: $base-grid * 2
+            text-transform: uppercase
+        // States
+        &--row
+            flex:
+                direction: row
+    // States
+    &--dark
+        .#{$class-form}__fieldset
+            border-color: white

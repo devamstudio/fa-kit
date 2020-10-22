@@ -1,37 +1,37 @@
 // Grid //
 %row
-	box-sizing: inherit
-	display : flex
-	flex :
-		wrap : wrap
-	margin :
-		left : -1rem
-		right : -1rem
+    box-sizing: inherit
+    display : flex
+    flex :
+        wrap : wrap
+    margin :
+        left : -1rem
+        right : -1rem
 
 
 // Text //
 %none-select
-	-moz-user-select : -moz-none
-	-o-user-select : none
-	-khtml-user-select : none
-	-webkit-user-select : none
-	user-select : none
+    -moz-user-select : -moz-none
+    -o-user-select : none
+    -khtml-user-select : none
+    -webkit-user-select : none
+    user-select : none
 
 %link
-	text-decoration : none
-	color : $color-blue
-	//text-decoration-skip: ink
-	line-height : inherit
-	&:hover
-		text-decoration : underline
-	&:active
-		color: darken($color-blue, 15%)
-	&:visited
-		color: $color-purple
-		&:active
-			color: darken($color-purple, 15%)
+    text-decoration : none
+    color : $color-blue
+    //text-decoration-skip: ink
+    line-height : inherit
+    &:hover
+        text-decoration : underline
+    &:active
+        color: darken($color-blue, 15%)
+    &:visited
+        color: $color-purple
+        &:active
+            color: darken($color-purple, 15%)
 
 // States //
 %disabled
-	pointer-events: hover
-	cursor: not-allowed
+    pointer-events: hover
+    cursor: not-allowed

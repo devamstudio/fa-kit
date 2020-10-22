@@ -1,16 +1,15 @@
 .#{$class-paragraph}
-	hyphens: auto
-	font:
-		size: $font-base-size
-		family: $font_main
-	line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
-	margin:
-		top: 0
-		bottom: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size) * 1rem)
+    hyphens: auto
+    font:
+        size: $font-base-size
+        family: $font_main
+    line-height: $font-base-lineheight
+    margin:
+        top: 0
+        bottom: $base-grid
     // Elems
-	*
-		vertical-align: baseline
-	// States
-	&--lead
-		font-size: $font-base-size * 1.2
-		line-height: calc(var(--grid-square) * var(--grid-squares-per-line) / var(--font-size)  * 1rem)
+    *
+        vertical-align: baseline
+    // States
+    &--lead
+        font-size: $font-base-size * 1.2
