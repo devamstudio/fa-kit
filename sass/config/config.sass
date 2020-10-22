@@ -22,9 +22,6 @@ $body-background-color : $color-white!default
 // Color schemes
 $colors: ( primary: $color-primary, secondary: $color-secondary, alert: $color-alert, warning: $color-warning, success: $color-success, black: $color-black, white: $color-white , light: $color-gray__light , dark: $color-gray__dark, red: $color-red ) !default
 $text-colors: ( primary: $color-white, secondary: $color-white, alert: $color-white, warning: $color-white, success: $color-white, black: $color-white, white: $color-black, light: $color-black , dark: $color-white, red: $color-white ) !default
-// Kbd
-$kbd-background-color : $color-black
-$kbd-color : $color-white
 
 // Grid
 $base-grid              : 8px !default
@@ -54,9 +51,7 @@ $flex-align_items-list : ( start: flex-start , end: flex-end , center: center , 
 // Margin and paddings
 $directions       : left, right, top, bottom, yy, xx !default
 $direction-offset : ( 0: 0 , 1_2: .5, 1_4: .25, 3_4: .75 , 1: 1 , 2: 2 , 3: 3 , 4: 4 , 5: 5 ) !default
-// Kbd
-$kbd-padding-y : $base-grid / 2
-$kbd-padding-x : $base-grid
+
 
 // Design
 // Rounded
@@ -70,8 +65,6 @@ $global-input-inset-y: $base-grid !default
 $global-input-inset-x: $base-grid * 2 !default
 // Coloring
 $border-width: 2px !default
-// Kbd
-$kbd-border-radius : 2px
 
 // Buttons
 $buttons-inset-x : $global-input-inset-x !default
@@ -101,3 +94,11 @@ $notification-shadow: 0 $base-grid*2 $base-grid*4 $base-grid*-2 rgba(black, .15)
 $notification-gap: $base-grid * 2
 $notification-icon-size: $base-grid * 3
 $notification-close-icon-size: $base-grid * 3
+
+
+// Kbd
+$kbd-padding-y : $base-grid / 2
+$kbd-padding-x : $base-grid / 2
+$kbd-border-radius : 2px
+$kbd-background-color : $color-black
+$kbd-color : $color-white
