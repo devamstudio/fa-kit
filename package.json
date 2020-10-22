@@ -37,7 +37,10 @@
   "directories": {
     "docs": "docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "yargs-parser": ">=13.1.2",
+    "minimist": ">=1.2.3"
+  },
   "keywords": [
     "css",
     "sass",
