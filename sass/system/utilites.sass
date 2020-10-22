@@ -39,7 +39,7 @@ $offset_side: margin, padding
 
 //* 2. Flex ordering
 .#{$class-order}
-    @for $i from 0 through $grid-cols
+    @for $i from 0 through $columns
         &--#{$i}
             order: $i
         @each $size, $tmp in $media_quaries_up
@@ -49,13 +49,13 @@ $offset_side: margin, padding
         &--first
             order: 0
         &--last
-            order: $grid-cols
+            order: $columns
         @each $size, $tmp in $media_quaries_up
             @include media_query_up($size)
                 &--#{$size}-first
                     order: 0
                 &--#{$size}-last
-                    order: $grid-cols
+                    order: $columns
 
 //* 3. Flex aligning
 .#{$class-align-items}

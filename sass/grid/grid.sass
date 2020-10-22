@@ -1,47 +1,128 @@
 // Grid system
 
-////container
+
+// Container
 .#{$class-container}
     box-sizing: border-box
-    display: block
+    display: flex
+    flex:
+        wrap: wrap
+    gap: $columns-gap
     width: 100%
-    padding: 0 1rem
     margin:
         left: auto
         right: auto
     position: relative
-    &--wide
-        max-width: 100%!important
-    @each $size, $tmp in $media_quaries_up
-        @include media_query_up($size)
-            max-width: map-get($containers, $size)
+    &:not(.#{$class-container}--grid)
+        padding: 0 $columns-gap
+        @each $size, $tmp in $media_quaries_up
+            @include media_query_up($size)
+                max-width: map-get($containers, $size)
 
-// Row
-.#{$class-row}
-    @extend %row
-    flex:
-        direction: row
-    &--no-inset
-        & > [class*='g-cols--']
-            padding:
-                left: 0rem!important
-                right: 0rem!important
-    &--no-offset
-        margin: 0
-.#{$class-column}
-    @extend %row
-    flex:
-        direction: column
-    &--no-inset
-        & > [class*='g-cols--']
-            padding:
-                left: 0rem!important
-                right: 0rem!important
-    &--no-offset
-        margin: 0
-////container
+    // Elements
+    .#{$class-container}__row
+        display: flex
+        gap: $columns-gap
+        // Elements
+        .#{$class-container}__column
+            grid:
+                column: 1 / -1
+        // States
+        &--grid
+            display: grid
+            grid:
+                template:
+                    columns: repeat($columns, 1fr)
+            column:
+                gap: $columns-gap
 
-////greed
-@include touch_grid($grid_cols, $media_quaries_up)
-////greed
-//grid system
+    .#{$class-container}__column
+        position: relative
+        width: 100%
+        min-height: 1px
+        @each $item, $size in $media_quaries_up
+            @include media_query_up($item)
+                @for $col from 1 through $columns
+                    &.#{$class-container}__column--#{$item}-#{$col}
+                        @if $columns - $col == 0
+                            max-width: calc(calc(100% - #{$columns-gap * ($columns - $col)}) / #{$columns} * #{$col})
+                            flex: 0 0 calc(calc(100% - #{$columns-gap * ($columns - $col)}) / #{$columns} * #{$col})
+                        @else
+                            max-width: calc((100% - #{$columns-gap * ($columns - 1)}) / #{$columns} * #{$col} + #{$columns-gap * ($col - 1)})
+                            flex: 0 0 calc((100% - #{$columns-gap * ($columns - 1)}) / #{$columns} * #{$col} + #{$columns-gap * ($col - 1)})
+                    &.#{$class-container}__column--#{$item}
+                        flex:
+                            basis: 0
+                            grow: 1
+
+    // States
+    &--grid
+        display: grid
+        grid:
+            column:
+                gap: $columns-gap
+        @each $size, $tmp in $media_quaries_up
+            @include media_query_up($size)
+                grid:
+                    template:
+                        columns: calc((100% - #{map-get($containers, $size)}) / 2) repeat($columns, 1fr) calc((100% - #{map-get($containers, $size)}) / 2)
+        // Elements
+        .#{$class-container}__row
+            display: grid
+            grid:
+                template:
+                    columns: repeat($columns, 1fr)
+            column:
+                gap: $columns-gap
+            // Elements
+            @for $i from 1 through $columns
+                @for $j from 1 through $columns
+                    & > .#{$class-container}__column--#{$i}-span-#{$j}
+                        grid:
+                            column:
+                                start: $i
+                                end: span $j
+                    @each $item, $size in $media_quaries_up
+                        @include media_query_up($item)
+                            & > .#{$class-container}__column--#{$item}-#{$i}-span-#{$j}
+                                grid:
+                                    column:
+                                        start: $i
+                                        end: span $j
+
+        .#{$class-container}__column
+            grid:
+                column: 2 / -2
+            &--full-grid
+                grid:
+                    column: 1 / -1
+                padding:
+                    left: $columns-gap
+                    right: $columns-gap
+            @for $i from 1 through $columns
+                &.#{$class-container}__column--span-#{$i}
+                    grid:
+                        column:
+                            start: unset
+                            end: span $i
+                @each $item, $size in $media_quaries_up
+                    @include media_query_up($item)
+                        &.#{$class-container}__column--#{$item}-span-#{$i}
+                            grid:
+                                column:
+                                    start: unset
+                                    end: span $i
+            @for $i from 0 through $columns + 2
+                @for $j from 0 through $columns + 2
+                    &.#{$class-container}__column--#{$i}-span-#{$j}
+                        grid:
+                            column:
+                                start: $i + 1
+                                end: span $j
+                    @each $item, $size in $media_quaries_up
+                        @include media_query_up($item)
+                            &.#{$class-container}__column--#{$item}-#{$i}-span-#{$j}
+                                grid:
+                                    column:
+                                        start: $i + 1
+                                        end: span $j
