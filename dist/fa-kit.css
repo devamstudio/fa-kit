@@ -9336,12 +9336,15 @@ img, picture {
 
 .kbd {
   display: inline-block;
-  padding: 8px 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
   font-size: .9em;
   line-height: 1;
   background-color: black;
   color: white;
-  border-radius: 2.66667px; }
+  border-radius: 2px; }
 
 .paragraph {
   hyphens: auto;

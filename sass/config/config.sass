@@ -23,7 +23,6 @@ $body-background-color : $color-white!default
 $colors: ( primary: $color-primary, secondary: $color-secondary, alert: $color-alert, warning: $color-warning, success: $color-success, black: $color-black, white: $color-white , light: $color-gray__light , dark: $color-gray__dark, red: $color-red ) !default
 $text-colors: ( primary: $color-white, secondary: $color-white, alert: $color-white, warning: $color-white, success: $color-white, black: $color-white, white: $color-black, light: $color-black , dark: $color-white, red: $color-white ) !default
 
-
 // Grid
 $base-grid              : 8px !default
 $columns                : 12 !default
@@ -32,7 +31,6 @@ $containers             : ( xs: 100%, sm: 100%, md: 1000px, lg: 1200px, xl: 1300
 $media-quaries          : ( xs, sm, md, lg, xl)!default
 $media-quaries_up       : ( xs: 0, sm: 500px, md: 900px, lg: 1024px, xl: 1220px ) !default
 $media-quaries_down     : ( xs: 500px, sm: 900px, md: 1024px, lg: 1220px, xl: 1220px ) !default
-
 
 // Text
 // Family
@@ -49,7 +47,6 @@ $font-heading-lineheight 	: ( 6: 2, 5: 2, 4: 2, 3: 1, 2: 1, 1: 1 ) !default // M
 // Align
 $text-align-list : left, right, center, justify !default
 $flex-align_items-list : ( start: flex-start , end: flex-end , center: center , baseline: baseline , stretch: stretch ) !default
-
 
 // Margin and paddings
 $directions       : left, right, top, bottom, yy, xx !default
@@ -69,14 +66,12 @@ $global-input-inset-x: $base-grid * 2 !default
 // Coloring
 $border-width: 2px !default
 
-
 // Buttons
 $buttons-inset-x : $global-input-inset-x !default
 $buttons-inset-y : $global-input-inset-y !default
 $buttons-radius : 2px !default
 @if $global-rounded
     $buttons-radius : $global-rounded-radius !default
-
 
 // Fields
 $fields-inset-x : $global-input-inset-x !default
@@ -99,3 +94,11 @@ $notification-shadow: 0 $base-grid*2 $base-grid*4 $base-grid*-2 rgba(black, .15)
 $notification-gap: $base-grid * 2
 $notification-icon-size: $base-grid * 3
 $notification-close-icon-size: $base-grid * 3
+
+
+// Kbd
+$kbd-padding-y : $base-grid / 2
+$kbd-padding-x : $base-grid / 2
+$kbd-border-radius : 2px
+$kbd-background-color : $color-black
+$kbd-color : $color-white
