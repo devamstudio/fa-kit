@@ -1,16 +1,8 @@
 # Основа
 
-[Сброс](/devamstudio/fa-kit/wiki/Reset) ***
-
 [Сетка](/devamstudio/fa-kit/wiki/Grid)
 
-[Оформление текста](/devamstudio/fa-kit/wiki/Article)
-
 [Медиа-контент](/devamstudio/fa-kit/wiki/Media)
-
-[Утилиты](/devamstudio/fa-kit/wiki/Utilites)
-
-[Система отображения\скрытия контента](/devamstudio/fa-kit/wiki/Hide-and-display)
 
 [Призрачные классы для SASS](/devamstudio/fa-kit/wiki/Ghosts)
 
@@ -18,19 +10,21 @@
 
 [Типографика](/devamstudio/fa-kit/wiki/Typography)
 
+[Оформление текста](/devamstudio/fa-kit/wiki/Article)
+
+[Список](/devamstudio/fa-kit/wiki/List)
+
 [KDB](/devamstudio/fa-kit/wiki/KBD)
 
 # Интерфейс
 
-[Блоки](/devamstudio/fa-kit/wiki/Blocks)
+[Формы](/devamstudio/fa-kit/wiki/Form)
 
-[Формы и поля ввода](/devamstudio/fa-kit/wiki/Forms)
+[Поля ввода](/devamstudio/fa-kit/wiki/Field)
 
-[Кнопки](/devamstudio/fa-kit/wiki/Buttons)
+[Кнопки](/devamstudio/fa-kit/wiki/Button)
 
-[Оформление модальных окон](/devamstudio/fa-kit/wiki/Modals)
-
-[Уведомления и предупреждения](/devamstudio/fa-kit/wiki/Notifications)
+[Уведомления и предупреждения](/devamstudio/fa-kit/wiki/Notification)
 
 [Хлебные крошки](/devamstudio/fa-kit/wiki/Breadcrumbs)
 
@@ -41,3 +35,9 @@
 [Как использовать](/devamstudio/fa-kit/wiki/How-to-use)
 
 [В начало проекта](/devamstudio/fa-kit/wiki/)
+
+# Утилиты
+
+[Утилиты](/devamstudio/fa-kit/wiki/Utilites)
+
+[Система отображения\скрытия контента](/devamstudio/fa-kit/wiki/Hide-and-display)
