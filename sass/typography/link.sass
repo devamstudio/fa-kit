@@ -1,2 +1,25 @@
 .#{$class-link}
-    @extend %link
+    text-decoration-skip: ink
+    line-height: inherit
+    // States
+    &:not(.#{$class-link}--white)
+        text-decoration: $link-decoration
+        color: $link-color
+        &:hover
+            text-decoration: $link-decoration--hover
+            color: $link-color--hover
+        &:active
+            text-decoration: $link-decoration--active
+            color: $link-color--active
+        &:visited
+            text-decoration: $link-decoration--visited
+            color: $link-color--visited
+    &--white
+        color: white
+        text-decoration: underline
+        &:hover, &:active
+            color: white
+            text-decoration: underline
+        &:visited
+            color: $color-gray--light
+            text-decoration: underline dotted
