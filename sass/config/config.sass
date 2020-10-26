@@ -99,12 +99,22 @@ $direction-offset : ( 0: 0 , 1_2: .5, 1_4: .25, 3_4: .75 , 1: 1 , 2: 2 , 3: 3 , 
 
 /*! Typography elements
 
+// Link
+$link-color : #007bff
+$link-color--hover : $link-color
+$link-color--active : $link-color
+$link-color--visited : purple
+$link-decoration : none
+$link-decoration--hover : underline
+$link-decoration--active : underline
+$link-decoration--visited : none
+
 // List
-$list-offset-top      : $base-grid * 2
-$list-offset-bottom   : $base-grid * 2
-$list-inset-left      : $base-grid * 3
-$list-items-gap       : $base-grid
-$list-item-lineheight : $font-base-lineheight
+$list-offset-top      : $base-grid * 2 !default
+$list-offset-bottom   : $base-grid * 2 !default
+$list-inset-left      : $base-grid * 3 !default
+$list-items-gap       : $base-grid !default
+$list-item-lineheight : $font-base-lineheight !default
 
 // Kbd
 $kbd-padding-y        : $base-grid / 2 !default
@@ -125,30 +135,30 @@ $buttons-radius : 2px !default
     $buttons-radius : $global-rounded-radius !default
 
 // Form
-$form-fieldset-border-color: $color-gray--light
-$form-fieldset-offset-top : 0
-$form-fieldset-offset-bottom : 0
-$form-fieldset-offset-left : 0
-$form-fieldset-offset-right : 0
-$form-fieldset-offset-next: $base-grid * 5
-$form-legend-font-size: $base-grid * 1.8
-$form-legend-font-weight: 500
+$form-fieldset-border-color: $color-gray--light !default
+$form-fieldset-offset-top : 0 !default
+$form-fieldset-offset-bottom : 0 !default
+$form-fieldset-offset-left : 0 !default
+$form-fieldset-offset-right : 0 !default
+$form-fieldset-offset-next: $base-grid * 5 !default
+$form-legend-font-size: $base-grid * 1.8 !default
+$form-legend-font-weight: 500 !default
 $form-legend-offset-top : 0
-$form-legend-offset-bottom : $base-grid
+$form-legend-offset-bottom : $base-grid !default
 $form-legend-offset-left : 0
-$form-legend-offset-right : 0
+$form-legend-offset-right : 0 !default
 
 
 // Fields
-$field-height: $base-grid * 5
-$field-label-offset: $base-grid
-$field-label-lineheight: $font-base-lineheight
-$field-helper-offset: $base-grid
-$field-offset: $base-grid * 2
-$field-background-color: darken($color-white, 2%)
-$field-background-color--hovered: darken($color-white, 5%)
-$field-background-color--focused: darken($color-white, 1%)
-$field-color: $color-black
+$field-height: $base-grid * 5 !default
+$field-label-offset: $base-grid !default
+$field-label-lineheight: $font-base-lineheight !default
+$field-helper-offset: $base-grid !default
+$field-offset: $base-grid * 2 !default
+$field-background-color: darken($color-white, 2%) !default
+$field-background-color--hovered: darken($color-white, 5%) !default
+$field-background-color--focused: darken($color-white, 1%) !default
+$field-color: $color-black !default
 $field-inset-x : $base-grid / 2 !default
 $field-inset-y : $base-grid !default
 $field-radius : '' !default

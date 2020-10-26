@@ -9365,6 +9365,31 @@ img, picture {
   color: white;
   border-radius: 2px; }
 
+.link {
+  text-decoration-skip: ink;
+  line-height: inherit; }
+  .link:not(.link--white) {
+    text-decoration: none;
+    color: #007bff; }
+    .link:not(.link--white):hover {
+      text-decoration: underline;
+      color: #007bff; }
+    .link:not(.link--white):active {
+      text-decoration: underline;
+      color: #007bff; }
+    .link:not(.link--white):visited {
+      text-decoration: none;
+      color: purple; }
+  .link--white {
+    color: white;
+    text-decoration: underline; }
+    .link--white:hover, .link--white:active {
+      color: white;
+      text-decoration: underline; }
+    .link--white:visited {
+      color: #eaeaea;
+      text-decoration: underline dotted; }
+
 .paragraph {
   hyphens: auto;
   font-size: 1rem;
@@ -9766,18 +9791,23 @@ img, picture {
   -webkit-user-select: none;
   user-select: none; }
 
-.link, .breadcrumbs .breadcrumbs__item--link a {
+.breadcrumbs .breadcrumbs__item--link {
   text-decoration: none;
-  color: #124388;
+  color: #007bff;
+  text-decoration-skip: ink;
   line-height: inherit; }
-  .link:hover, .breadcrumbs .breadcrumbs__item--link a:hover {
-    text-decoration: underline; }
-  .link:active, .breadcrumbs .breadcrumbs__item--link a:active {
-    color: #092244; }
-  .link:visited, .breadcrumbs .breadcrumbs__item--link a:visited {
+  .breadcrumbs .breadcrumbs__item--link:hover {
+    text-decoration: underline;
+    color: #007bff; }
+  .breadcrumbs .breadcrumbs__item--link:active {
+    text-decoration: underline;
+    color: #007bff; }
+  .breadcrumbs .breadcrumbs__item--link:visited {
+    text-decoration: none;
     color: purple; }
-    .link:visited:active, .breadcrumbs .breadcrumbs__item--link a:visited:active {
-      color: #340034; }
+    .breadcrumbs .breadcrumbs__item--link:visited:active, .breadcrumbs .breadcrumbs__item--link:visited:hover {
+      text-decoration: none;
+      color: purple; }
 
 .button--disabled, .button[disabled] {
   pointer-events: hover;
