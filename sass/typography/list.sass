@@ -1,12 +1,17 @@
 .#{$class-list}
     margin:
-        top: 0
-        bottom: $base-grid * 2
+        top: $list-offset-top
+        bottom: $list-offset-bottom
+    padding:
+        left: $list-inset-left
     // Elements
-    &.#{$class-list}__item
-        line-height: $base-grid * 2
+    .#{$class-list}__item
+        line-height: $list-item-lineheight
+        & + .#{$class-list}__item
+            margin:
+                top: $list-items-gap
     // States
     &--unstyled
         list-style-type: none
-        padding: 0
-        margin: 0
+        padding:
+            left: 0
