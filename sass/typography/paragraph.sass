@@ -1,15 +1,16 @@
 .#{$class-paragraph}
     hyphens: auto
     font:
-        size: $font-base-size
-        family: $font_main
-    line-height: $font-base-lineheight
+        size: $paragraph-size
+        family: $font-main
+    line-height: $paragraph-line-height
     margin:
-        top: 0
-        bottom: $base-grid
+        top: $paragraph-offset-top
+        bottom: $paragraph-offset-bottom
     // Elems
     *
         vertical-align: baseline
     // States
     &--lead
-        font-size: $font-base-size * 1.2
+        font-size: $paragraph-size--lead
+        line-height: $paragraph-line-height--lead
