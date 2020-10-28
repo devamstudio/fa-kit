@@ -1,6 +1,6 @@
 {
   "name": "@fakit/core",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Flexible Asix Kit",
   "main": "gulpfile.js",
   "scripts": {
