@@ -1,4 +1,8 @@
 **/desktop.ini
 node_modules/
 
-package-lock.json
+# Builds
+docs_build/
+
+# Test
+dist/index.html

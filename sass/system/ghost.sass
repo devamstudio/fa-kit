@@ -1,0 +1,30 @@
+// Text //
+%none-select
+    -moz-user-select: -moz-none
+    -o-user-select: none
+    -khtml-user-select: none
+    -webkit-user-select: none
+    user-select: none
+
+%link
+    text-decoration: $link-decoration
+    color: $link-color
+    text-decoration-skip: ink
+    line-height: inherit
+    &:hover
+        text-decoration: $link-decoration--hover
+        color: $link-color--hover
+    &:active
+        text-decoration: $link-decoration--active
+        color: $link-color--active
+    &:visited
+        text-decoration: $link-decoration--visited
+        color: $link-color--visited
+        &:active, &:hover
+            text-decoration: $link-decoration--visited
+            color: $link-color--visited
+
+// States //
+%disabled
+    pointer-events: hover
+    cursor: not-allowed

@@ -1,0 +1,76 @@
+.#{$class-notification}
+    display: grid
+    grid:
+        template:
+            columns: auto 1fr auto
+            areas: 'icon title close' 'icon message close'
+        column-gap: $notification-gap
+    padding:
+        top: $notification-inset-y
+        bottom: $notification-inset-y
+    border:
+        style: solid
+        color: $color-primary
+        top-width: $notification-top-border-width
+        bottom-width: $notification-bottom-border-width
+        left-width: $notification-left-border-width
+        right-width: $notification-right-border-width
+    background-color: white
+    @if $notification-shadow
+        box-shadow: $notification-shadow
+    // Elements
+    .#{$class-notification}__icon
+        grid-area: icon
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        height: $notification-icon-size
+        width: $notification-icon-size
+        border-radius: 50%
+        background-color: $color-primary
+        margin: 0
+            left: $notification-inset-x
+        font-size: .8em
+    .#{$class-notification}__title
+        grid-area: title
+        margin: 0
+        font-size: $font-base-size
+        font-weight: bolder
+    .#{$class-notification}__message
+        grid-area: message
+        margin: 0
+        font-size: $font-base-size
+        // Elements
+        p:last-child, .paragraph:last-child
+            margin-bottom: 0
+    .#{$class-notification}__close-button
+        grid-area: close
+        cursor: pointer
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        height: $notification-close-icon-size
+        width: $notification-close-icon-size
+        border-radius: 50%
+        border: 2px solid $color-gray
+        appearance: none
+        background-color: transparent
+        color: $color-gray
+        fill: $color-gray
+        margin: 0
+            right: $notification-inset-x
+        font-size: .8em
+        @if $global-animation
+            transition: color #{$global-animation-delay}, border-color #{$global-animation-delay}, background-color #{$global-animation-delay}
+        // States
+        &:hover
+            border-color: $color-gray--dark
+            color: $color-gray--dark
+            fill: $color-gray--dark
+    // States
+    @each $state, $color in $colors
+        &--#{$state}
+            border-color: $color
+            .#{$class-notification}__icon
+                background-color: $color
+                color: map-get($text-colors, $state)

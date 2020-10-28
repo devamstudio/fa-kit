@@ -1,0 +1,30 @@
+//* 1. Media mixins */
+//* 2. Grid mixins */
+
+
+//* 1. Media mixins */
+// 1.1 Get media query up
+@mixin media_query_up($breakpoint)
+    @if map-has-key($media_quaries_up, $breakpoint)
+        @media (min-width: #{map-get($media_quaries_up, $breakpoint)})
+            @content
+// 1.2 Get media query down
+@mixin media_query_down($breakpoint)
+    @if map-has-key($media_quaries_down, $breakpoint)
+        @media (max-width: #{map-get($media_quaries_down, $breakpoint)})
+            @content
+// 1.3 Get media query between
+@mixin media_query_between($breakpoint)
+    @if map-has-key($media_quaries_up, $breakpoint) and ($media_quaries_down, $breakpoint)
+        @media (min-width: #{map-get($media_quaries_up, $breakpoint)}) and (max-width: #{map-get($media_quaries_down, $breakpoint)} )
+            @content
+
+
+@function enumerate($list)
+    $map: ()
+
+    @for $index from 1 through  length($list)
+        $value: nth($list, $index)
+        $map: map-merge($map, ($index: $value))
+
+    @return $map

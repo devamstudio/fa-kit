@@ -1,0 +1,195 @@
+/*  Config nav:
+    — Colors system
+    — Grid system
+    — Design props
+    — Typography system
+    — Blocks configuration
+
+
+
+/*! Colors system
+
+// Basic colors
+$color-red    : #bc1817!default
+$color-blue   : #124388!default
+$color-yellow : #fab51b!default
+$color-yellow : #fab51b!default
+$color-green  : #3baa35!default
+$color-purple : purple!default
+$color-white  : white!default
+$color-black  : black!default
+
+// Gray
+$color-gray--light : #eaeaea!default
+$color-gray        : #a4a4a4!default
+$color-gray--dark  : #727272!default
+
+// Interface
+$color-primary         : $color-black!default
+$color-primary-text    : $color-white!default
+$color-secondary       : $color-yellow!default
+$color-alert           : $color-red!default
+$color-warning         : $color-yellow!default
+$color-success         : $color-green!default
+$body-text-color       : $color-black!default
+$body-background-color : $color-white!default
+
+// Color schemes
+$colors: ( primary: $color-primary, secondary: $color-secondary, alert: $color-alert, warning: $color-warning, success: $color-success, black: $color-black, white: $color-white , light: $color-gray__light , dark: $color-gray__dark, red: $color-red ) !default
+$text-colors: ( primary: $color-white, secondary: $color-white, alert: $color-white, warning: $color-white, success: $color-white, black: $color-white, white: $color-black, light: $color-black , dark: $color-white, red: $color-white ) !default
+
+
+
+/*! Grid system
+
+$base-grid              : 8px !default
+$columns                : 12 !default
+$columns-gap            : $base-grid * 3 !default
+$containers             : ( xs: 100%, sm: 100%, md: 1000px, lg: 1200px, xl: 1300px ) !default
+$media-quaries          : ( xs, sm, md, lg, xl)!default
+$media-quaries_up       : ( xs: 0, sm: 500px, md: 900px, lg: 1024px, xl: 1220px ) !default
+$media-quaries_down     : ( xs: 500px, sm: 900px, md: 1024px, lg: 1220px, xl: 1220px ) !default
+
+
+
+/*! Design props
+
+// Rounding
+// Will turn on or off global rounding in fields, buttons etc.
+$global-rounded: true !default
+$global-rounded-radius: $base-grid / 2 !default
+
+// Animation
+$global-animation: true !default
+$global-animation-delay: 0.2s !default
+
+// Insets
+$global-input-inset-y: $base-grid !default
+$global-input-inset-x: $base-grid * 2 !default
+$border-width: 2px !default
+
+
+
+/*! Typography system
+
+// Family
+$font-heading : Arial, -apple-system, system-ui!default
+$font-main    : Arial, -apple-system, system-ui!default
+
+// Size
+$font-base-ratio            : ( xs: 16, lg: 18 ) !default
+$font-base-size             : 18px !default
+$font-base-lineheight       : 1.5 !default
+
+// Align
+$text-align-list : left, right, center, justify !default
+$flex-align_items-list : ( start: flex-start , end: flex-end , center: center , baseline: baseline , stretch: stretch ) !default
+
+// Margin and paddings
+$directions       : left, right, top, bottom, yy, xx !default
+$direction-offset : ( 0: 0 , 1_2: .5, 1_4: .25, 3_4: .75 , 1: 1 , 2: 2 , 3: 3 , 4: 4 , 5: 5 ) !default
+
+/*! Typography elements
+
+// Heading
+$heading-offset-top    : ( 1: 0, 2: $base-grid * 4, 3: $base-grid * 4, 4: $base-grid * 4, 5: $base-grid * 4, 6: $base-grid * 4 ) !default
+$heading-offset-bottom : ( 1: $base-grid * 2, 2: $base-grid * 2, 3: $base-grid * 2, 4: $base-grid * 2, 5: $base-grid * 2, 6: $base-grid * 2 ) !default
+$heading-sizes         : ( 1: 2.5rem, 2: 2.1rem, 3: 1.8rem, 4: 1.5rem, 5: 1.2rem, 6: 1rem ) !default
+$heading-weight        : ( 1: normal, 2: normal, 3: normal, 4: normal, 5: normal, 6: normal ) !default
+$heading-lineheight    : ( 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1 ) !default
+
+// Paragraph
+$paragraph-size: $font-base-size
+$paragraph-line-height: $font-base-lineheight
+$paragraph-size--lead: $font-base-size * 1.2
+$paragraph-line-height--lead: $font-base-lineheight
+$paragraph-offset-top: 0
+$paragraph-offset-bottom: $font-base-size * $font-base-lineheight
+
+// Link
+$link-color : #007bff
+$link-color--hover : $link-color
+$link-color--active : $link-color
+$link-color--visited : purple
+$link-decoration : none
+$link-decoration--hover : underline
+$link-decoration--active : underline
+$link-decoration--visited : none
+
+// List
+$list-offset-top      : $base-grid * 2 !default
+$list-offset-bottom   : $base-grid * 2 !default
+$list-inset-left      : $base-grid * 3 !default
+$list-items-gap       : $base-grid !default
+$list-item-lineheight : $font-base-lineheight !default
+
+// Kbd
+$kbd-padding-y        : $base-grid / 2 !default
+$kbd-padding-x        : $base-grid / 2 !default
+$kbd-border-radius    : 2px !default
+$kbd-background-color : $color-black !default
+$kbd-color            : $color-white !default
+
+
+
+/*! Blocks configuration
+
+// Buttons
+$buttons-inset-x : $global-input-inset-x !default
+$buttons-inset-y : $global-input-inset-y !default
+$buttons-radius : 2px !default
+@if $global-rounded
+    $buttons-radius : $global-rounded-radius !default
+
+// Form
+$form-fieldset-border-color: $color-gray--light !default
+$form-fieldset-offset-top : 0 !default
+$form-fieldset-offset-bottom : 0 !default
+$form-fieldset-offset-left : 0 !default
+$form-fieldset-offset-right : 0 !default
+$form-fieldset-offset-next: $base-grid * 5 !default
+$form-legend-font-size: $base-grid * 1.8 !default
+$form-legend-font-weight: 500 !default
+$form-legend-offset-top : 0
+$form-legend-offset-bottom : $base-grid !default
+$form-legend-offset-left : 0
+$form-legend-offset-right : 0 !default
+
+
+// Fields
+$field-height: $base-grid * 5 !default
+$field-label-offset: $base-grid !default
+$field-label-lineheight: $font-base-lineheight !default
+$field-helper-offset: $base-grid !default
+$field-offset: $base-grid * 2 !default
+$field-background-color: darken($color-white, 2%) !default
+$field-background-color--hovered: darken($color-white, 5%) !default
+$field-background-color--focused: darken($color-white, 1%) !default
+$field-color: $color-black !default
+$field-inset-x : $base-grid / 2 !default
+$field-inset-y : $base-grid !default
+$field-radius : '' !default
+@if $global-rounded
+    $fields-radius : $global-rounded-radius !default
+$field-border-top-width : 0 !default
+$field-border-bottom-width : $border-width !default
+$field-border-left-width : 0 !default
+$field-border-right-width : 0 !default
+$field-border-style : solid !default
+$field-border-color : $color-gray--light !default
+$field-border-color--focused : $color-gray !default
+$checkbox-size: $base-grid * 1.6
+$checkbox-gap: $base-grid
+
+// Notifications
+$notification-inset-x: $base-grid * 2 !default
+$notification-inset-y: $base-grid * 2 !default
+$notification-top-border-width: 0 !default
+$notification-bottom-border-width: 0 !default
+$notification-left-border-width: 6px !default
+$notification-right-border-width: 0 !default
+$notification-shadow: 0 $base-grid*2 $base-grid*4 $base-grid*-2 rgba(black, .15) !default
+$notification-gap: $base-grid * 2 !default
+$notification-icon-size: $base-grid * 3 !default
+$notification-close-icon-size: $base-grid * 3 !default
+

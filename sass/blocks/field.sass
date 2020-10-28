@@ -1,0 +1,140 @@
+// Helpers
+@mixin vertical_field
+    display: flex
+    flex:
+        direction: column
+    .#{$class-field}__input
+        min-height: $field-height
+    .#{$class-field}__label
+        margin:
+            bottom: $field-label-offset
+    .#{$class-field}__helper
+        margin:
+            top: $base-grid
+
+
+
+// Field
+.#{$class-field}
+    margin:
+        top: 0
+        bottom: 0
+    &:not(.#{$class-field}--checkbox):not(.#{$class-field}--radio):not(.#{$class-field}--inline)
+        @include vertical_field
+
+    // Elements
+    // Field label
+    .#{$class-field}__label
+        font-size: $font-base-size
+        line-height: $field-label-lineheight
+        cursor: pointer
+
+    // Field input
+    .#{$class-field}__input
+        font-weight: normal
+        color: $field-color
+        background-color: $field-background-color
+        padding:
+            top: $field-inset-y
+            bottom: $field-inset-y
+            left: $field-inset-x
+            right: $field-inset-x
+        border: 0
+            top-width: $field-border-top-width
+            bottom-width: $field-border-bottom-width
+            left-width: $field-border-left-width
+            right-width: $field-border-right-width
+            style: $field-border-style
+            color: $field-border-color
+        outline: none
+        font-size: $font-base-size
+        @if $global-animation
+            transition: color #{$global-animation-delay}, background-color #{$global-animation-delay}, border-color #{$global-animation-delay}
+        // States
+        &:hover
+            background-color: $field-background-color--hovered
+        &:focus
+            background-color: $field-background-color--focused
+            border-color: $field-border-color--focused
+        &--disabled
+            cursor: not-allowed
+            opacity: .5
+        &--no-inset
+            padding: 0
+        // Field types
+        &[type="file"]
+            &::-webkit-file-upload-button
+                vertical-align: middle
+                height: 100%
+
+    // Field helper
+    .#{$class-field}__helper
+        font-size: $font-base-size * 0.8
+        line-height: $base-grid * 2
+
+    // Field additional types
+    &--checkbox, &--radio
+        display: grid
+        grid:
+            template:
+                columns: $checkbox-size minmax(0, 1fr)
+                areas: 'input .' '. helper'
+            column-gap: $checkbox-gap
+        .#{$class-field}__input
+            grid-area: input
+            height: $checkbox-size
+            width: $checkbox-size
+            margin: 0
+            align-self: first baseline
+        .#{$class-field}__label
+            // grid-area: label
+            align-self: first baseline
+        .#{$class-field}__helper
+            grid-area: helper
+
+    // States
+    &--offset-top
+        margin-top: $field-offset
+    &--offset-bottom
+        margin-bottom: $field-offset
+    &--inline
+        display: inline-block
+        vertical-align: baseline
+        margin:
+            top: 0
+            bottom: 0
+        .#{$class-field}__input
+            display: inline
+            margin:
+                top: 0
+                left: 0
+            vertical-align: baseline
+        .#{$class-field}__label
+            display: inline
+            margin: 0
+            vertical-align: baseline
+        .#{$class-field}__helper
+            font-size: inherit
+            &:before
+                content: '('
+            &:after
+                content: ')'
+    // Warning states
+    &--alert
+        .#{$class-field}__label, .#{$class-field}__helper
+            color: $color-alert
+        .#{$class-field}__input
+            border:
+                color: $color-alert !important
+    &--warning
+        .#{$class-field}__label, .#{$class-field}__helper
+            color: $color-warning
+        .#{$class-field}__input
+            border:
+                color: $color-warning !important
+    &--success
+        .#{$class-field}__label, .#{$class-field}__helper
+            color: $color-success
+        .#{$class-field}__input
+            border:
+                color: $color-success !important

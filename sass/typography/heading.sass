@@ -1,0 +1,23 @@
+.#{$class-heading}
+    margin:
+        top: 0
+        bottom: 0
+    display: block
+    font:
+        family: $font-heading
+    font-weight: 400
+    hyphens: auto
+
+    @each $heading, $size in $heading-sizes
+        $line-height: map-get($heading-lineheight, $heading )
+        $font-weight: map-get($heading-weight, $heading)
+        $offset-top: map-get($heading-offset-top, $heading)
+        $offset-bottom: map-get($heading-offset-bottom, $heading)
+        &--h#{$heading}
+            // margin:
+            //     top: $offset-top
+            //     bottom: $offset-bottom
+            font:
+                size: $size
+                weight: $font-weight
+            line-height: $line-height

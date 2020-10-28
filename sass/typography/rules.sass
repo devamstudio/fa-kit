@@ -1,0 +1,17 @@
+/*  Specific rules to make atomic management real: text alignment, coloring etc.
+
+.#{$class-text}
+    // Color text
+    @each $state, $color in $colors
+        &--#{$state}
+            color: $color
+
+    // Align text
+    @each $align in $text_align_list
+        &--#{$align}
+            text-align: $align
+    @each $size, $tmp in $media_quaries_up
+        @include media_query_up($size)
+            @each $align in $text_align_list
+                &--#{$size}-#{$align}
+                    text-align: $align

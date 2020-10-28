@@ -1,0 +1,31 @@
+// Form //
+.#{$class-form}
+    .#{$class-form}__fieldset
+        padding: 0
+        margin:
+            top: $form-fieldset-offset-top
+            bottom: $form-fieldset-offset-bottom
+            left: $form-fieldset-offset-left
+            right: $form-fieldset-offset-right
+        border:
+            top-width: 2px
+            bottom-width: 0
+            left-width: 0
+            right-width: 0
+            color: $color-gray--light
+        & + .#{$class-form}__fieldset
+            margin:
+                top: $form-fieldset-offset-next
+    .#{$class-form}__legend
+        display: block
+        margin:
+            top: $form-legend-offset-top
+            bottom: $form-legend-offset-bottom
+            left: $form-legend-offset-left
+            right: $form-legend-offset-right
+        font:
+            family: $font-main
+            style: normal
+            weight: $form-legend-font-weight
+            size: $form-legend-font-size
+        line-height: $font-base-lineheight
