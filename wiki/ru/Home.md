@@ -4,26 +4,39 @@
 
 На данный момент структура проекта следующая:
 
-## Основа (Base)
+# Основа
 
-1. [Сброс](/devamstudio/fa-kit/wiki/Grid)
-1. [Сетка](/devamstudio/fa-kit/wiki/02-Grid)
-1. [Типографика](/devamstudio/fa-kit/wiki/)
-1. [Оформление текста](/devamstudio/fa-kit/wiki/04-Text-formatting)
-1. [Медиа-контент](/devamstudio/fa-kit/wiki/07-Media)
-1. [Утилиты](/devamstudio/fa-kit/wiki/03-Utilites)
-1. [Система отображения\скрытия контента](/devamstudio/fa-kit/wiki/05-Hide-and-display)
-1. [Призрачные классы для SASS](/devamstudio/fa-kit/wiki/06-Ghosts)
+1. [Сетка](/devamstudio/fa-kit/wiki/Grid)
+1. [Медиа-контент](/devamstudio/fa-kit/wiki/Media)
+1. [Призрачные классы для SASS](/devamstudio/fa-kit/wiki/Ghosts)
 
-## Элементы дизайна\интерфейс (UI)
+# Настройка и использование
 
-1. Блоки
-1. Формы и поля ввода
-1. Кнопки
-1. Оформление модальных окон
-1. Уведомления и предупреждения
-1. Хлебные крошки
-1. Пагинация
+1. [Как использовать](/devamstudio/fa-kit/wiki/How-to-use)
+1. [В начало проекта](/devamstudio/fa-kit/wiki/)
+
+# Типографика
+
+1. [Типографика](/devamstudio/fa-kit/wiki/Typography)
+1. [Оформление текста](/devamstudio/fa-kit/wiki/Article)
+1. [Заголовки](/devamstudio/fa-kit/wiki/Heading)
+1. [Параграфы](/devamstudio/fa-kit/wiki/Paragraph)
+1. [Ссылка](/devamstudio/fa-kit/wiki/Link)
+1. [Список](/devamstudio/fa-kit/wiki/List)
+1. [KDB](/devamstudio/fa-kit/wiki/KBD)
+
+# Блоки
+
+1. [Формы](/devamstudio/fa-kit/wiki/Form)
+1. [Поля ввода](/devamstudio/fa-kit/wiki/Field)
+1. [Кнопки](/devamstudio/fa-kit/wiki/Button)
+1. [Изображения](/devamstudio/fa-kit/wiki/Image)
+1. [Уведомления и предупреждения](/devamstudio/fa-kit/wiki/Notification)
+
+# Утилиты
+
+1. [Утилиты](/devamstudio/fa-kit/wiki/Utilites)
+1. [Система отображения\скрытия контента](/devamstudio/fa-kit/wiki/Hide-and-display)
 
 ## Наименование классов
 
@@ -33,7 +46,7 @@
 
 На примере образования класса контейнера: `.g-container`. Где `g-` — приставка, а `container` — блок.
 
-Также, дабы исключить ошибки в формировании элементов и модификаторов, мы используем двойной дефис. Например: `.g-container--whide`, где `--wide` — модификатор.
+Также, дабы исключить ошибки в формировании элементов и модификаторов, мы используем двойной дефис. Например: `.g-container--wide`, где `--wide` — модификатор.
 
 ***
 
